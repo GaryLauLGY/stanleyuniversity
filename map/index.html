@@ -443,7 +443,7 @@
         1px 0 0 rgba(255,255,255,0.78),
         -1px 0 0 rgba(255,255,255,0.78),
         0 2px 4px rgba(70, 58, 48, 0.18);
-      transform: translateY(-1px);
+      transform: translateY(-1px) scale(var(--label-scale, 1));
       transform-origin: center;
     }
 
@@ -1207,6 +1207,13 @@
       return element;
     }
 
+    function updateMapLabelScale() {
+      if (!map) return;
+      const zoom = map.getZoom();
+      const scale = Math.min(1.7, Math.max(0.24, Math.pow(1.45, zoom - 5)));
+      map.getContainer().style.setProperty("--label-scale", scale.toFixed(3));
+    }
+
     function clearMapLabels() {
       for (const marker of mapLabelMarkers) marker.remove();
       mapLabelMarkers = [];
@@ -1223,6 +1230,7 @@
     function renderMapLabels() {
       clearMapLabels();
       if (!map) return;
+      updateMapLabelScale();
       if (chinaCityGeo?.features) {
         for (const feature of chinaCityGeo.features) {
           const count = Number(feature.properties.studentCount || 0);
@@ -1463,6 +1471,9 @@
       });
       window.studentBlockMap = map;
       map.addControl(new maplibregl.NavigationControl({ visualizePitch: false }), "top-right");
+      map.on("load", updateMapLabelScale);
+      map.on("zoom", updateMapLabelScale);
+      map.on("resize", updateMapLabelScale);
       let layersReady = false;
       map.on("style.load", async () => {
         if (layersReady) return;
