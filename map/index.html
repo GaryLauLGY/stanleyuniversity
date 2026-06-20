@@ -707,7 +707,7 @@
 
     <section class="map-wrap" aria-label="可旋转城市区块地球仪">
       <div id="map"></div>
-      <div id="loading" class="loading">正在加载离线地球仪与城市行政区块。底图、国内市级边界和海外城市区块均从本站静态文件读取。</div>
+      <div id="loading" class="loading">正在加载离线地球仪与城市行政区块。底图、国内市级边界和海外城市行政边界均从本站静态文件读取。</div>
     </section>
 
     <aside class="data-panel" aria-label="数据概览">
@@ -775,13 +775,14 @@
       { label: "秦皇岛", count: 1, note: "秦皇岛市", lng: 119.5996, lat: 39.9354, chinaNames: ["秦皇岛市"], students: ["小羊"] },
       { label: "衡阳", count: 1, note: "衡阳市", lng: 112.5719, lat: 26.8932, chinaNames: ["衡阳市"], students: ["Spaceman"] },
       { label: "西安", count: 1, note: "西安市", lng: 108.9398, lat: 34.3416, chinaNames: ["西安市"], students: ["杜祖鹏"] },
-      { label: "新加坡", count: 1, note: "海外中心城区块", lng: 103.8198, lat: 1.3521, overseasId: "singapore", students: ["愚任杰"] },
-      { label: "波士顿", count: 1, note: "海外中心城区块", lng: -71.0589, lat: 42.3601, overseasId: "boston", students: ["Tracy"] },
-      { label: "悉尼", count: 1, note: "海外中心城区块", lng: 151.2093, lat: -33.8688, overseasId: "sydney", students: ["sam"] }
+      { label: "新加坡", count: 1, note: "海外市级行政边界", lng: 103.8198, lat: 1.3521, overseasId: "singapore", students: ["愚任杰"] },
+      { label: "波士顿", count: 1, note: "海外市级行政边界", lng: -71.0589, lat: 42.3601, overseasId: "boston", students: ["Tracy"] },
+      { label: "悉尼", count: 1, note: "海外市级行政边界", lng: 151.2093, lat: -33.8688, overseasId: "sydney", students: ["sam"] }
     ];
 
     const chinaCountByName = new Map();
     const chinaLabelByName = new Map();
+    let overseasAdminGeo = null;
 
     const tooltip = document.getElementById("tooltip");
     const loading = document.getElementById("loading");
@@ -879,6 +880,9 @@
       }
       if (map?.getSource("overseas-city-blocks")) {
         map.getSource("overseas-city-blocks").setData(overseasGeoJson());
+      }
+      if (map?.getSource("overseas-admin-boundaries") && overseasAdminGeo) {
+        map.getSource("overseas-admin-boundaries").setData(overseasAdminGeo);
       }
     }
 
@@ -1010,23 +1014,24 @@
           ...feature.properties,
           displayLabel: row.label,
           studentCount: row.count,
-          note: "海外中心城区块",
+          note: row.note || "海外市级行政边界",
           color: colorFor(row.count)
         }
       };
     }
 
     function overseasGeoJson() {
-      const realFeatures = OVERSEAS_BOUNDARIES.features.map(decorateOverseasFeature).filter(Boolean);
+      const source = overseasAdminGeo || OVERSEAS_BOUNDARIES;
+      const realFeatures = source.features.map(decorateOverseasFeature).filter(Boolean);
       if (realFeatures.length) {
         return { type: "FeatureCollection", features: realFeatures };
       }
       return {
         type: "FeatureCollection",
         features: [
-          overseasPolygon("singapore", "新加坡", 1, "海外中心城区块", 103.8198, 1.3521, 0.55, 0.35),
-          overseasPolygon("boston", "波士顿", 1, "海外中心城区块", -71.0589, 42.3601, 0.34, 0.22),
-          overseasPolygon("sydney", "悉尼", 1, "海外中心城区块", 151.2093, -33.8688, 0.46, 0.3)
+          overseasPolygon("singapore", "新加坡", 1, "海外市级行政边界", 103.8198, 1.3521, 0.55, 0.35),
+          overseasPolygon("boston", "波士顿", 1, "海外市级行政边界", -71.0589, 42.3601, 0.34, 0.22),
+          overseasPolygon("sydney", "悉尼", 1, "海外市级行政边界", 151.2093, -33.8688, 0.46, 0.3)
         ]
       };
     }
@@ -1047,6 +1052,10 @@
       return fetchJson("../data/world-countries.geojson");
     }
 
+    async function loadOverseasAdminGeo() {
+      return fetchJson("../data/overseas-admin-boundaries.json");
+    }
+
     function decorateFeature(feature) {
       const name = feature.properties.name;
       const count = chinaCountByName.get(name) || 0;
@@ -1055,9 +1064,11 @@
       feature.properties.color = count ? colorFor(count) : "rgba(255, 250, 243, 0.36)";
     }
 
-    function addChoroplethLayers(chinaGeo, worldGeo) {
+    function addChoroplethLayers(chinaGeo, worldGeo, overseasGeo) {
       chinaCityGeo = chinaGeo;
+      overseasAdminGeo = overseasGeo;
       map.addSource("world-land", { type: "geojson", data: worldGeo });
+      map.addSource("overseas-admin-boundaries", { type: "geojson", data: overseasAdminGeo });
       map.addSource("china-cities", { type: "geojson", data: chinaGeo });
       map.addSource("overseas-city-blocks", { type: "geojson", data: overseasGeoJson() });
 
@@ -1072,6 +1083,16 @@
         type: "line",
         source: "world-land",
         paint: { "line-color": "rgba(232, 208, 204, 0.62)", "line-width": 0.45 }
+      });
+      map.addLayer({
+        id: "overseas-admin-lines",
+        type: "line",
+        source: "overseas-admin-boundaries",
+        paint: {
+          "line-color": "rgba(205, 166, 160, 0.9)",
+          "line-width": ["interpolate", ["linear"], ["zoom"], 1, 0.45, 6, 0.9, 9, 1.5],
+          "line-dasharray": [2, 1.2]
+        }
       });
       map.addLayer({
         id: "china-empty",
@@ -1120,7 +1141,7 @@
         id: "overseas-lines",
         type: "line",
         source: "overseas-city-blocks",
-        paint: { "line-color": "#ffffff", "line-width": 1.8 }
+        paint: { "line-color": "#ffffff", "line-width": 1.1 }
       });
       map.addLayer({
         id: "overseas-active",
@@ -1180,8 +1201,8 @@
         map.resize();
         map.setProjection({ type: "globe" });
         try {
-          const [chinaGeo, worldGeo] = await Promise.all([loadChinaCityGeo(), loadWorldGeo()]);
-          addChoroplethLayers(chinaGeo, worldGeo);
+          const [chinaGeo, worldGeo, overseasGeo] = await Promise.all([loadChinaCityGeo(), loadWorldGeo(), loadOverseasAdminGeo()]);
+          addChoroplethLayers(chinaGeo, worldGeo, overseasGeo);
           requestAnimationFrame(() => {
             map.resize();
             map.triggerRepaint();

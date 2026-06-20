@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-20T11:49:05.019Z",
+  "updatedAt": "2026-06-20T12:44:36.556Z",
   "totalMembers": 54,
   "locatedMembers": 27,
   "filledCityRecords": 29,
@@ -80,7 +80,7 @@
     },
     {
       "label": "波士顿",
-      "note": "海外中心城区块",
+      "note": "海外市级行政边界",
       "lng": -71.0589,
       "lat": 42.3601,
       "overseasId": "boston",
@@ -222,7 +222,7 @@
     },
     {
       "label": "悉尼",
-      "note": "海外中心城区块",
+      "note": "海外市级行政边界",
       "lng": 151.2093,
       "lat": -33.8688,
       "overseasId": "sydney",
@@ -233,7 +233,7 @@
     },
     {
       "label": "新加坡",
-      "note": "海外中心城区块",
+      "note": "海外市级行政边界",
       "lng": 103.8198,
       "lat": 1.3521,
       "overseasId": "singapore",
