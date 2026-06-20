@@ -3,6 +3,7 @@ import { dirname, join, resolve } from "node:path";
 
 const ROOT = resolve(import.meta.dirname, "..");
 const OUT_FILE = join(ROOT, "data/overseas-admin-boundaries.json");
+const BOSTON_GRID_FILE = join(ROOT, "data/sources/us-boston-municipalities.geojson");
 const USER_AGENT = process.env.GEOBOUNDARIES_USER_AGENT || "stanleyuniversity-map/1.0 (https://stanleyuniversity.garylau.ai/map/)";
 
 const greaterSydneyLgas = [
@@ -50,10 +51,14 @@ const countryGrids = [
       name,
       { id: "sydney", name: "悉尼", note: "澳洲悉尼都会区" }
     ]))
+  },
+  {
+    country: "SGP",
+    adm: "ADM2",
+    note: "新加坡规划分区",
+    memberAll: { id: "singapore", name: "新加坡", note: "新加坡规划分区" }
   }
 ];
-
-const preserveMemberIds = new Set(["boston", "singapore"]);
 
 async function fetchJson(url) {
   const response = await fetch(url, {
@@ -85,7 +90,7 @@ async function geoboundariesGrid(config) {
   const data = await fetchJson(metadata.simplifiedGeometryGeoJSON || metadata.gjDownloadURL);
   return data.features.map((feature) => {
     const sourceName = feature.properties.shapeName;
-    const member = config.memberByName.get(sourceName);
+    const member = config.memberByName?.get(sourceName) || config.memberAll;
     return {
       type: "Feature",
       geometry: roundGeometry(feature.geometry),
@@ -108,9 +113,33 @@ async function geoboundariesGrid(config) {
   });
 }
 
-async function preservedMemberFeatures() {
-  const current = JSON.parse(await readFile(OUT_FILE, "utf8"));
-  return current.features.filter((feature) => preserveMemberIds.has(feature.properties?.memberId));
+async function bostonGrid() {
+  const data = JSON.parse(await readFile(BOSTON_GRID_FILE, "utf8"));
+  return data.features.map((feature) => {
+    const isBoston = feature.properties.memberId === "boston" || feature.properties.name === "波士顿";
+    const sourceName = isBoston ? "Boston" : feature.properties.sourceName || feature.properties.name;
+    return {
+      type: "Feature",
+      geometry: roundGeometry(feature.geometry),
+      properties: {
+        id: isBoston ? "boston" : `osm-us-ma-${slug(sourceName)}`,
+        memberId: isBoston ? "boston" : "",
+        name: isBoston ? "波士顿" : sourceName,
+        name_en: sourceName,
+        note: isBoston ? "美国波士顿市级边界" : "美国马萨诸塞城市/镇区块",
+        sourceName,
+        display_name: feature.properties.display_name || `${sourceName}, Massachusetts, United States`,
+        country: "USA",
+        boundarySource: "OpenStreetMap / Nominatim",
+        boundarySourceURL: "https://www.openstreetmap.org/",
+        boundaryLicense: "Open Database License (ODbL)",
+        boundaryType: "municipality",
+        boundaryRole: "grid-city",
+        osm_type: feature.properties.osm_type,
+        osm_id: feature.properties.osm_id
+      }
+    };
+  });
 }
 
 async function main() {
@@ -120,7 +149,9 @@ async function main() {
     console.log(`${config.country} ${config.adm}: ${grid.length} grid features`);
     features.push(...grid);
   }
-  features.push(...await preservedMemberFeatures());
+  const boston = await bostonGrid();
+  console.log(`USA Boston municipalities: ${boston.length} grid features`);
+  features.push(...boston);
 
   const collection = {
     type: "FeatureCollection",
