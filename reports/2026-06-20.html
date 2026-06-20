@@ -1,0 +1,764 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stanley商学院日报 - 2026年6月20日</title>
+  <style>
+    :root {
+      --ink: #1f2933;
+      --muted: #687386;
+      --paper: #fbfaf6;
+      --line: #ded8cd;
+      --panel: #ffffff;
+      --navy: #102a43;
+      --green: #2f6b5f;
+      --gold: #b8872c;
+      --rose: #ad4f5f;
+      --blue: #2f5f9f;
+      --soft-green: #e8f1ee;
+      --soft-gold: #f7ecd4;
+      --soft-rose: #f5e5e8;
+      --soft-blue: #e8eef8;
+      --shadow: 0 18px 45px rgba(16, 42, 67, .08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        linear-gradient(90deg, rgba(16,42,67,.045) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(16,42,67,.035) 1px, transparent 1px),
+        var(--paper);
+      background-size: 36px 36px;
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif;
+      line-height: 1.78;
+    }
+
+    .page {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 40px 24px 64px;
+    }
+
+    header {
+      display: grid;
+      grid-template-columns: 1.4fr .9fr;
+      gap: 28px;
+      align-items: stretch;
+      min-height: 520px;
+      margin-bottom: 28px;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 44px;
+      border: 1px solid var(--line);
+      background: var(--navy);
+      color: #fff;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 18px;
+      border: 1px solid rgba(255,255,255,.18);
+      pointer-events: none;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      right: -120px;
+      bottom: -120px;
+      width: 320px;
+      height: 320px;
+      background:
+        linear-gradient(135deg, rgba(184,135,44,.9), rgba(173,79,95,.65));
+      transform: rotate(18deg);
+      opacity: .72;
+    }
+
+    .eyebrow {
+      position: relative;
+      z-index: 1;
+      font-size: 13px;
+      letter-spacing: 0;
+      color: rgba(255,255,255,.74);
+      text-transform: uppercase;
+    }
+
+    h1 {
+      position: relative;
+      z-index: 1;
+      margin: 76px 0 18px;
+      max-width: 760px;
+      font-size: clamp(42px, 7vw, 86px);
+      line-height: .98;
+      font-weight: 850;
+      letter-spacing: 0;
+    }
+
+    .subtitle {
+      position: relative;
+      z-index: 1;
+      max-width: 720px;
+      margin: 0;
+      font-size: 22px;
+      color: rgba(255,255,255,.84);
+    }
+
+    .hero-footer {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 44px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 5px 12px;
+      border: 1px solid rgba(255,255,255,.28);
+      color: rgba(255,255,255,.88);
+      background: rgba(255,255,255,.08);
+      font-size: 14px;
+    }
+
+    .meta-panel {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.86);
+      box-shadow: var(--shadow);
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .meta-title {
+      margin: 0 0 16px;
+      font-size: 18px;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .meta-list {
+      display: grid;
+      gap: 12px;
+      margin: 0;
+    }
+
+    .meta-row {
+      display: grid;
+      grid-template-columns: 92px 1fr;
+      gap: 14px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .meta-row span:first-child {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .meta-row span:last-child {
+      font-weight: 720;
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin: 28px 0 34px;
+    }
+
+    .metric {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 20px;
+      min-height: 126px;
+      box-shadow: 0 12px 30px rgba(31,41,51,.05);
+    }
+
+    .metric strong {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--navy);
+      font-size: 34px;
+      line-height: 1;
+    }
+
+    .metric span {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    section {
+      margin-top: 34px;
+      padding: 34px 0;
+      border-top: 2px solid var(--ink);
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: 180px 1fr 180px;
+      gap: 24px;
+      align-items: start;
+      margin-bottom: 22px;
+    }
+
+    .section-kicker {
+      color: var(--green);
+      font-weight: 850;
+      font-size: 14px;
+      text-align: left;
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    .section-head h2 {
+      grid-column: 1 / -1;
+      grid-row: 1;
+      text-align: center;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 34px;
+      line-height: 1.2;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      margin: 0;
+      font-size: 19px;
+      color: #2d3748;
+    }
+
+    .summary {
+      columns: 2 360px;
+      column-gap: 34px;
+      font-size: 17px;
+    }
+
+    .summary p {
+      break-inside: avoid;
+      margin: 0 0 18px;
+    }
+
+    .events {
+      display: grid;
+      gap: 14px;
+    }
+
+    .event {
+      display: grid;
+      grid-template-columns: 76px 1fr;
+      gap: 18px;
+      padding: 22px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      box-shadow: 0 10px 26px rgba(31,41,51,.04);
+    }
+
+    .event-no {
+      width: 52px;
+      height: 52px;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      background: var(--green);
+      font-size: 22px;
+      font-weight: 850;
+    }
+
+    .event:nth-child(3n+2) .event-no {
+      background: var(--blue);
+    }
+
+    .event:nth-child(3n) .event-no {
+      background: var(--gold);
+    }
+
+    .event h3 {
+      margin: 0 0 8px;
+      font-size: 22px;
+      line-height: 1.35;
+    }
+
+    .event p {
+      margin: 0;
+      color: #344054;
+    }
+
+    .grid-two {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .info-block {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 24px;
+    }
+
+    .info-block h3 {
+      margin: 0 0 12px;
+      font-size: 22px;
+    }
+
+    .info-block ul,
+    .info-block ol {
+      margin: 0;
+      padding-left: 21px;
+    }
+
+    .info-block li {
+      margin: 7px 0;
+    }
+
+    .highlight {
+      background: var(--soft-gold);
+      border-color: #e2c77c;
+    }
+
+    .blue {
+      background: var(--soft-blue);
+      border-color: #b8c9e6;
+    }
+
+    .green {
+      background: var(--soft-green);
+      border-color: #abc9c0;
+    }
+
+    .rose {
+      background: var(--soft-rose);
+      border-color: #d7acb5;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      overflow: hidden;
+    }
+
+    th,
+    td {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+      text-align: left;
+    }
+
+    th {
+      background: var(--navy);
+      color: #fff;
+      font-size: 14px;
+      font-weight: 760;
+    }
+
+    td {
+      font-size: 15px;
+    }
+
+    .topics {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .topic {
+      padding: 24px;
+      border: 1px solid var(--line);
+      background: var(--panel);
+    }
+
+    .topic h3 {
+      margin: 0 0 12px;
+      color: var(--navy);
+      font-size: 22px;
+    }
+
+    .topic p {
+      margin: 0;
+      color: #344054;
+    }
+
+    .actions {
+      counter-reset: action;
+      display: grid;
+      gap: 12px;
+    }
+
+    .action {
+      counter-increment: action;
+      position: relative;
+      padding: 18px 20px 18px 62px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+    }
+
+    .action::before {
+      content: counter(action);
+      position: absolute;
+      left: 18px;
+      top: 18px;
+      width: 28px;
+      height: 28px;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      background: var(--rose);
+      font-weight: 850;
+      font-size: 14px;
+    }
+
+    footer {
+      margin-top: 46px;
+      padding: 22px 0 0;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    @media (max-width: 860px) {
+      .page {
+        padding: 22px 14px 42px;
+      }
+
+      header,
+      .section-head,
+      .grid-two,
+      .topics,
+      .metrics {
+        grid-template-columns: 1fr;
+      }
+
+      header {
+        min-height: auto;
+      }
+
+      .hero {
+        min-height: 460px;
+        padding: 30px;
+      }
+
+      h1 {
+        margin-top: 62px;
+      }
+
+      .event {
+        grid-template-columns: 1fr;
+      }
+
+      .event-no {
+        width: 44px;
+        height: 44px;
+      }
+
+      .section-head h2 {
+        grid-column: auto;
+        text-align: left;
+      }
+
+      .section-kicker {
+        grid-column: auto;
+        text-align: left;
+      }
+    }
+
+    @media print {
+      body {
+        background: #fff;
+      }
+
+      .page {
+        max-width: none;
+        padding: 0;
+      }
+
+      .hero,
+      .meta-panel,
+      .metric,
+      .event,
+      .info-block,
+      .topic,
+      .action {
+        box-shadow: none;
+      }
+
+      section {
+        break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <div class="hero">
+        <div>
+          <div class="eyebrow">Daily Intelligence Report</div>
+          <h1>Stanley商学院日报</h1>
+          <p class="subtitle">Don 讨论、可复制路径、团队共学与成员继续扩容。</p>
+        </div>
+        <div class="hero-footer">
+          <span class="tag">2026年6月20日 星期六</span>
+          <span class="tag">Stanley商学院</span>
+          <span class="tag">群聊精华日报</span>
+        </div>
+      </div>
+
+      <aside class="meta-panel">
+        <div>
+          <p class="meta-title">日报元信息</p>
+          <div class="meta-list">
+            <div class="meta-row"><span>日期</span><span>2026年6月20日</span></div>
+            <div class="meta-row"><span>统计区间</span><span>2026-06-20 00:00 至 2026-06-21 00:00</span></div>
+            <div class="meta-row"><span>可见记录</span><span>01:04:36 至 23:59:48</span></div>
+            <div class="meta-row"><span>群名称</span><span>Stanley商学院</span></div>
+            <div class="meta-row"><span>定位</span><span>大学生 AI 社群 · 可复制的学习与实践网络</span></div>
+          </div>
+        </div>
+        <p class="lead">今天的核心不是单纯变热闹，而是 Stanley 借 Don 讨论把“普通人该怎么学”讲得更清楚。</p>
+      </aside>
+    </header>
+
+    <div class="metrics">
+      <div class="metric"><strong>1435</strong><span>条可见消息</span></div>
+      <div class="metric"><strong>92</strong><span>最终群成员约</span></div>
+      <div class="metric"><strong>86</strong><span>可见发言成员</span></div>
+      <div class="metric"><strong>26</strong><span>新增成员约</span></div>
+    </div>
+
+    <section>
+      <div class="section-head">
+        <div class="section-kicker">今日总结</div>
+        <h2>Don 讨论引出的可复制路径</h2>
+      </div>
+      <div class="summary">
+        <p>6 月 20 日，Stanley商学院全天可见消息 1435 条，成员规模从首日继续扩到约 92 人。新同学不断加入、自我介绍、补表和互相认识，但当天真正值得沉淀的主线，是晚上围绕 Don 的一波讨论。</p>
+        <p>19 点前后，群里有人转发 Don 的商业思维视频，大家先是在聊“Don 很懂人性”“现在还在用他的 DBS skill”“超级好用”。这本来像是一段普通的内容推荐，但 Stanley 很快把讨论拉到另一个层面：不是问这个人厉不厉害，而是问普通成员能不能沿着同样路径做出结果。</p>
+        <p>Stanley 随后设计了一个很直接的“十秒问答”：请群友用任意 AI 工具，快速说出由 Don 带出来、并且已经有影响力的学生或博主。大家一时很难给出明确案例。这个小测试的重点不是否定 Don，而是提醒大家，学习不能只看一个人多强，还要看这条路是否可复制、是否适合自己进入。</p>
+        <p>Stanley 给出的答案很清楚：学习最好找一个“你能成为他/她”的人学。不要把迈克尔杰克逊当成跳舞起点，也不要把科比当成打篮球起点。对普通人来说，真正重要的是找到切实可行、够得着、能每天推进的路径，先做自己能做的事，再慢慢厚积薄发。</p>
+        <p>这段讨论也把 Stanley商学院的底色讲得更明白：这里不是个人英雄主义，而是团队共学、开源分享和抱团打天下。Stanley 说，只要努力、人品没问题，都是他愿意培养的对象。这句话让今天的主题从“崇拜谁”变成了“我们怎么一起做出可复制的结果”。</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div class="section-kicker">今日大事件</div>
+        <h2>9 个关键节点</h2>
+      </div>
+      <div class="events">
+        <article class="event">
+          <div class="event-no">1</div>
+          <div>
+            <h3>Don 视频引发晚间核心讨论</h3>
+            <p>19 点前后，群里转发了 Don 关于商业思维和赚钱思维的视频，随后大家开始讨论 Don 的内容、DBS skill 和他对人性的理解。这段讨论成为今天最重要的思想入口。</p>
+          </div>
+        </article>
+
+        <article class="event">
+          <div class="event-no">2</div>
+          <div>
+            <h3>Stanley 用“十秒问答”检验可复制性</h3>
+            <p>Stanley 请群友用任意 AI 工具，在 10 秒内说出 1 到 2 位由 Don 带出来、并且已经有影响力的学生或博主。大家很难迅速给出明确答案，这让“厉害”和“可复制”之间的差别变得非常具体。</p>
+          </div>
+        </article>
+
+        <article class="event">
+          <div class="event-no">3</div>
+          <div>
+            <h3>学习对象的标准被重新定义</h3>
+            <p>Stanley 说，学习最好找一个“你能成为他/她”的人学。不是谁最强就学谁，而是谁的路径对你来说够得着、能拆解、能执行。这个判断对大学生尤其重要。</p>
+          </div>
+        </article>
+
+        <article class="event">
+          <div class="event-no">4</div>
+          <div>
+            <h3>“不要对标迈克尔杰克逊和科比”成为关键比喻</h3>
+            <p>Stanley 用跳舞和篮球做类比：普通人学跳舞不该一上来对标迈克尔杰克逊，打篮球也不该一上来对标科比。先找到切实可行的训练方式，才不会在过高对标里快速挫败。</p>
+          </div>
+        </article>
+
+        <article class="event">
+          <div class="event-no">5</div>
+          <div>
+            <h3>从个人英雄主义转向团队共学</h3>
+            <p>Stanley 明确说，这里不是个人英雄主义，而是一个团队。一个人做不了太多事，真正能持续的是互相分享、互相托举，把可用的方法开源给更多同学。</p>
+          </div>
+        </article>
+
+        <article class="event">
+          <div class="event-no">6</div>
+          <div>
+            <h3>“do what u can do”成为执行落点</h3>
+            <p>这段讨论最后落在一句非常朴素的话上：先做你能做的事。少一点空泛大道理，多一点脚踏实地；先把小结果做出来，再谈厚积薄发。</p>
+          </div>
+        </article>
+
+        <article class="event">
+          <div class="event-no">7</div>
+          <div>
+            <h3>6 月 19 日日报回流群内</h3>
+            <p>上午，前一日的 Stanley商学院日报被作为 HTML 文件发到群里。日报不再只是生成一个文件，而开始成为群内复盘、共识沉淀和后续传播的固定载体。</p>
+          </div>
+        </article>
+
+        <article class="event">
+          <div class="event-no">8</div>
+          <div>
+            <h3>成员继续扩容，学生画像继续补全</h3>
+            <p>全天约 26 位新成员加入，群成员规模来到约 92 人。新同学持续自我介绍，覆盖不同城市、学校、年级和方向，学生名册也继续补充。</p>
+          </div>
+        </article>
+
+        <article class="event">
+          <div class="event-no">9</div>
+          <div>
+            <h3>Space、表格和报告继续沉淀为社群资产</h3>
+            <p>当天围绕 Space 报告、学生名册和公开表的讨论继续推进。群里的交流正在从“消息流”变成可反复查看、可复用、可继续建设的资料体系。</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div class="section-kicker">数据概览</div>
+        <h2>活跃、扩容和讨论峰值</h2>
+      </div>
+      <div class="grid-two">
+        <div class="info-block green">
+          <h3>聊天数据</h3>
+          <ul>
+            <li>消息总数：1435 条</li>
+            <li>可见记录：01:04:36 至 23:59:48</li>
+            <li>可见发言成员：86 人</li>
+            <li>最终群成员：约 92 人</li>
+            <li>新增成员：约 26 人</li>
+            <li>统计区间：2026-06-20 00:00 至 2026-06-21 00:00</li>
+          </ul>
+        </div>
+        <div class="info-block blue">
+          <h3>高峰时段</h3>
+          <ul>
+            <li>16:15 - 20:55：682 条，Don 讨论、可复制路径、成员互动集中爆发。</li>
+            <li>12:25 - 15:06：366 条，新成员加入、自我介绍和学生信息补充。</li>
+            <li>10:47 - 12:25：150 条，日报回流、文件分享和群内信息同步。</li>
+            <li>21:15 - 23:11：90 条，晚间继续补充成员信息和社群资料。</li>
+          </ul>
+        </div>
+      </div>
+
+      <div style="margin-top: 18px; overflow-x: auto;">
+        <table>
+          <thead>
+            <tr>
+              <th>主题</th>
+              <th>口径</th>
+              <th>说明</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Stanley</td><td>核心发言</td><td>把 Don 讨论转化为“可复制路径”的学习原则，并强调团队、开源和抱团打天下。</td></tr>
+            <tr><td>Don 相关讨论</td><td>晚间主线</td><td>从内容推荐延伸到学习对象、路径复制、普通人执行方式和社群定位。</td></tr>
+            <tr><td>新成员</td><td>约 26 人</td><td>持续补充自我介绍、城市、学校、方向和可协作信息。</td></tr>
+            <tr><td>日报机制</td><td>开始回流</td><td>6 月 19 日日报在群内分享，成为社群复盘与外部展示的固定材料。</td></tr>
+            <tr><td>资料沉淀</td><td>持续推进</td><td>围绕学生名册、公开表、Space 报告和文件汇总继续形成资料体系。</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div class="section-kicker">主题精华</div>
+        <h2>今天最值得沉淀的 4 条线</h2>
+      </div>
+      <div class="topics">
+        <article class="topic">
+          <h3>1. 可复制路径</h3>
+          <p>今天最重要的不是“Don 值不值得学”，而是 Stanley 把问题改成了“这条路普通人能不能学”。对群里的学生来说，找到够得着、能拆解、能每天执行的路径，比仰望一个天才更有价值。</p>
+        </article>
+        <article class="topic">
+          <h3>2. 团队而非个人英雄</h3>
+          <p>Stanley 明确说，这里不是个人英雄主义，而是团队。个人可以很强，但社群要长期有价值，靠的是互相分享、互相托举、把方法开源出去，让更多人能跟上。</p>
+        </article>
+        <article class="topic">
+          <h3>3. 新同学扩容与画像补全</h3>
+          <p>群成员继续增长，新同学持续补充城市、学校、专业、方向和社交账号。这个动作看起来基础，但它会决定后续谁能找到同伴、谁能接到资源、谁能参与项目。</p>
+        </article>
+        <article class="topic">
+          <h3>4. 日报、Space 和表格成为沉淀工具</h3>
+          <p>6 月 19 日日报回流群内，Space 报告和公开表也继续出现。群聊里的高密度信息需要被整理成可回看、可转发、可复用的资料，这会让社群从热闹走向持续建设。</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div class="section-kicker">行动建议</div>
+        <h2>明日可继续推进</h2>
+      </div>
+      <div class="actions">
+        <div class="action">把今晚 Don 讨论整理成一篇群内可读的短文：主题放在“普通人如何选择可复制路径”，避免写成对任何人的评价。</div>
+        <div class="action">继续补齐新同学名册，重点补城市、学校、专业、年级、关注方向、X 账号和可参与项目。</div>
+        <div class="action">把日报、Space 报告和成员表形成固定入口，让新成员进群后能快速了解过去发生了什么。</div>
+        <div class="action">建立一个“可复制案例库”，从普通学生能做到的小任务开始记录：用了什么工具、做了什么结果、下一步怎么复制。</div>
+        <div class="action">把“do what u can do”做成日常行动原则：少对标神话，多做当前能推进的一步。</div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div class="section-kicker">一句话复盘</div>
+        <h2>今天的 Stanley商学院，把崇拜对象转成了行动路径。</h2>
+      </div>
+      <div class="grid-two">
+        <div class="info-block highlight">
+          <h3>已经跑通</h3>
+          <ul>
+            <li>Don 讨论被转化成普通人可执行的学习原则。</li>
+            <li>“可复制路径”成为今天最重要的社群共识。</li>
+            <li>日报开始回流群内，复盘机制进入使用。</li>
+            <li>成员继续扩容，学生画像继续补全。</li>
+            <li>团队、开源、抱团打天下的定位更清楚。</li>
+          </ul>
+        </div>
+        <div class="info-block rose">
+          <h3>继续补齐</h3>
+          <ul>
+            <li>把今晚的讨论沉淀成更短、更容易转发的版本。</li>
+            <li>把“可复制路径”从理念落到具体任务和案例。</li>
+            <li>继续降低新同学进群后的信息获取成本。</li>
+            <li>让表格、日报和 Space 报告互相链接起来。</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>本日报统计口径为 2026-06-20 00:00 至 2026-06-21 00:00 的本地可见聊天记录；跨日记录仅计入 2026-06-20 23:59:59 之前内容。</p>
+    </footer>
+  </main>
+</body>
+</html>
