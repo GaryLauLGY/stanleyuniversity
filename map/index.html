@@ -443,7 +443,7 @@
         1px 0 0 rgba(255,255,255,0.78),
         -1px 0 0 rgba(255,255,255,0.78),
         0 2px 4px rgba(70, 58, 48, 0.18);
-      transform: translateY(-1px) scale(var(--label-scale, 1));
+      transform: translateY(-1px);
       transform-origin: center;
     }
 
@@ -1207,15 +1207,6 @@
       return element;
     }
 
-    function updateMapLabelScale() {
-      if (!map) return;
-      const zoom = map.getZoom();
-      const width = map.getContainer().clientWidth || window.innerWidth;
-      const viewportFactor = width < 680 ? 0.86 : 1;
-      const zoomFactor = Math.min(1.12, Math.max(0.74, 0.68 + zoom * 0.06));
-      map.getContainer().style.setProperty("--label-scale", (zoomFactor * viewportFactor).toFixed(2));
-    }
-
     function clearMapLabels() {
       for (const marker of mapLabelMarkers) marker.remove();
       mapLabelMarkers = [];
@@ -1244,7 +1235,6 @@
         if (!row.overseasId || !row.count) continue;
         addMapLabel(row.label, row.count, [row.lng, row.lat]);
       }
-      updateMapLabelScale();
     }
 
     function overseasPolygon(id, label, count, note, centerLng, centerLat, dx, dy) {
@@ -1473,9 +1463,6 @@
       });
       window.studentBlockMap = map;
       map.addControl(new maplibregl.NavigationControl({ visualizePitch: false }), "top-right");
-      map.on("load", updateMapLabelScale);
-      map.on("zoom", updateMapLabelScale);
-      map.on("resize", updateMapLabelScale);
       let layersReady = false;
       map.on("style.load", async () => {
         if (layersReady) return;
