@@ -373,8 +373,12 @@
 
     .map-label {
       pointer-events: none;
-      min-width: 46px;
-      padding: 3px 7px 4px;
+    }
+
+    .map-label-card {
+      width: 58px;
+      min-height: 34px;
+      padding: 4px 7px 5px;
       border: 1px solid rgba(255, 255, 255, 0.72);
       border-radius: 7px;
       color: #2e2e2e;
@@ -383,21 +387,24 @@
       text-align: center;
       font-weight: 850;
       line-height: 1.15;
-      transform: translateY(-2px);
+      transform: translateY(-2px) scale(var(--label-scale, 1));
+      transform-origin: center;
       backdrop-filter: blur(5px);
     }
 
-    .map-label strong,
-    .map-label span {
+    .map-label-card strong,
+    .map-label-card span {
       display: block;
       white-space: nowrap;
     }
 
-    .map-label strong {
+    .map-label-card strong {
+      overflow: hidden;
       font-size: 12px;
+      text-overflow: ellipsis;
     }
 
-    .map-label span {
+    .map-label-card span {
       margin-top: 2px;
       color: var(--text-dim);
       font-size: 10px;
@@ -1031,8 +1038,17 @@
     function labelElement(label, count) {
       const element = document.createElement("div");
       element.className = "map-label";
-      element.innerHTML = `<strong>${label}</strong><span>${count}人</span>`;
+      element.innerHTML = `<div class="map-label-card"><strong>${label}</strong><span>${count}人</span></div>`;
       return element;
+    }
+
+    function updateMapLabelScale() {
+      if (!map) return;
+      const zoom = map.getZoom();
+      const width = map.getContainer().clientWidth || window.innerWidth;
+      const viewportFactor = width < 680 ? 0.88 : 1;
+      const zoomFactor = Math.min(1.28, Math.max(0.78, 0.72 + zoom * 0.08));
+      map.getContainer().style.setProperty("--label-scale", (zoomFactor * viewportFactor).toFixed(2));
     }
 
     function clearMapLabels() {
@@ -1063,6 +1079,7 @@
         if (!row.overseasId || !row.count) continue;
         addMapLabel(row.label, row.count, [row.lng, row.lat]);
       }
+      updateMapLabelScale();
     }
 
     function overseasPolygon(id, label, count, note, centerLng, centerLat, dx, dy) {
@@ -1291,6 +1308,9 @@
       });
       window.studentBlockMap = map;
       map.addControl(new maplibregl.NavigationControl({ visualizePitch: false }), "top-right");
+      map.on("load", updateMapLabelScale);
+      map.on("zoom", updateMapLabelScale);
+      map.on("resize", updateMapLabelScale);
       let layersReady = false;
       map.on("style.load", async () => {
         if (layersReady) return;
