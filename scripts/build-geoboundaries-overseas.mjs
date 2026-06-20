@@ -3,7 +3,7 @@ import { dirname, join, resolve } from "node:path";
 
 const ROOT = resolve(import.meta.dirname, "..");
 const OUT_FILE = join(ROOT, "data/overseas-admin-boundaries.json");
-const BOSTON_GRID_FILE = join(ROOT, "data/sources/us-boston-municipalities.geojson");
+const US_PLACE_GRID_FILE = join(ROOT, "data/sources/us-place-boundaries.geojson");
 const USER_AGENT = process.env.GEOBOUNDARIES_USER_AGENT || "stanleyuniversity-map/1.0 (https://stanleyuniversity.garylau.ai/map/)";
 
 const greaterSydneyLgas = [
@@ -113,30 +113,31 @@ async function geoboundariesGrid(config) {
   });
 }
 
-async function bostonGrid() {
-  const data = JSON.parse(await readFile(BOSTON_GRID_FILE, "utf8"));
+async function usPlaceGrid() {
+  const data = JSON.parse(await readFile(US_PLACE_GRID_FILE, "utf8"));
   return data.features.map((feature) => {
-    const isBoston = feature.properties.memberId === "boston" || feature.properties.name === "波士顿";
-    const sourceName = isBoston ? "Boston" : feature.properties.sourceName || feature.properties.name;
+    const isBoston = feature.properties.GEOID === "2507000";
+    const sourceName = feature.properties.NAMELSAD || feature.properties.NAME;
     return {
       type: "Feature",
       geometry: roundGeometry(feature.geometry),
       properties: {
-        id: isBoston ? "boston" : `osm-us-ma-${slug(sourceName)}`,
+        id: isBoston ? "boston" : `us-place-${feature.properties.GEOID || slug(sourceName)}`,
         memberId: isBoston ? "boston" : "",
         name: isBoston ? "波士顿" : sourceName,
         name_en: sourceName,
-        note: isBoston ? "美国波士顿市级边界" : "美国马萨诸塞城市/镇区块",
+        note: isBoston ? "美国波士顿市级边界" : "美国城市/镇边界",
         sourceName,
-        display_name: feature.properties.display_name || `${sourceName}, Massachusetts, United States`,
+        display_name: `${sourceName}, ${feature.properties.STATE_NAME || "United States"}`,
         country: "USA",
-        boundarySource: "OpenStreetMap / Nominatim",
-        boundarySourceURL: "https://www.openstreetmap.org/",
-        boundaryLicense: "Open Database License (ODbL)",
-        boundaryType: "municipality",
+        boundarySource: "U.S. Census Bureau Cartographic Boundary Files via CitySDK",
+        boundarySourceURL: "https://uscensusbureau.github.io/citysdk/docs/",
+        boundaryLicense: "U.S. Government public domain",
+        boundaryType: "place",
         boundaryRole: "grid-city",
-        osm_type: feature.properties.osm_type,
-        osm_id: feature.properties.osm_id
+        geoid: feature.properties.GEOID,
+        state: feature.properties.STUSPS,
+        stateName: feature.properties.STATE_NAME
       }
     };
   });
@@ -149,9 +150,9 @@ async function main() {
     console.log(`${config.country} ${config.adm}: ${grid.length} grid features`);
     features.push(...grid);
   }
-  const boston = await bostonGrid();
-  console.log(`USA Boston municipalities: ${boston.length} grid features`);
-  features.push(...boston);
+  const usPlaces = await usPlaceGrid();
+  console.log(`USA places: ${usPlaces.length} grid features`);
+  features.push(...usPlaces);
 
   const collection = {
     type: "FeatureCollection",
