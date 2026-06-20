@@ -1023,7 +1023,8 @@
     function focusRow(row) {
       if (!row || !map) return;
       activeLabel = row.label;
-      map.flyTo({ center: [row.lng, row.lat], zoom: row.overseasId ? 9.4 : 4.9, speed: 1.2, curve: 1.25 });
+      const zoom = row.overseasId === "sydney" ? 7.75 : (row.overseasId ? 9.4 : 4.9);
+      map.flyTo({ center: [row.lng, row.lat], zoom, speed: 1.2, curve: 1.25 });
       renderList();
       applyLayerFilters();
     }

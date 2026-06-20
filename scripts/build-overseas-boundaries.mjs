@@ -12,7 +12,7 @@ const OVERPASS_ENDPOINTS = [
 const memberBoundaryIds = new Map([
   ["R536780", { id: "singapore", name: "新加坡", name_en: "Singapore", note: "海外市级行政边界" }],
   ["R2315704", { id: "boston", name: "波士顿", name_en: "Boston", note: "海外市级行政边界" }],
-  ["R1251066", { id: "sydney", name: "悉尼", name_en: "City of Sydney", note: "海外市级行政边界" }]
+  ["R5750005", { id: "sydney", name: "悉尼", name_en: "Sydney", note: "海外都会区边界" }]
 ]);
 
 const regions = [
