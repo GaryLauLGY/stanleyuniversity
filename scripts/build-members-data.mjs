@@ -57,6 +57,7 @@ const cityCatalog = [
   { label: "北京", provinceLabel: "北京", note: "北京市", lng: 116.4074, lat: 39.9042, chinaNames: ["北京市"], aliases: ["北京", "北京市"] },
   { label: "天津", provinceLabel: "天津", note: "天津市", lng: 117.2009, lat: 39.0842, chinaNames: ["天津市"], aliases: ["天津", "天津市"] },
   { label: "重庆", provinceLabel: "重庆", note: "重庆市", lng: 106.504962, lat: 29.533155, chinaNames: ["重庆市"], aliases: ["重庆", "重庆市"] },
+  { label: "长春", provinceLabel: "吉林", note: "长春市", lng: 125.3245, lat: 43.886841, chinaNames: ["长春市"], aliases: ["长春", "长春市", "吉林长春"] },
   { label: "大连", provinceLabel: "辽宁", note: "大连市", lng: 121.6147, lat: 38.914, chinaNames: ["大连市"], aliases: ["大连", "大连市"] },
   { label: "成都", provinceLabel: "四川", note: "成都市", lng: 104.065735, lat: 30.659462, chinaNames: ["成都市"], aliases: ["成都", "成都市"] },
   { label: "广州", provinceLabel: "广东", note: "广州市", lng: 113.280637, lat: 23.125178, chinaNames: ["广州市"], aliases: ["广州", "广州市"] },
@@ -98,6 +99,14 @@ function isDualCity(value) {
   const raw = String(value || "").trim();
   const normalized = normalizeCity(raw);
   return normalized.includes("/") || raw.includes("与");
+}
+
+function primaryCityOverride(value) {
+  const normalized = normalizeCity(value);
+  if (normalized === "长春/济南") return "长春";
+  if (normalized === "常州/北京") return "北京";
+  if (normalized === "泉州/厦门") return "厦门";
+  return "";
 }
 
 function textCell(value) {
@@ -223,12 +232,13 @@ function buildMapData(records) {
 
   for (const record of records) {
     const student = memberRecord(record.registeredName || record.name, record.wechatName);
-    const city = normalizeCity(record.city);
+    const primaryCity = primaryCityOverride(record.city);
+    const city = normalizeCity(primaryCity || record.city);
     if (!city) {
       unrecordedStudents.push(student);
       continue;
     }
-    if (isDualCity(record.city)) {
+    if (!primaryCity && isDualCity(record.city)) {
       excludedDualCityStudents.push({ ...student, city: record.city });
       continue;
     }

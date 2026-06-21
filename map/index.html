@@ -8,22 +8,22 @@
   <link rel="stylesheet" href="../assets/maplibre-gl.css">
   <style>
     :root {
-      --bg: #f8f9f6;
-      --bg-sidebar: #eef2ee;
-      --bg-hover: #e5ece5;
+      --bg: #fffaf4;
+      --bg-sidebar: #fff1df;
+      --bg-hover: #ffe6ca;
       --bg-elev: #ffffff;
-      --border: #dce3dc;
-      --border-strong: #c8d2c8;
-      --text: #28312f;
-      --text-dim: #68716c;
-      --text-faint: #929a94;
-      --accent: #6468d9;
-      --green: #4f9b73;
-      --amber: #d9a13b;
-      --red: #e65f55;
-      --empty: rgba(249, 247, 241, 0.42);
-      --empty-border: rgba(223, 197, 190, 0.74);
-      --shadow: 0 1px 3px rgba(29, 38, 34, 0.04), 0 8px 24px rgba(29, 38, 34, 0.08);
+      --border: #efd8bd;
+      --border-strong: #e0bd91;
+      --text: #332822;
+      --text-dim: #78665b;
+      --text-faint: #a79386;
+      --accent: #7b61ff;
+      --green: #56c58b;
+      --amber: #ffb84d;
+      --red: #ff695f;
+      --empty: rgba(255, 246, 234, 0.5);
+      --empty-border: rgba(234, 184, 150, 0.66);
+      --shadow: 0 1px 3px rgba(84, 50, 28, 0.05), 0 10px 26px rgba(84, 50, 28, 0.09);
     }
 
     * { box-sizing: border-box; }
@@ -66,7 +66,7 @@
     .traffic .g { background: #28c840; }
 
     .window-title {
-      color: #5f6964;
+      color: #715d50;
       font-size: 15px;
       font-weight: 800;
     }
@@ -112,10 +112,10 @@
       max-width: 230px;
       min-height: 30px;
       padding: 5px 9px;
-      border: 1px solid rgba(79, 155, 115, 0.2);
+      border: 1px solid rgba(86, 197, 139, 0.24);
       border-radius: 999px;
       color: var(--text-dim);
-      background: rgba(255,255,255,0.68);
+      background: rgba(255,255,255,0.72);
       font-size: 11px;
       font-weight: 780;
       white-space: nowrap;
@@ -127,7 +127,7 @@
       height: 7px;
       border-radius: 50%;
       background: var(--green);
-      box-shadow: 0 0 0 3px rgba(74, 157, 90, 0.12);
+      box-shadow: 0 0 0 3px rgba(86, 197, 139, 0.14);
       flex-shrink: 0;
     }
 
@@ -154,7 +154,7 @@
       padding: 4px;
       border: 1px solid var(--border);
       border-radius: 8px;
-      background: rgba(255,255,255,0.76);
+      background: rgba(255,255,255,0.8);
       box-shadow: var(--shadow);
     }
 
@@ -198,8 +198,8 @@
     .view-btn.active,
     .map-mode-btn.active {
       color: var(--text);
-      background: #f1f2ff;
-      box-shadow: inset 0 0 0 1px rgba(100, 104, 217, 0.14);
+      background: #f4f0ff;
+      box-shadow: inset 0 0 0 1px rgba(123, 97, 255, 0.15);
     }
 
     .view-count {
@@ -220,7 +220,7 @@
 
     .view-btn.active .view-count {
       color: var(--accent);
-      background: #e8eaff;
+      background: #ebe5ff;
     }
 
     .mode-dot {
@@ -302,12 +302,12 @@
     .province-group {
       margin-bottom: 5px;
       border-radius: 7px;
-      background: rgba(255,255,255,0.34);
-      box-shadow: inset 0 0 0 1px rgba(220, 227, 220, 0.64);
+      background: rgba(255,255,255,0.42);
+      box-shadow: inset 0 0 0 1px rgba(239, 216, 189, 0.72);
     }
 
     .province-group > .tree-row {
-      background: rgba(255,255,255,0.42);
+      background: rgba(255,255,255,0.52);
     }
 
     .province-group .city-children {
@@ -341,7 +341,7 @@
     .tree-row.active { background: var(--bg-hover); }
 
     .tree-row.active {
-      border-color: rgba(100, 104, 217, 0.2);
+      border-color: rgba(123, 97, 255, 0.22);
       color: var(--accent);
     }
 
@@ -352,7 +352,7 @@
 
     .tree-item.expanded {
       background: rgba(255, 255, 255, 0.58);
-      box-shadow: inset 0 0 0 1px rgba(220, 227, 220, 0.9), 0 8px 18px rgba(42, 52, 48, 0.06);
+      box-shadow: inset 0 0 0 1px rgba(239, 216, 189, 0.92), 0 8px 18px rgba(84, 50, 28, 0.07);
     }
 
     .tree-item .tree-row {
@@ -401,7 +401,7 @@
       padding: 7px 9px;
       border: 1px solid var(--border);
       border-radius: 7px;
-      background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(247,249,246,0.78));
+      background: linear-gradient(180deg, rgba(255,255,255,0.92), rgba(255,248,238,0.82));
       color: var(--text-dim);
       box-shadow: 0 1px 2px rgba(0,0,0,0.03);
       overflow: hidden;
@@ -479,7 +479,7 @@
       position: relative;
       min-width: 0;
       min-height: 0;
-      background: radial-gradient(ellipse at center, #f4f7f2 0%, #dfe6dd 100%);
+      background: radial-gradient(ellipse at center, #fff8ed 0%, #f0dcc2 100%);
     }
 
     #map {
@@ -552,7 +552,7 @@
       border: 1px solid var(--border);
       border-radius: 8px;
       color: var(--text-dim);
-      background: rgba(248, 249, 246, 0.92);
+      background: rgba(255, 250, 244, 0.94);
       box-shadow: var(--shadow);
       font-size: 12px;
       font-weight: 650;
@@ -588,7 +588,7 @@
       width: 142px;
       height: 142px;
       border-radius: 50%;
-      background: conic-gradient(#d9ded7 0 100%);
+      background: conic-gradient(#eadfd3 0 100%);
       position: relative;
       box-shadow: inset 0 0 0 1px rgba(0,0,0,0.04);
     }
@@ -699,9 +699,9 @@
     .form-card {
       margin-top: 14px;
       padding: 13px;
-      border: 1px solid rgba(100, 104, 217, 0.14);
+      border: 1px solid rgba(123, 97, 255, 0.14);
       border-radius: 8px;
-      background: linear-gradient(180deg, rgba(241,242,255,0.76), rgba(255,255,255,0.94));
+      background: linear-gradient(180deg, rgba(244,240,255,0.78), rgba(255,255,255,0.95));
       box-shadow: 0 1px 2px rgba(0,0,0,0.03), 0 10px 22px rgba(83, 78, 68, 0.05);
     }
 
@@ -729,7 +729,7 @@
       width: 100%;
       min-height: 36px;
       padding: 8px 10px;
-      border: 1px solid rgba(100, 104, 217, 0.2);
+      border: 1px solid rgba(123, 97, 255, 0.2);
       border-radius: 7px;
       color: var(--accent);
       background: rgba(255,255,255,0.72);
@@ -740,7 +740,7 @@
     }
 
     .form-link:hover {
-      border-color: rgba(100, 104, 217, 0.36);
+      border-color: rgba(123, 97, 255, 0.36);
       background: #fff;
       transform: translateY(-1px);
     }
@@ -995,7 +995,7 @@
         {
           id: "offline-ocean",
           type: "background",
-          paint: { "background-color": "#cfe8e9" }
+          paint: { "background-color": "#cfeff0" }
         }
       ]
     };
@@ -1054,10 +1054,10 @@
     const amber = getComputedStyle(document.documentElement).getPropertyValue("--amber").trim();
     const green = getComputedStyle(document.documentElement).getPropertyValue("--green").trim();
     const pieColors = [
-      "#e65f55", "#d9a13b", "#4f9b73", "#3f8fb6", "#6468d9", "#c45f9d",
-      "#8c7644", "#369783", "#c66f45", "#5b7fab", "#7f9560", "#a96b57",
-      "#4b9b9a", "#bd8d3a", "#6f8f73", "#9977b9", "#d07c83", "#7890a8",
-      "#b3a064", "#8a7fbc", "#5f9f61", "#c58a5a", "#d4d1c8", "#e1ded6"
+      "#ff695f", "#ffb84d", "#56c58b", "#39b8d8", "#7b61ff", "#ff7bbd",
+      "#ff8d54", "#71d4a1", "#4ccfe3", "#a98cff", "#ffc857", "#ff9aa2",
+      "#6ed3c4", "#f59f6b", "#8bd36d", "#d285ff", "#ffcf7a", "#7eb7ff",
+      "#ff7f6e", "#b6dc62", "#67c6ff", "#f48fc8", "#eadfd3", "#f2e8dc"
     ];
     let map;
     let filter = "all";
@@ -1533,7 +1533,7 @@
           displayLabel: row?.label || feature.properties.name,
           studentCount: count,
           note: row?.note || feature.properties.note || "海外市级行政边界",
-          color: count ? colorFor(count) : "rgba(249, 247, 241, 0.42)"
+          color: count ? colorFor(count) : "rgba(255, 246, 234, 0.5)"
         }
       };
     }
@@ -1590,7 +1590,7 @@
       const count = cityCountByName.get(name) || 0;
       feature.properties.studentCount = count;
       feature.properties.displayLabel = cityLabelByName.get(name) || name;
-      feature.properties.color = count ? colorFor(count) : "rgba(249, 247, 241, 0.42)";
+      feature.properties.color = count ? colorFor(count) : "rgba(255, 246, 234, 0.5)";
     }
 
     function polygonParts(geometry) {
@@ -1628,7 +1628,7 @@
                 centroid: [row.lng, row.lat],
                 level: "province",
                 studentCount: row.count,
-                color: row.count ? colorFor(row.count) : "rgba(249, 247, 241, 0.42)"
+                color: row.count ? colorFor(row.count) : "rgba(255, 246, 234, 0.5)"
               }
             };
           })
@@ -1650,25 +1650,25 @@
         id: "world-land-fill",
         type: "fill",
         source: "world-land",
-        paint: { "fill-color": "#fbfaf6", "fill-opacity": 0.94 }
+        paint: { "fill-color": "#fff9ef", "fill-opacity": 0.95 }
       });
       map.addLayer({
         id: "world-land-lines",
         type: "line",
         source: "world-land",
-        paint: { "line-color": "rgba(220, 190, 184, 0.58)", "line-width": 0.45 }
+        paint: { "line-color": "rgba(234, 184, 150, 0.56)", "line-width": 0.45 }
       });
       map.addLayer({
         id: "china-empty",
         type: "fill",
         source: "china-cities",
-        paint: { "fill-color": "rgba(249, 247, 241, 0.46)", "fill-opacity": 0.72 }
+        paint: { "fill-color": "rgba(255, 246, 234, 0.54)", "fill-opacity": 0.72 }
       });
       map.addLayer({
         id: "china-boundaries",
         type: "line",
         source: "china-cities",
-        paint: { "line-color": "rgba(220, 190, 184, 0.82)", "line-width": 0.55 }
+        paint: { "line-color": "rgba(234, 184, 150, 0.78)", "line-width": 0.55 }
       });
       map.addLayer({
         id: "china-filled",
@@ -1685,21 +1685,21 @@
         type: "line",
         source: "china-cities",
         filter: activeExpression(),
-        paint: { "line-color": "#6468d9", "line-width": 2.4 }
+        paint: { "line-color": "#7b61ff", "line-width": 2.4 }
       });
       map.addLayer({
         id: "china-province-empty",
         type: "fill",
         source: "china-provinces",
         layout: { visibility: "none" },
-        paint: { "fill-color": "rgba(249, 247, 241, 0.46)", "fill-opacity": 0.7 }
+        paint: { "fill-color": "rgba(255, 246, 234, 0.54)", "fill-opacity": 0.7 }
       });
       map.addLayer({
         id: "china-province-boundaries",
         type: "line",
         source: "china-provinces",
         layout: { visibility: "none" },
-        paint: { "line-color": "rgba(211, 179, 172, 0.9)", "line-width": ["interpolate", ["linear"], ["zoom"], 1, 0.45, 4, 0.85, 6, 1.2] }
+        paint: { "line-color": "rgba(226, 169, 132, 0.86)", "line-width": ["interpolate", ["linear"], ["zoom"], 1, 0.45, 4, 0.85, 6, 1.2] }
       });
       map.addLayer({
         id: "china-province-filled",
@@ -1718,7 +1718,7 @@
         source: "china-provinces",
         layout: { visibility: "none" },
         filter: activeExpression(),
-        paint: { "line-color": "#6468d9", "line-width": 2.6 }
+        paint: { "line-color": "#7b61ff", "line-width": 2.6 }
       });
 
       map.addLayer({
@@ -1726,7 +1726,7 @@
         type: "line",
         source: "overseas-region-boundaries",
         paint: {
-          "line-color": "rgba(199, 164, 158, 0.9)",
+          "line-color": "rgba(226, 169, 132, 0.82)",
           "line-width": ["interpolate", ["linear"], ["zoom"], 1, 0.55, 4, 0.75, 7, 1.05],
           "line-opacity": ["interpolate", ["linear"], ["zoom"], 1, 0.72, 4, 0.86, 7, 0.58],
           "line-dasharray": [2, 2]
@@ -1737,7 +1737,7 @@
         id: "overseas-empty",
         type: "fill",
         source: "overseas-city-blocks",
-        paint: { "fill-color": "rgba(249, 247, 241, 0.46)", "fill-opacity": 0.75 }
+        paint: { "fill-color": "rgba(255, 246, 234, 0.54)", "fill-opacity": 0.75 }
       });
       map.addLayer({
         id: "overseas-filled",
@@ -1751,7 +1751,7 @@
         type: "line",
         source: "overseas-city-blocks",
         paint: {
-          "line-color": "rgba(205, 173, 166, 0.88)",
+          "line-color": "rgba(226, 169, 132, 0.82)",
           "line-width": ["interpolate", ["linear"], ["zoom"], 1, 0.32, 4, 0.5, 7, 0.85, 10, 1.15],
           "line-opacity": ["interpolate", ["linear"], ["zoom"], 1, 0.08, 4, 0.18, 6, 0.5, 9, 0.88]
         }
@@ -1761,7 +1761,7 @@
         type: "line",
         source: "overseas-city-blocks",
         filter: activeExpression(),
-        paint: { "line-color": "#6468d9", "line-width": 2.6 }
+        paint: { "line-color": "#7b61ff", "line-width": 2.6 }
       });
 
       for (const layer of ["china-filled", "china-province-filled", "overseas-filled"]) {
