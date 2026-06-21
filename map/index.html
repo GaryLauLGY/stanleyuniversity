@@ -886,7 +886,7 @@
           </div>
           <ul class="note-list">
             <li><span>落图人数</span><strong id="locatedMembersMetric">22</strong></li>
-            <li><span>省级未落市</span><strong id="provinceOnlyMetric">2</strong></li>
+            <li><span>未落图地点</span><strong id="provinceOnlyMetric">2</strong></li>
             <li><span>双地点未落图</span><strong id="excludedDualCityMetric">0</strong></li>
             <li><span>未记录成员</span><strong id="unrecordedMetric">18</strong></li>
           </ul>
@@ -1113,7 +1113,7 @@
     function pieSegments() {
       return [
         ...PLACE_ROWS.map((row, index) => ({ label: row.label, count: row.count, color: pieColors[index % pieColors.length] })),
-        { label: "省级未落市", count: PROVINCE_ONLY_MEMBERS, color: "#bcb8b0" },
+        { label: "未落图地点", count: PROVINCE_ONLY_MEMBERS, color: "#bcb8b0" },
         { label: "双地点未落图", count: EXCLUDED_DUAL_CITY_MEMBERS, color: "#cec8bd" },
         { label: "未记录成员", count: UNRECORDED_MEMBERS, color: "#d8d5cf" }
       ];
