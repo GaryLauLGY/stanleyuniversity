@@ -829,13 +829,21 @@
     }
 
     @media (max-width: 680px) {
-      body { background: var(--bg-sidebar); }
+      html,
+      body {
+        height: 100%;
+        overflow: hidden;
+      }
+      body {
+        display: grid;
+        grid-template-rows: auto minmax(0, 1fr);
+        background: var(--bg-sidebar);
+      }
       .titlebar {
         display: none;
       }
       .app-header {
-        position: sticky;
-        top: 0;
+        position: relative;
         z-index: 6;
         grid-template-columns: minmax(0, 1fr) auto;
         grid-template-areas:
@@ -894,9 +902,20 @@
         min-width: 74px;
         min-height: 34px;
       }
+      .app-main {
+        height: 100%;
+        min-height: 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: minmax(300px, 52svh) minmax(0, 1fr);
+        overflow: hidden;
+      }
       .map-wrap {
-        height: 52svh;
-        min-height: 330px;
+        order: 0;
+        grid-row: 1;
+        height: auto;
+        min-height: 0;
+        border-bottom: 1px solid var(--border);
       }
       .maplibregl-ctrl-top-right {
         top: 10px;
@@ -913,9 +932,25 @@
         max-width: none;
         font-size: 11px;
       }
+      .place-tree {
+        order: 1;
+        grid-row: 2;
+        min-height: 0;
+        height: auto;
+        overflow: hidden;
+      }
+      .tree-header {
+        flex-shrink: 0;
+        min-height: 46px;
+        background: rgba(238,242,238,0.96);
+      }
       .tree-body {
+        flex: 1;
+        min-height: 0;
+        overflow-y: auto;
         max-height: none;
         padding: 8px 10px 16px;
+        -webkit-overflow-scrolling: touch;
       }
       .tree-row {
         min-height: 54px;
@@ -941,6 +976,9 @@
       .student-list {
         grid-template-columns: 1fr;
         padding: 0 10px 12px 34px;
+      }
+      .data-panel {
+        display: none;
       }
       .data-body {
         padding: 12px;
@@ -1497,7 +1535,17 @@
       const activeRow = list.querySelector(".tree-row.active");
       if (!activeRow) return;
       const target = activeRow.closest(".tree-item, .province-group") || activeRow;
+      const fixedMobile = window.matchMedia("(max-width: 680px)").matches;
       const isNarrow = window.matchMedia("(max-width: 980px)").matches;
+      if (fixedMobile) {
+        const container = document.querySelector(".tree-body");
+        if (!container) return;
+        const containerRect = container.getBoundingClientRect();
+        const targetRect = activeRow.getBoundingClientRect();
+        const centeredOffset = targetRect.top - containerRect.top - ((container.clientHeight - targetRect.height) / 2);
+        container.scrollTo({ top: container.scrollTop + centeredOffset, behavior: "smooth" });
+        return;
+      }
       if (isNarrow) {
         document.querySelector(".place-tree")?.scrollIntoView({ behavior: "smooth", block: "start" });
         window.setTimeout(() => {
