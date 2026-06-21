@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-21T05:29:15.289Z",
+  "updatedAt": "2026-06-21T07:11:30.686Z",
   "totalMembers": 72,
   "locatedMembers": 53,
   "cityLocatedMembers": 53,
@@ -27,6 +27,8 @@
           "name": "王境",
           "registeredName": "王境",
           "wechatName": "狸猫🦝",
+          "university": "武汉晴川学院",
+          "major": "机械电子工程",
           "city": "武汉",
           "sourceCity": "武汉"
         },
@@ -34,6 +36,8 @@
           "name": "李国正",
           "registeredName": "李国正",
           "wechatName": "七度旅人",
+          "university": "湖北工业大学工程技术学院",
+          "major": "计算机科学与技术（大二，已休学创业中）",
           "city": "武汉",
           "sourceCity": "武汉"
         },
@@ -41,6 +45,8 @@
           "name": "李谨西",
           "registeredName": "李谨西",
           "wechatName": "koi",
+          "university": "武汉科技大学",
+          "major": "金融科技专业",
           "city": "武汉",
           "sourceCity": "武汉"
         },
@@ -48,6 +54,8 @@
           "name": "章魚飯.",
           "registeredName": "章魚飯.",
           "wechatName": "章魚飯.",
+          "university": "",
+          "major": "",
           "city": "武汉",
           "sourceCity": "武汉"
         },
@@ -55,6 +63,8 @@
           "name": "冷酷小猫",
           "registeredName": "冷酷小猫",
           "wechatName": "猫博",
+          "university": "华中科技大学",
+          "major": "机械电子工程",
           "city": "武汉",
           "sourceCity": "武汉"
         }
@@ -75,6 +85,8 @@
           "name": "王梓如",
           "registeredName": "王梓如",
           "wechatName": "帧安",
+          "university": "",
+          "major": "中医",
           "city": "上海",
           "sourceCity": "上海"
         },
@@ -82,6 +94,8 @@
           "name": "leah",
           "registeredName": "leah",
           "wechatName": "状况外🌀",
+          "university": "华东师范大学",
+          "major": "经济学",
           "city": "上海",
           "sourceCity": "上海"
         },
@@ -89,6 +103,8 @@
           "name": "Allonsy",
           "registeredName": "Allonsy",
           "wechatName": "Allons--y",
+          "university": "上海理工大学",
+          "major": "土木水利研一",
           "city": "上海",
           "sourceCity": "上海"
         },
@@ -96,6 +112,8 @@
           "name": "Wheeler",
           "registeredName": "Wheeler",
           "wechatName": "Seacoconut",
+          "university": "上海海洋大学",
+          "major": "物理海洋学",
           "city": "上海",
           "sourceCity": "上海"
         }
@@ -116,6 +134,8 @@
           "name": "季佳杰",
           "registeredName": "季佳杰",
           "wechatName": "季",
+          "university": "北京中医药大学",
+          "major": "",
           "city": "北京",
           "sourceCity": "常州/北京"
         },
@@ -123,6 +143,8 @@
           "name": "阿良",
           "registeredName": "阿良",
           "wechatName": "Anthony Li",
+          "university": "",
+          "major": "国贸专业大三",
           "city": "北京",
           "sourceCity": "北京"
         },
@@ -130,6 +152,8 @@
           "name": "Robin",
           "registeredName": "Robin",
           "wechatName": "Robin",
+          "university": "中国科学院大学；中科院某研究所",
+          "major": "读研",
           "city": "北京",
           "sourceCity": "北京"
         }
@@ -150,6 +174,8 @@
           "name": "影洲",
           "registeredName": "影洲",
           "wechatName": "雅正",
+          "university": "杭州电子科技大学",
+          "major": "",
           "city": "杭州",
           "sourceCity": "杭州"
         },
@@ -157,6 +183,8 @@
           "name": "五谷粥",
           "registeredName": "五谷粥",
           "wechatName": "五谷粥",
+          "university": "浙江大学",
+          "major": "准备申请临床医学",
           "city": "杭州",
           "sourceCity": "杭州"
         },
@@ -164,6 +192,8 @@
           "name": "华宇昊",
           "registeredName": "华宇昊",
           "wechatName": "ɔɪ化十子.",
+          "university": "宁波大学科学技术学院",
+          "major": "生物技术专业（刚毕业）",
           "city": "杭州",
           "sourceCity": "杭州"
         }
@@ -184,6 +214,8 @@
           "name": "李仲实",
           "registeredName": "李仲实",
           "wechatName": "塞雷SL",
+          "university": "南航大",
+          "major": "飞行技术",
           "city": "南京",
           "sourceCity": "南京"
         },
@@ -191,6 +223,8 @@
           "name": "Yesoo",
           "registeredName": "Yesoo",
           "wechatName": "Malpaca",
+          "university": "南京邮电大学",
+          "major": "软件工程 大二",
           "city": "南京",
           "sourceCity": "南京"
         },
@@ -198,6 +232,8 @@
           "name": "大符",
           "registeredName": "大符",
           "wechatName": "红茶椰",
+          "university": "南京农业大学",
+          "major": "食品安全",
           "city": "南京",
           "sourceCity": "南京"
         }
@@ -215,6 +251,8 @@
           "name": "sam",
           "registeredName": "sam",
           "wechatName": "lwt",
+          "university": "悉尼大学",
+          "major": "医学科学+解剖与组织学（本科）",
           "city": "悉尼",
           "sourceCity": "悉尼"
         },
@@ -222,6 +260,8 @@
           "name": "蟑螂",
           "registeredName": "蟑螂",
           "wechatName": "ㅤ蟑螂",
+          "university": "新南威尔士大学",
+          "major": "生物医学工程（方向：生信和数据科学，大三）",
           "city": "悉尼",
           "sourceCity": "悉尼"
         },
@@ -229,6 +269,8 @@
           "name": "Sophie",
           "registeredName": "Sophie",
           "wechatName": "淼",
+          "university": "澳洲不知名某大学；悉尼大学",
+          "major": "教育硕士待入学",
           "city": "悉尼",
           "sourceCity": "悉尼"
         }
@@ -249,6 +291,8 @@
           "name": "moby豪",
           "registeredName": "moby豪",
           "wechatName": "MoBy豪",
+          "university": "集美大学",
+          "major": "",
           "city": "厦门",
           "sourceCity": "厦门"
         },
@@ -256,6 +300,8 @@
           "name": "姜永健",
           "registeredName": "姜永健",
           "wechatName": "。",
+          "university": "华侨大学",
+          "major": "市场营销专业（2024级）",
           "city": "厦门",
           "sourceCity": "泉州 / 厦门"
         }
@@ -273,6 +319,8 @@
           "name": "张嘉文",
           "registeredName": "张嘉文",
           "wechatName": "我说，要有光",
+          "university": "法国索邦大学",
+          "major": "人工智能（研究生在读）",
           "city": "巴黎",
           "sourceCity": "巴黎"
         }
@@ -290,6 +338,8 @@
           "name": "Tracy",
           "registeredName": "Tracy",
           "wechatName": "Traaa",
+          "university": "Wellesley College",
+          "major": "Media Arts and Sciences",
           "city": "波士顿",
           "sourceCity": "波士顿"
         }
@@ -310,6 +360,8 @@
           "name": "季佳杰",
           "registeredName": "季佳杰",
           "wechatName": "季",
+          "university": "北京中医药大学",
+          "major": "",
           "city": "常州",
           "sourceCity": "常州/北京"
         }
@@ -330,6 +382,8 @@
           "name": "Time flies.",
           "registeredName": "Time flies.",
           "wechatName": "Time flies.",
+          "university": "西南交通大学",
+          "major": "通信工程（准大二）",
           "city": "成都",
           "sourceCity": "成都"
         }
@@ -350,6 +404,8 @@
           "name": "梁波",
           "registeredName": "梁波",
           "wechatName": "粉色钉子头",
+          "university": "西南交大",
+          "major": "通信工程专业 / 本科一年级",
           "city": "重庆",
           "sourceCity": "重庆"
         }
@@ -370,6 +426,8 @@
           "name": "Wincent",
           "registeredName": "Wincent",
           "wechatName": "Wincent",
+          "university": "",
+          "major": "应届高考生",
           "city": "大连",
           "sourceCity": "大连"
         }
@@ -390,6 +448,8 @@
           "name": "Levia",
           "registeredName": "Levia",
           "wechatName": "Levia.Qi",
+          "university": "福建師範大學",
+          "major": "",
           "city": "福州",
           "sourceCity": "福州"
         }
@@ -410,6 +470,8 @@
           "name": "多林",
           "registeredName": "多林",
           "wechatName": "Artist多林",
+          "university": "山东第一医科大学",
+          "major": "医学实验技术（大二）",
           "city": "广西柳州",
           "sourceCity": "广西柳州"
         }
@@ -430,6 +492,8 @@
           "name": "康康",
           "registeredName": "康康",
           "wechatName": "sloth",
+          "university": "",
+          "major": "师范专业",
           "city": "广州",
           "sourceCity": "广州"
         }
@@ -450,6 +514,8 @@
           "name": "Spaceman",
           "registeredName": "Spaceman",
           "wechatName": "十日十韦",
+          "university": "衡阳师范学院",
+          "major": "计算机专业",
           "city": "衡阳",
           "sourceCity": "衡阳"
         }
@@ -470,6 +536,8 @@
           "name": "杜博伦",
           "registeredName": "杜博伦",
           "wechatName": "有志青年",
+          "university": "",
+          "major": "应届高考生",
           "city": "淮安",
           "sourceCity": "江苏淮安"
         }
@@ -490,6 +558,8 @@
           "name": "janus",
           "registeredName": "janus",
           "wechatName": "陆小果",
+          "university": "",
+          "major": "导演 / 艺术生",
           "city": "济南",
           "sourceCity": "长春 / 济南"
         }
@@ -510,6 +580,8 @@
           "name": "酌锦",
           "registeredName": "酌锦",
           "wechatName": "酌锦",
+          "university": "昆明医科大学",
+          "major": "基础医学专业 / 研0",
           "city": "昆明",
           "sourceCity": "昆明"
         }
@@ -530,6 +602,8 @@
           "name": "Bryan",
           "registeredName": "Bryan",
           "wechatName": "Ryan",
+          "university": "江苏海洋大学",
+          "major": "",
           "city": "连云港",
           "sourceCity": "连云港"
         }
@@ -550,6 +624,8 @@
           "name": "小羊",
           "registeredName": "小羊",
           "wechatName": "FY",
+          "university": "燕山大学",
+          "major": "机械工程",
           "city": "秦皇岛",
           "sourceCity": "秦皇岛"
         }
@@ -570,6 +646,8 @@
           "name": "郑杨守都",
           "registeredName": "郑杨守都",
           "wechatName": "Luxorion",
+          "university": "青岛科技大学",
+          "major": "人工智能专业在读",
           "city": "青岛",
           "sourceCity": "青岛"
         }
@@ -590,6 +668,8 @@
           "name": "姜永健",
           "registeredName": "姜永健",
           "wechatName": "。",
+          "university": "华侨大学",
+          "major": "市场营销专业（2024级）",
           "city": "泉州",
           "sourceCity": "泉州 / 厦门"
         }
@@ -610,6 +690,8 @@
           "name": "张淇博",
           "registeredName": "张淇博",
           "wechatName": "keve",
+          "university": "深圳技术大学",
+          "major": "集成电路",
           "city": "深圳",
           "sourceCity": "深圳"
         }
@@ -630,6 +712,8 @@
           "name": "穆昱伟",
           "registeredName": "穆昱伟",
           "wechatName": "Algea",
+          "university": "河北科技大学",
+          "major": "建环专业",
           "city": "石家庄市",
           "sourceCity": "石家庄市"
         }
@@ -650,6 +734,8 @@
           "name": "三十六",
           "registeredName": "三十六",
           "wechatName": "三十六",
+          "university": "青岛理工",
+          "major": "土木水利（研0）",
           "city": "苏州",
           "sourceCity": "苏州"
         }
@@ -670,6 +756,8 @@
           "name": "朱天宇",
           "registeredName": "朱天宇",
           "wechatName": "思想先落地",
+          "university": "天津大学",
+          "major": "材料科学与工程",
           "city": "天津",
           "sourceCity": "天津"
         }
@@ -690,6 +778,8 @@
           "name": "杜祖鹏",
           "registeredName": "杜祖鹏",
           "wechatName": "Sunflower",
+          "university": "西安交通大学",
+          "major": "机械工程学院",
           "city": "西安",
           "sourceCity": "西安"
         }
@@ -709,6 +799,8 @@
           "name": "浩瀚夜空",
           "registeredName": "浩瀚夜空",
           "wechatName": "浩瀚夜空",
+          "university": "香港大学（准本科生）",
+          "major": "",
           "city": "香港",
           "sourceCity": "香港"
         }
@@ -726,6 +818,8 @@
           "name": "愚任杰",
           "registeredName": "愚任杰",
           "wechatName": "愚任杰",
+          "university": "新加坡国立大学",
+          "major": "工业系统工程（研究生）",
           "city": "新加坡",
           "sourceCity": "新加坡"
         }
@@ -746,6 +840,8 @@
           "name": "徐亚博",
           "registeredName": "徐亚博",
           "wechatName": "火火",
+          "university": "信阳师范大学",
+          "major": "护理学",
           "city": "信阳市",
           "sourceCity": "信阳市"
         }
@@ -766,6 +862,8 @@
           "name": "张校菘",
           "registeredName": "张校菘",
           "wechatName": "向箔",
+          "university": "烟台大学",
+          "major": "AI应用方向",
           "city": "烟台",
           "sourceCity": "山东烟台"
         }
@@ -786,6 +884,8 @@
           "name": "淼淼",
           "registeredName": "淼淼",
           "wechatName": "邱淼淼",
+          "university": "闽南师范大学",
+          "major": "广播电视编导大三 / 摄影摄像",
           "city": "漳州",
           "sourceCity": "漳州"
         }
@@ -806,6 +906,8 @@
           "name": "janus",
           "registeredName": "janus",
           "wechatName": "陆小果",
+          "university": "",
+          "major": "导演 / 艺术生",
           "city": "长春",
           "sourceCity": "长春 / 济南"
         }
@@ -826,6 +928,8 @@
           "name": "张锦阳",
           "registeredName": "张锦阳",
           "wechatName": "Orion 常青de绵阳",
+          "university": "河南财经政法大学",
+          "major": "软件工程（大一）",
           "city": "郑州",
           "sourceCity": "郑州"
         }
@@ -846,6 +950,8 @@
           "name": "Glory",
           "registeredName": "Glory",
           "wechatName": "Glory",
+          "university": "山东理工大学",
+          "major": "地信专业 / 大二",
           "city": "淄博",
           "sourceCity": "淄博"
         }
@@ -868,6 +974,8 @@
           "name": "李仲实",
           "registeredName": "李仲实",
           "wechatName": "塞雷SL",
+          "university": "南航大",
+          "major": "飞行技术",
           "city": "南京",
           "sourceCity": "南京"
         },
@@ -875,6 +983,8 @@
           "name": "Yesoo",
           "registeredName": "Yesoo",
           "wechatName": "Malpaca",
+          "university": "南京邮电大学",
+          "major": "软件工程 大二",
           "city": "南京",
           "sourceCity": "南京"
         },
@@ -882,6 +992,8 @@
           "name": "三十六",
           "registeredName": "三十六",
           "wechatName": "三十六",
+          "university": "青岛理工",
+          "major": "土木水利（研0）",
           "city": "苏州",
           "sourceCity": "苏州"
         },
@@ -889,6 +1001,8 @@
           "name": "季佳杰",
           "registeredName": "季佳杰",
           "wechatName": "季",
+          "university": "北京中医药大学",
+          "major": "",
           "city": "常州",
           "sourceCity": "常州/北京"
         },
@@ -896,6 +1010,8 @@
           "name": "Bryan",
           "registeredName": "Bryan",
           "wechatName": "Ryan",
+          "university": "江苏海洋大学",
+          "major": "",
           "city": "连云港",
           "sourceCity": "连云港"
         },
@@ -903,6 +1019,8 @@
           "name": "大符",
           "registeredName": "大符",
           "wechatName": "红茶椰",
+          "university": "南京农业大学",
+          "major": "食品安全",
           "city": "南京",
           "sourceCity": "南京"
         },
@@ -910,6 +1028,8 @@
           "name": "杜博伦",
           "registeredName": "杜博伦",
           "wechatName": "有志青年",
+          "university": "",
+          "major": "应届高考生",
           "city": "淮安",
           "sourceCity": "江苏淮安"
         }
@@ -924,6 +1044,8 @@
               "name": "李仲实",
               "registeredName": "李仲实",
               "wechatName": "塞雷SL",
+              "university": "南航大",
+              "major": "飞行技术",
               "city": "南京",
               "sourceCity": "南京"
             },
@@ -931,6 +1053,8 @@
               "name": "Yesoo",
               "registeredName": "Yesoo",
               "wechatName": "Malpaca",
+              "university": "南京邮电大学",
+              "major": "软件工程 大二",
               "city": "南京",
               "sourceCity": "南京"
             },
@@ -938,6 +1062,8 @@
               "name": "大符",
               "registeredName": "大符",
               "wechatName": "红茶椰",
+              "university": "南京农业大学",
+              "major": "食品安全",
               "city": "南京",
               "sourceCity": "南京"
             }
@@ -952,6 +1078,8 @@
               "name": "季佳杰",
               "registeredName": "季佳杰",
               "wechatName": "季",
+              "university": "北京中医药大学",
+              "major": "",
               "city": "常州",
               "sourceCity": "常州/北京"
             }
@@ -966,6 +1094,8 @@
               "name": "杜博伦",
               "registeredName": "杜博伦",
               "wechatName": "有志青年",
+              "university": "",
+              "major": "应届高考生",
               "city": "淮安",
               "sourceCity": "江苏淮安"
             }
@@ -980,6 +1110,8 @@
               "name": "Bryan",
               "registeredName": "Bryan",
               "wechatName": "Ryan",
+              "university": "江苏海洋大学",
+              "major": "",
               "city": "连云港",
               "sourceCity": "连云港"
             }
@@ -994,6 +1126,8 @@
               "name": "三十六",
               "registeredName": "三十六",
               "wechatName": "三十六",
+              "university": "青岛理工",
+              "major": "土木水利（研0）",
               "city": "苏州",
               "sourceCity": "苏州"
             }
@@ -1016,6 +1150,8 @@
           "name": "moby豪",
           "registeredName": "moby豪",
           "wechatName": "MoBy豪",
+          "university": "集美大学",
+          "major": "",
           "city": "厦门",
           "sourceCity": "厦门"
         },
@@ -1023,6 +1159,8 @@
           "name": "淼淼",
           "registeredName": "淼淼",
           "wechatName": "邱淼淼",
+          "university": "闽南师范大学",
+          "major": "广播电视编导大三 / 摄影摄像",
           "city": "漳州",
           "sourceCity": "漳州"
         },
@@ -1030,6 +1168,8 @@
           "name": "姜永健",
           "registeredName": "姜永健",
           "wechatName": "。",
+          "university": "华侨大学",
+          "major": "市场营销专业（2024级）",
           "city": "泉州",
           "sourceCity": "泉州 / 厦门"
         },
@@ -1037,6 +1177,8 @@
           "name": "姜永健",
           "registeredName": "姜永健",
           "wechatName": "。",
+          "university": "华侨大学",
+          "major": "市场营销专业（2024级）",
           "city": "厦门",
           "sourceCity": "泉州 / 厦门"
         },
@@ -1044,6 +1186,8 @@
           "name": "Levia",
           "registeredName": "Levia",
           "wechatName": "Levia.Qi",
+          "university": "福建師範大學",
+          "major": "",
           "city": "福州",
           "sourceCity": "福州"
         }
@@ -1058,6 +1202,8 @@
               "name": "moby豪",
               "registeredName": "moby豪",
               "wechatName": "MoBy豪",
+              "university": "集美大学",
+              "major": "",
               "city": "厦门",
               "sourceCity": "厦门"
             },
@@ -1065,6 +1211,8 @@
               "name": "姜永健",
               "registeredName": "姜永健",
               "wechatName": "。",
+              "university": "华侨大学",
+              "major": "市场营销专业（2024级）",
               "city": "厦门",
               "sourceCity": "泉州 / 厦门"
             }
@@ -1079,6 +1227,8 @@
               "name": "Levia",
               "registeredName": "Levia",
               "wechatName": "Levia.Qi",
+              "university": "福建師範大學",
+              "major": "",
               "city": "福州",
               "sourceCity": "福州"
             }
@@ -1093,6 +1243,8 @@
               "name": "姜永健",
               "registeredName": "姜永健",
               "wechatName": "。",
+              "university": "华侨大学",
+              "major": "市场营销专业（2024级）",
               "city": "泉州",
               "sourceCity": "泉州 / 厦门"
             }
@@ -1107,6 +1259,8 @@
               "name": "淼淼",
               "registeredName": "淼淼",
               "wechatName": "邱淼淼",
+              "university": "闽南师范大学",
+              "major": "广播电视编导大三 / 摄影摄像",
               "city": "漳州",
               "sourceCity": "漳州"
             }
@@ -1129,6 +1283,8 @@
           "name": "王境",
           "registeredName": "王境",
           "wechatName": "狸猫🦝",
+          "university": "武汉晴川学院",
+          "major": "机械电子工程",
           "city": "武汉",
           "sourceCity": "武汉"
         },
@@ -1136,6 +1292,8 @@
           "name": "李国正",
           "registeredName": "李国正",
           "wechatName": "七度旅人",
+          "university": "湖北工业大学工程技术学院",
+          "major": "计算机科学与技术（大二，已休学创业中）",
           "city": "武汉",
           "sourceCity": "武汉"
         },
@@ -1143,6 +1301,8 @@
           "name": "李谨西",
           "registeredName": "李谨西",
           "wechatName": "koi",
+          "university": "武汉科技大学",
+          "major": "金融科技专业",
           "city": "武汉",
           "sourceCity": "武汉"
         },
@@ -1150,6 +1310,8 @@
           "name": "章魚飯.",
           "registeredName": "章魚飯.",
           "wechatName": "章魚飯.",
+          "university": "",
+          "major": "",
           "city": "武汉",
           "sourceCity": "武汉"
         },
@@ -1157,6 +1319,8 @@
           "name": "冷酷小猫",
           "registeredName": "冷酷小猫",
           "wechatName": "猫博",
+          "university": "华中科技大学",
+          "major": "机械电子工程",
           "city": "武汉",
           "sourceCity": "武汉"
         }
@@ -1171,6 +1335,8 @@
               "name": "王境",
               "registeredName": "王境",
               "wechatName": "狸猫🦝",
+              "university": "武汉晴川学院",
+              "major": "机械电子工程",
               "city": "武汉",
               "sourceCity": "武汉"
             },
@@ -1178,6 +1344,8 @@
               "name": "李国正",
               "registeredName": "李国正",
               "wechatName": "七度旅人",
+              "university": "湖北工业大学工程技术学院",
+              "major": "计算机科学与技术（大二，已休学创业中）",
               "city": "武汉",
               "sourceCity": "武汉"
             },
@@ -1185,6 +1353,8 @@
               "name": "李谨西",
               "registeredName": "李谨西",
               "wechatName": "koi",
+              "university": "武汉科技大学",
+              "major": "金融科技专业",
               "city": "武汉",
               "sourceCity": "武汉"
             },
@@ -1192,6 +1362,8 @@
               "name": "章魚飯.",
               "registeredName": "章魚飯.",
               "wechatName": "章魚飯.",
+              "university": "",
+              "major": "",
               "city": "武汉",
               "sourceCity": "武汉"
             },
@@ -1199,6 +1371,8 @@
               "name": "冷酷小猫",
               "registeredName": "冷酷小猫",
               "wechatName": "猫博",
+              "university": "华中科技大学",
+              "major": "机械电子工程",
               "city": "武汉",
               "sourceCity": "武汉"
             }
@@ -1221,6 +1395,8 @@
           "name": "janus",
           "registeredName": "janus",
           "wechatName": "陆小果",
+          "university": "",
+          "major": "导演 / 艺术生",
           "city": "济南",
           "sourceCity": "长春 / 济南"
         },
@@ -1228,6 +1404,8 @@
           "name": "舒奕萌",
           "registeredName": "舒奕萌",
           "wechatName": "🐟",
+          "university": "",
+          "major": "应届高考生",
           "city": "山东",
           "sourceCity": "山东"
         },
@@ -1235,6 +1413,8 @@
           "name": "Glory",
           "registeredName": "Glory",
           "wechatName": "Glory",
+          "university": "山东理工大学",
+          "major": "地信专业 / 大二",
           "city": "淄博",
           "sourceCity": "淄博"
         },
@@ -1242,6 +1422,8 @@
           "name": "郑杨守都",
           "registeredName": "郑杨守都",
           "wechatName": "Luxorion",
+          "university": "青岛科技大学",
+          "major": "人工智能专业在读",
           "city": "青岛",
           "sourceCity": "青岛"
         },
@@ -1249,6 +1431,8 @@
           "name": "张校菘",
           "registeredName": "张校菘",
           "wechatName": "向箔",
+          "university": "烟台大学",
+          "major": "AI应用方向",
           "city": "烟台",
           "sourceCity": "山东烟台"
         }
@@ -1263,6 +1447,8 @@
               "name": "janus",
               "registeredName": "janus",
               "wechatName": "陆小果",
+              "university": "",
+              "major": "导演 / 艺术生",
               "city": "济南",
               "sourceCity": "长春 / 济南"
             }
@@ -1277,6 +1463,8 @@
               "name": "郑杨守都",
               "registeredName": "郑杨守都",
               "wechatName": "Luxorion",
+              "university": "青岛科技大学",
+              "major": "人工智能专业在读",
               "city": "青岛",
               "sourceCity": "青岛"
             }
@@ -1291,6 +1479,8 @@
               "name": "张校菘",
               "registeredName": "张校菘",
               "wechatName": "向箔",
+              "university": "烟台大学",
+              "major": "AI应用方向",
               "city": "烟台",
               "sourceCity": "山东烟台"
             }
@@ -1305,6 +1495,8 @@
               "name": "Glory",
               "registeredName": "Glory",
               "wechatName": "Glory",
+              "university": "山东理工大学",
+              "major": "地信专业 / 大二",
               "city": "淄博",
               "sourceCity": "淄博"
             }
@@ -1327,6 +1519,8 @@
           "name": "王梓如",
           "registeredName": "王梓如",
           "wechatName": "帧安",
+          "university": "",
+          "major": "中医",
           "city": "上海",
           "sourceCity": "上海"
         },
@@ -1334,6 +1528,8 @@
           "name": "leah",
           "registeredName": "leah",
           "wechatName": "状况外🌀",
+          "university": "华东师范大学",
+          "major": "经济学",
           "city": "上海",
           "sourceCity": "上海"
         },
@@ -1341,6 +1537,8 @@
           "name": "Allonsy",
           "registeredName": "Allonsy",
           "wechatName": "Allons--y",
+          "university": "上海理工大学",
+          "major": "土木水利研一",
           "city": "上海",
           "sourceCity": "上海"
         },
@@ -1348,6 +1546,8 @@
           "name": "Wheeler",
           "registeredName": "Wheeler",
           "wechatName": "Seacoconut",
+          "university": "上海海洋大学",
+          "major": "物理海洋学",
           "city": "上海",
           "sourceCity": "上海"
         }
@@ -1362,6 +1562,8 @@
               "name": "王梓如",
               "registeredName": "王梓如",
               "wechatName": "帧安",
+              "university": "",
+              "major": "中医",
               "city": "上海",
               "sourceCity": "上海"
             },
@@ -1369,6 +1571,8 @@
               "name": "leah",
               "registeredName": "leah",
               "wechatName": "状况外🌀",
+              "university": "华东师范大学",
+              "major": "经济学",
               "city": "上海",
               "sourceCity": "上海"
             },
@@ -1376,6 +1580,8 @@
               "name": "Allonsy",
               "registeredName": "Allonsy",
               "wechatName": "Allons--y",
+              "university": "上海理工大学",
+              "major": "土木水利研一",
               "city": "上海",
               "sourceCity": "上海"
             },
@@ -1383,6 +1589,8 @@
               "name": "Wheeler",
               "registeredName": "Wheeler",
               "wechatName": "Seacoconut",
+              "university": "上海海洋大学",
+              "major": "物理海洋学",
               "city": "上海",
               "sourceCity": "上海"
             }
@@ -1405,6 +1613,8 @@
           "name": "季佳杰",
           "registeredName": "季佳杰",
           "wechatName": "季",
+          "university": "北京中医药大学",
+          "major": "",
           "city": "北京",
           "sourceCity": "常州/北京"
         },
@@ -1412,6 +1622,8 @@
           "name": "阿良",
           "registeredName": "阿良",
           "wechatName": "Anthony Li",
+          "university": "",
+          "major": "国贸专业大三",
           "city": "北京",
           "sourceCity": "北京"
         },
@@ -1419,6 +1631,8 @@
           "name": "Robin",
           "registeredName": "Robin",
           "wechatName": "Robin",
+          "university": "中国科学院大学；中科院某研究所",
+          "major": "读研",
           "city": "北京",
           "sourceCity": "北京"
         }
@@ -1433,6 +1647,8 @@
               "name": "季佳杰",
               "registeredName": "季佳杰",
               "wechatName": "季",
+              "university": "北京中医药大学",
+              "major": "",
               "city": "北京",
               "sourceCity": "常州/北京"
             },
@@ -1440,6 +1656,8 @@
               "name": "阿良",
               "registeredName": "阿良",
               "wechatName": "Anthony Li",
+              "university": "",
+              "major": "国贸专业大三",
               "city": "北京",
               "sourceCity": "北京"
             },
@@ -1447,6 +1665,8 @@
               "name": "Robin",
               "registeredName": "Robin",
               "wechatName": "Robin",
+              "university": "中国科学院大学；中科院某研究所",
+              "major": "读研",
               "city": "北京",
               "sourceCity": "北京"
             }
@@ -1469,6 +1689,8 @@
           "name": "影洲",
           "registeredName": "影洲",
           "wechatName": "雅正",
+          "university": "杭州电子科技大学",
+          "major": "",
           "city": "杭州",
           "sourceCity": "杭州"
         },
@@ -1476,6 +1698,8 @@
           "name": "五谷粥",
           "registeredName": "五谷粥",
           "wechatName": "五谷粥",
+          "university": "浙江大学",
+          "major": "准备申请临床医学",
           "city": "杭州",
           "sourceCity": "杭州"
         },
@@ -1483,6 +1707,8 @@
           "name": "华宇昊",
           "registeredName": "华宇昊",
           "wechatName": "ɔɪ化十子.",
+          "university": "宁波大学科学技术学院",
+          "major": "生物技术专业（刚毕业）",
           "city": "杭州",
           "sourceCity": "杭州"
         }
@@ -1497,6 +1723,8 @@
               "name": "影洲",
               "registeredName": "影洲",
               "wechatName": "雅正",
+              "university": "杭州电子科技大学",
+              "major": "",
               "city": "杭州",
               "sourceCity": "杭州"
             },
@@ -1504,6 +1732,8 @@
               "name": "五谷粥",
               "registeredName": "五谷粥",
               "wechatName": "五谷粥",
+              "university": "浙江大学",
+              "major": "准备申请临床医学",
               "city": "杭州",
               "sourceCity": "杭州"
             },
@@ -1511,6 +1741,8 @@
               "name": "华宇昊",
               "registeredName": "华宇昊",
               "wechatName": "ɔɪ化十子.",
+              "university": "宁波大学科学技术学院",
+              "major": "生物技术专业（刚毕业）",
               "city": "杭州",
               "sourceCity": "杭州"
             }
@@ -1533,6 +1765,8 @@
           "name": "康康",
           "registeredName": "康康",
           "wechatName": "sloth",
+          "university": "",
+          "major": "师范专业",
           "city": "广州",
           "sourceCity": "广州"
         },
@@ -1540,6 +1774,8 @@
           "name": "张淇博",
           "registeredName": "张淇博",
           "wechatName": "keve",
+          "university": "深圳技术大学",
+          "major": "集成电路",
           "city": "深圳",
           "sourceCity": "深圳"
         }
@@ -1554,6 +1790,8 @@
               "name": "康康",
               "registeredName": "康康",
               "wechatName": "sloth",
+              "university": "",
+              "major": "师范专业",
               "city": "广州",
               "sourceCity": "广州"
             }
@@ -1568,6 +1806,8 @@
               "name": "张淇博",
               "registeredName": "张淇博",
               "wechatName": "keve",
+              "university": "深圳技术大学",
+              "major": "集成电路",
               "city": "深圳",
               "sourceCity": "深圳"
             }
@@ -1590,6 +1830,8 @@
           "name": "穆昱伟",
           "registeredName": "穆昱伟",
           "wechatName": "Algea",
+          "university": "河北科技大学",
+          "major": "建环专业",
           "city": "石家庄市",
           "sourceCity": "石家庄市"
         },
@@ -1597,6 +1839,8 @@
           "name": "小羊",
           "registeredName": "小羊",
           "wechatName": "FY",
+          "university": "燕山大学",
+          "major": "机械工程",
           "city": "秦皇岛",
           "sourceCity": "秦皇岛"
         }
@@ -1611,6 +1855,8 @@
               "name": "小羊",
               "registeredName": "小羊",
               "wechatName": "FY",
+              "university": "燕山大学",
+              "major": "机械工程",
               "city": "秦皇岛",
               "sourceCity": "秦皇岛"
             }
@@ -1625,6 +1871,8 @@
               "name": "穆昱伟",
               "registeredName": "穆昱伟",
               "wechatName": "Algea",
+              "university": "河北科技大学",
+              "major": "建环专业",
               "city": "石家庄市",
               "sourceCity": "石家庄市"
             }
@@ -1647,6 +1895,8 @@
           "name": "张锦阳",
           "registeredName": "张锦阳",
           "wechatName": "Orion 常青de绵阳",
+          "university": "河南财经政法大学",
+          "major": "软件工程（大一）",
           "city": "郑州",
           "sourceCity": "郑州"
         },
@@ -1654,6 +1904,8 @@
           "name": "徐亚博",
           "registeredName": "徐亚博",
           "wechatName": "火火",
+          "university": "信阳师范大学",
+          "major": "护理学",
           "city": "信阳市",
           "sourceCity": "信阳市"
         }
@@ -1668,6 +1920,8 @@
               "name": "徐亚博",
               "registeredName": "徐亚博",
               "wechatName": "火火",
+              "university": "信阳师范大学",
+              "major": "护理学",
               "city": "信阳市",
               "sourceCity": "信阳市"
             }
@@ -1682,6 +1936,8 @@
               "name": "张锦阳",
               "registeredName": "张锦阳",
               "wechatName": "Orion 常青de绵阳",
+              "university": "河南财经政法大学",
+              "major": "软件工程（大一）",
               "city": "郑州",
               "sourceCity": "郑州"
             }
@@ -1704,6 +1960,8 @@
           "name": "梁波",
           "registeredName": "梁波",
           "wechatName": "粉色钉子头",
+          "university": "西南交大",
+          "major": "通信工程专业 / 本科一年级",
           "city": "重庆",
           "sourceCity": "重庆"
         }
@@ -1718,6 +1976,8 @@
               "name": "梁波",
               "registeredName": "梁波",
               "wechatName": "粉色钉子头",
+              "university": "西南交大",
+              "major": "通信工程专业 / 本科一年级",
               "city": "重庆",
               "sourceCity": "重庆"
             }
@@ -1740,6 +2000,8 @@
           "name": "多林",
           "registeredName": "多林",
           "wechatName": "Artist多林",
+          "university": "山东第一医科大学",
+          "major": "医学实验技术（大二）",
           "city": "广西柳州",
           "sourceCity": "广西柳州"
         }
@@ -1754,6 +2016,8 @@
               "name": "多林",
               "registeredName": "多林",
               "wechatName": "Artist多林",
+              "university": "山东第一医科大学",
+              "major": "医学实验技术（大二）",
               "city": "广西柳州",
               "sourceCity": "广西柳州"
             }
@@ -1776,6 +2040,8 @@
           "name": "Spaceman",
           "registeredName": "Spaceman",
           "wechatName": "十日十韦",
+          "university": "衡阳师范学院",
+          "major": "计算机专业",
           "city": "衡阳",
           "sourceCity": "衡阳"
         }
@@ -1790,6 +2056,8 @@
               "name": "Spaceman",
               "registeredName": "Spaceman",
               "wechatName": "十日十韦",
+              "university": "衡阳师范学院",
+              "major": "计算机专业",
               "city": "衡阳",
               "sourceCity": "衡阳"
             }
@@ -1812,6 +2080,8 @@
           "name": "janus",
           "registeredName": "janus",
           "wechatName": "陆小果",
+          "university": "",
+          "major": "导演 / 艺术生",
           "city": "长春",
           "sourceCity": "长春 / 济南"
         }
@@ -1826,6 +2096,8 @@
               "name": "janus",
               "registeredName": "janus",
               "wechatName": "陆小果",
+              "university": "",
+              "major": "导演 / 艺术生",
               "city": "长春",
               "sourceCity": "长春 / 济南"
             }
@@ -1848,6 +2120,8 @@
           "name": "Wincent",
           "registeredName": "Wincent",
           "wechatName": "Wincent",
+          "university": "",
+          "major": "应届高考生",
           "city": "大连",
           "sourceCity": "大连"
         }
@@ -1862,6 +2136,8 @@
               "name": "Wincent",
               "registeredName": "Wincent",
               "wechatName": "Wincent",
+              "university": "",
+              "major": "应届高考生",
               "city": "大连",
               "sourceCity": "大连"
             }
@@ -1884,6 +2160,8 @@
           "name": "杜祖鹏",
           "registeredName": "杜祖鹏",
           "wechatName": "Sunflower",
+          "university": "西安交通大学",
+          "major": "机械工程学院",
           "city": "西安",
           "sourceCity": "西安"
         }
@@ -1898,6 +2176,8 @@
               "name": "杜祖鹏",
               "registeredName": "杜祖鹏",
               "wechatName": "Sunflower",
+              "university": "西安交通大学",
+              "major": "机械工程学院",
               "city": "西安",
               "sourceCity": "西安"
             }
@@ -1920,6 +2200,8 @@
           "name": "Time flies.",
           "registeredName": "Time flies.",
           "wechatName": "Time flies.",
+          "university": "西南交通大学",
+          "major": "通信工程（准大二）",
           "city": "成都",
           "sourceCity": "成都"
         }
@@ -1934,6 +2216,8 @@
               "name": "Time flies.",
               "registeredName": "Time flies.",
               "wechatName": "Time flies.",
+              "university": "西南交通大学",
+              "major": "通信工程（准大二）",
               "city": "成都",
               "sourceCity": "成都"
             }
@@ -1956,6 +2240,8 @@
           "name": "朱天宇",
           "registeredName": "朱天宇",
           "wechatName": "思想先落地",
+          "university": "天津大学",
+          "major": "材料科学与工程",
           "city": "天津",
           "sourceCity": "天津"
         }
@@ -1970,6 +2256,8 @@
               "name": "朱天宇",
               "registeredName": "朱天宇",
               "wechatName": "思想先落地",
+              "university": "天津大学",
+              "major": "材料科学与工程",
               "city": "天津",
               "sourceCity": "天津"
             }
@@ -1992,6 +2280,8 @@
           "name": "浩瀚夜空",
           "registeredName": "浩瀚夜空",
           "wechatName": "浩瀚夜空",
+          "university": "香港大学（准本科生）",
+          "major": "",
           "city": "香港",
           "sourceCity": "香港"
         }
@@ -2006,6 +2296,8 @@
               "name": "浩瀚夜空",
               "registeredName": "浩瀚夜空",
               "wechatName": "浩瀚夜空",
+              "university": "香港大学（准本科生）",
+              "major": "",
               "city": "香港",
               "sourceCity": "香港"
             }
@@ -2028,6 +2320,8 @@
           "name": "酌锦",
           "registeredName": "酌锦",
           "wechatName": "酌锦",
+          "university": "昆明医科大学",
+          "major": "基础医学专业 / 研0",
           "city": "昆明",
           "sourceCity": "昆明"
         }
@@ -2042,6 +2336,8 @@
               "name": "酌锦",
               "registeredName": "酌锦",
               "wechatName": "酌锦",
+              "university": "昆明医科大学",
+              "major": "基础医学专业 / 研0",
               "city": "昆明",
               "sourceCity": "昆明"
             }
@@ -2054,107 +2350,149 @@
     {
       "name": "雷雨",
       "registeredName": "雷雨",
-      "wechatName": "雷雨同学"
+      "wechatName": "雷雨同学",
+      "university": "",
+      "major": ""
     },
     {
       "name": "彭根辉",
       "registeredName": "彭根辉",
-      "wechatName": "彭根辉"
+      "wechatName": "彭根辉",
+      "university": "",
+      "major": ""
     },
     {
       "name": "小橘",
       "registeredName": "小橘",
-      "wechatName": "小橘"
+      "wechatName": "小橘",
+      "university": "",
+      "major": ""
     },
     {
       "name": "周晶🎐",
       "registeredName": "周晶🎐",
-      "wechatName": "周晶🎐"
+      "wechatName": "周晶🎐",
+      "university": "",
+      "major": ""
     },
     {
       "name": "Dorian",
       "registeredName": "Dorian",
-      "wechatName": "Dorian"
+      "wechatName": "Dorian",
+      "university": "",
+      "major": ""
     },
     {
       "name": "注意力",
       "registeredName": "注意力",
-      "wechatName": "注意力"
+      "wechatName": "注意力",
+      "university": "",
+      "major": ""
     },
     {
       "name": "JM",
       "registeredName": "JM",
-      "wechatName": "JM"
+      "wechatName": "JM",
+      "university": "",
+      "major": ""
     },
     {
       "name": "Echo",
       "registeredName": "Echo",
-      "wechatName": "Echo"
+      "wechatName": "Echo",
+      "university": "",
+      "major": ""
     },
     {
       "name": "Jaden",
       "registeredName": "Jaden",
-      "wechatName": "Jaden@Jaden_riku"
+      "wechatName": "Jaden@Jaden_riku",
+      "university": "",
+      "major": ""
     },
     {
       "name": "覔",
       "registeredName": "覔",
-      "wechatName": "覔"
+      "wechatName": "覔",
+      "university": "",
+      "major": ""
     },
     {
       "name": "Lihyu",
       "registeredName": "Lihyu",
-      "wechatName": "Lihyu"
+      "wechatName": "Lihyu",
+      "university": "",
+      "major": ""
     },
     {
       "name": "仅此而已",
       "registeredName": "仅此而已",
-      "wechatName": "仅此而已"
+      "wechatName": "仅此而已",
+      "university": "",
+      "major": ""
     },
     {
       "name": "月",
       "registeredName": "月",
-      "wechatName": "月"
+      "wechatName": "月",
+      "university": "",
+      "major": ""
     },
     {
       "name": "Yuvi",
       "registeredName": "Yuvi",
-      "wechatName": "Yuvi"
+      "wechatName": "Yuvi",
+      "university": "",
+      "major": ""
     },
     {
       "name": "Cameron",
       "registeredName": "Cameron",
-      "wechatName": "Cameron"
+      "wechatName": "Cameron",
+      "university": "",
+      "major": ""
     },
     {
       "name": "Gambetto",
       "registeredName": "Gambetto",
-      "wechatName": "Gambetto"
+      "wechatName": "Gambetto",
+      "university": "",
+      "major": ""
     },
     {
       "name": "半夏",
       "registeredName": "半夏",
-      "wechatName": "半夏"
+      "wechatName": "半夏",
+      "university": "",
+      "major": ""
     },
     {
       "name": "Musol",
       "registeredName": "Musol",
-      "wechatName": "桜のMusol"
+      "wechatName": "桜のMusol",
+      "university": "",
+      "major": ""
     },
     {
       "name": "vleffrey",
       "registeredName": "vleffrey",
-      "wechatName": "vleffrey"
+      "wechatName": "vleffrey",
+      "university": "",
+      "major": ""
     },
     {
       "name": "郁郁葱葱",
       "registeredName": "郁郁葱葱",
-      "wechatName": "郁郁葱葱"
+      "wechatName": "郁郁葱葱",
+      "university": "",
+      "major": ""
     },
     {
       "name": "乘璟",
       "registeredName": "乘璟",
-      "wechatName": "乘璟"
+      "wechatName": "乘璟",
+      "university": "",
+      "major": ""
     }
   ],
   "provinceOnlyStudents": [
@@ -2162,6 +2500,8 @@
       "name": "舒奕萌",
       "registeredName": "舒奕萌",
       "wechatName": "🐟",
+      "university": "",
+      "major": "应届高考生",
       "city": "山东",
       "sourceCity": "山东"
     }
@@ -2173,19 +2513,1068 @@
       "name": "janus",
       "registeredName": "janus",
       "wechatName": "陆小果",
+      "university": "",
+      "major": "导演 / 艺术生",
       "city": "长春 / 济南"
     },
     {
       "name": "季佳杰",
       "registeredName": "季佳杰",
       "wechatName": "季",
+      "university": "北京中医药大学",
+      "major": "",
       "city": "常州/北京"
     },
     {
       "name": "姜永健",
       "registeredName": "姜永健",
       "wechatName": "。",
+      "university": "华侨大学",
+      "major": "市场营销专业（2024级）",
       "city": "泉州 / 厦门"
+    }
+  ],
+  "studentRows": [
+    {
+      "name": "李仲实",
+      "registeredName": "李仲实",
+      "wechatName": "塞雷SL",
+      "university": "南航大",
+      "major": "飞行技术",
+      "city": "南京",
+      "locations": [
+        {
+          "label": "南京",
+          "note": "南京市",
+          "type": "city"
+        }
+      ],
+      "unmappedLocations": []
+    },
+    {
+      "name": "雷雨",
+      "registeredName": "雷雨",
+      "wechatName": "雷雨同学",
+      "university": "",
+      "major": "",
+      "city": "",
+      "locations": [],
+      "unmappedLocations": []
+    },
+    {
+      "name": "彭根辉",
+      "registeredName": "彭根辉",
+      "wechatName": "彭根辉",
+      "university": "",
+      "major": "",
+      "city": "",
+      "locations": [],
+      "unmappedLocations": []
+    },
+    {
+      "name": "小橘",
+      "registeredName": "小橘",
+      "wechatName": "小橘",
+      "university": "",
+      "major": "",
+      "city": "",
+      "locations": [],
+      "unmappedLocations": []
+    },
+    {
+      "name": "周晶🎐",
+      "registeredName": "周晶🎐",
+      "wechatName": "周晶🎐",
+      "university": "",
+      "major": "",
+      "city": "",
+      "locations": [],
+      "unmappedLocations": []
+    },
+    {
+      "name": "Tracy",
+      "registeredName": "Tracy",
+      "wechatName": "Traaa",
+      "university": "Wellesley College",
+      "major": "Media Arts and Sciences",
+      "city": "波士顿",
+      "locations": [
+        {
+          "label": "波士顿",
+          "note": "海外市级行政边界",
+          "type": "city"
+        }
+      ],
+      "unmappedLocations": []
+    },
+    {
+      "name": "王梓如",
+      "registeredName": "王梓如",
+      "wechatName": "帧安",
+      "university": "",
+      "major": "中医",
+      "city": "上海",
+      "locations": [
+        {
+          "label": "上海",
+          "note": "上海市",
+          "type": "city"
+        }
+      ],
+      "unmappedLocations": []
+    },
+    {
+      "name": "影洲",
+      "registeredName": "影洲",
+      "wechatName": "雅正",
+      "university": "杭州电子科技大学",
+      "major": "",
+      "city": "杭州",
+      "locations": [
+        {
+          "label": "杭州",
+          "note": "杭州市",
+          "type": "city"
+        }
+      ],
+      "unmappedLocations": []
+    },
+    {
+      "name": "Spaceman",
+      "registeredName": "Spaceman",
+      "wechatName": "十日十韦",
+      "university": "衡阳师范学院",
+      "major": "计算机专业",
+      "city": "衡阳",
+      "locations": [
+        {
+          "label": "衡阳",
+          "note": "衡阳市",
+          "type": "city"
+        }
+      ],
+      "unmappedLocations": []
+    },
+    {
+      "name": "Yesoo",
+      "registeredName": "Yesoo",
+      "wechatName": "Malpaca",
+      "university": "南京邮电大学",
+      "major": "软件工程 大二",
+      "city": "南京",
+      "locations": [
+        {
+          "label": "南京",
+          "note": "南京市",
+          "type": "city"
+        }
+      ],
+      "unmappedLocations": []
+    },
+    {
+      "name": "Dorian",
+      "registeredName": "Dorian",
+      "wechatName": "Dorian",
+      "university": "",
+      "major": "",
+      "city": "",
+      "locations": [],
+      "unmappedLocations": []
+    },
+    {
+      "name": "janus",
+      "registeredName": "janus",
+      "wechatName": "陆小果",
+      "university": "",
+      "major": "导演 / 艺术生",
+      "city": "长春 / 济南",
+      "locations": [
+        {
+          "label": "长春",
+          "note": "长春市",
+          "type": "city"
+        },
+        {
+          "label": "济南",
+          "note": "济南市",
+          "type": "city"
+        }
+      ],
+      "unmappedLocations": []
+    },
+    {
+      "name": "moby豪",
+      "registeredName": "moby豪",
+      "wechatName": "MoBy豪",
+      "university": "集美大学",
+      "major": "",
+      "city": "厦门",
+      "locations": [
+        {
+          "label": "厦门",
+          "note": "厦门市",
+          "type": "city"
+        }
+      ],
+      "unmappedLocations": []
+    },
+    {
+      "name": "淼淼",
+      "registeredName": "淼淼",
+      "wechatName": "邱淼淼",
+      "university": "闽南师范大学",
+      "major": "广播电视编导大三 / 摄影摄像",
+      "city": "漳州",
+      "locations": [
+        {
+          "label": "漳州",
+          "note": "漳州市",
+          "type": "city"
+        }
+      ],
+      "unmappedLocations": []
+    },
+    {
+      "name": "注意力",
+      "registeredName": "注意力",
+      "wechatName": "注意力",
+      "university": "",
+      "major": "",
+      "city": "",
+      "locations": [],
+      "unmappedLocations": []
+    },
+    {
+      "name": "王境",
+      "registeredName": "王境",
+      "wechatName": "狸猫🦝",
+      "university": "武汉晴川学院",
+      "major": "机械电子工程",
+      "city": "武汉",
+      "locations": [
+        {
+          "label": "武汉",
+          "note": "武汉市",
+          "type": "city"
+        }
+      ],
+      "unmappedLocations": []
+    },
+    {
+      "name": "三十六",
+      "registeredName": "三十六",
+      "wechatName": "三十六",
+      "university": "青岛理工",
+      "major": "土木水利（研0）",
+      "city": "苏州",
+      "locations": [
+        {
+          "label": "苏州",
+          "note": "苏州市",
+          "type": "city"
+        }
+      ],
+      "unmappedLocations": []
+    },
+    {
+      "name": "Wincent",
+      "registeredName": "Wincent",
+      "wechatName": "Wincent",
+      "university": "",
+      "major": "应届高考生",
+      "city": "大连",
+      "locations": [
+        {
+          "label": "大连",
+          "note": "大连市",
+          "type": "city"
+        }
+      ],
+      "unmappedLocations": []
+    },
+    {
+      "name": "五谷粥",
+      "registeredName": "五谷粥",
+      "wechatName": "五谷粥",
+      "university": "浙江大学",
+      "major": "准备申请临床医学",
+      "city": "杭州",
+      "locations": [
+        {
+          "label": "杭州",
+          "note": "杭州市",
+          "type": "city"
+        }
+      ],
+      "unmappedLocations": []
+    },
+    {
+      "name": "JM",
+      "registeredName": "JM",
+      "wechatName": "JM",
+      "university": "",
+      "major": "",
+      "city": "",
+      "locations": [],
+      "unmappedLocations": []
+    },
+    {
+      "name": "Time flies.",
+      "registeredName": "Time flies.",
+      "wechatName": "Time flies.",
+      "university": "西南交通大学",
+      "major": "通信工程（准大二）",
+      "city": "成都",
+      "locations": [
+        {
+          "label": "成都",
+          "note": "成都市",
+          "type": "city"
+        }
+      ],
+      "unmappedLocations": []
+    },
+    {
+      "name": "张嘉文",
+      "registeredName": "张嘉文",
+      "wechatName": "我说，要有光",
+      "university": "法国索邦大学",
+      "major": "人工智能（研究生在读）",
+      "city": "巴黎",
+      "locations": [
+        {
+          "label": "巴黎",
+          "note": "海外市级行政边界",
+          "type": "city"
+        }
+      ],
+      "unmappedLocations": []
+    },
+    {
+      "name": "sam",
+      "registeredName": "sam",
+      "wechatName": "lwt",
+      "university": "悉尼大学",
+      "major": "医学科学+解剖与组织学（本科）",
+      "city": "悉尼",
+      "locations": [
+        {
+          "label": "悉尼",
+          "note": "海外都会区边界",
+          "type": "city"
+        }
+      ],
+      "unmappedLocations": []
+    },
+    {
+      "name": "杜祖鹏",
+      "registeredName": "杜祖鹏",
+      "wechatName": "Sunflower",
+      "university": "西安交通大学",
+      "major": "机械工程学院",
+      "city": "西安",
+      "locations": [
+        {
+          "label": "西安",
+          "note": "西安市",
+          "type": "city"
+        }
+      ],
+      "unmappedLocations": []
+    },
+    {
+      "name": "李国正",
+      "registeredName": "李国正",
+      "wechatName": "七度旅人",
+      "university": "湖北工业大学工程技术学院",
+      "major": "计算机科学与技术（大二，已休学创业中）",
+      "city": "武汉",
+      "locations": [
+        {
+          "label": "武汉",
+          "note": "武汉市",
+          "type": "city"
+        }
+      ],
+      "unmappedLocations": []
+    },
+    {
+      "name": "愚任杰",
+      "registeredName": "愚任杰",
+      "wechatName": "愚任杰",
+      "university": "新加坡国立大学",
+      "major": "工业系统工程（研究生）",
+      "city": "新加坡",
+      "locations": [
+        {
+          "label": "新加坡",
+          "note": "海外市级行政边界",
+          "type": "city"
+        }
+      ],
+      "unmappedLocations": []
+    },
+    {
+      "name": "穆昱伟",
+      "registeredName": "穆昱伟",
+      "wechatName": "Algea",
+      "university": "河北科技大学",
+      "major": "建环专业",
+      "city": "石家庄市",
+      "locations": [
+        {
+          "label": "石家庄市",
+          "note": "石家庄市",
+          "type": "city"
+        }
+      ],
+      "unmappedLocations": []
+    },
+    {
+      "name": "张锦阳",
+      "registeredName": "张锦阳",
+      "wechatName": "Orion 常青de绵阳",
+      "university": "河南财经政法大学",
+      "major": "软件工程（大一）",
+      "city": "郑州",
+      "locations": [
+        {
+          "label": "郑州",
+          "note": "郑州市",
+          "type": "city"
+        }
+      ],
+      "unmappedLocations": []
+    },
+    {
+      "name": "华宇昊",
+      "registeredName": "华宇昊",
+      "wechatName": "ɔɪ化十子.",
+      "university": "宁波大学科学技术学院",
+      "major": "生物技术专业（刚毕业）",
+      "city": "杭州",
+      "locations": [
+        {
+          "label": "杭州",
+          "note": "杭州市",
+          "type": "city"
+        }
+      ],
+      "unmappedLocations": []
+    },
+    {
+      "name": "多林",
+      "registeredName": "多林",
+      "wechatName": "Artist多林",
+      "university": "山东第一医科大学",
+      "major": "医学实验技术（大二）",
+      "city": "广西柳州",
+      "locations": [
+        {
+          "label": "广西柳州",
+          "note": "柳州市",
+          "type": "city"
+        }
+      ],
+      "unmappedLocations": []
+    },
+    {
+      "name": "浩瀚夜空",
+      "registeredName": "浩瀚夜空",
+      "wechatName": "浩瀚夜空",
+      "university": "香港大学（准本科生）",
+      "major": "",
+      "city": "香港",
+      "locations": [
+        {
+          "label": "香港",
+          "note": "香港特别行政区",
+          "type": "city"
+        }
+      ],
+      "unmappedLocations": []
+    },
+    {
+      "name": "季佳杰",
+      "registeredName": "季佳杰",
+      "wechatName": "季",
+      "university": "北京中医药大学",
+      "major": "",
+      "city": "常州/北京",
+      "locations": [
+        {
+          "label": "常州",
+          "note": "常州市",
+          "type": "city"
+        },
+        {
+          "label": "北京",
+          "note": "北京市",
+          "type": "city"
+        }
+      ],
+      "unmappedLocations": []
+    },
+    {
+      "name": "Echo",
+      "registeredName": "Echo",
+      "wechatName": "Echo",
+      "university": "",
+      "major": "",
+      "city": "",
+      "locations": [],
+      "unmappedLocations": []
+    },
+    {
+      "name": "leah",
+      "registeredName": "leah",
+      "wechatName": "状况外🌀",
+      "university": "华东师范大学",
+      "major": "经济学",
+      "city": "上海",
+      "locations": [
+        {
+          "label": "上海",
+          "note": "上海市",
+          "type": "city"
+        }
+      ],
+      "unmappedLocations": []
+    },
+    {
+      "name": "Jaden",
+      "registeredName": "Jaden",
+      "wechatName": "Jaden@Jaden_riku",
+      "university": "",
+      "major": "",
+      "city": "",
+      "locations": [],
+      "unmappedLocations": []
+    },
+    {
+      "name": "Allonsy",
+      "registeredName": "Allonsy",
+      "wechatName": "Allons--y",
+      "university": "上海理工大学",
+      "major": "土木水利研一",
+      "city": "上海",
+      "locations": [
+        {
+          "label": "上海",
+          "note": "上海市",
+          "type": "city"
+        }
+      ],
+      "unmappedLocations": []
+    },
+    {
+      "name": "覔",
+      "registeredName": "覔",
+      "wechatName": "覔",
+      "university": "",
+      "major": "",
+      "city": "",
+      "locations": [],
+      "unmappedLocations": []
+    },
+    {
+      "name": "蟑螂",
+      "registeredName": "蟑螂",
+      "wechatName": "ㅤ蟑螂",
+      "university": "新南威尔士大学",
+      "major": "生物医学工程（方向：生信和数据科学，大三）",
+      "city": "悉尼",
+      "locations": [
+        {
+          "label": "悉尼",
+          "note": "海外都会区边界",
+          "type": "city"
+        }
+      ],
+      "unmappedLocations": []
+    },
+    {
+      "name": "小羊",
+      "registeredName": "小羊",
+      "wechatName": "FY",
+      "university": "燕山大学",
+      "major": "机械工程",
+      "city": "秦皇岛",
+      "locations": [
+        {
+          "label": "秦皇岛",
+          "note": "秦皇岛市",
+          "type": "city"
+        }
+      ],
+      "unmappedLocations": []
+    },
+    {
+      "name": "徐亚博",
+      "registeredName": "徐亚博",
+      "wechatName": "火火",
+      "university": "信阳师范大学",
+      "major": "护理学",
+      "city": "信阳市",
+      "locations": [
+        {
+          "label": "信阳市",
+          "note": "信阳市",
+          "type": "city"
+        }
+      ],
+      "unmappedLocations": []
+    },
+    {
+      "name": "李谨西",
+      "registeredName": "李谨西",
+      "wechatName": "koi",
+      "university": "武汉科技大学",
+      "major": "金融科技专业",
+      "city": "武汉",
+      "locations": [
+        {
+          "label": "武汉",
+          "note": "武汉市",
+          "type": "city"
+        }
+      ],
+      "unmappedLocations": []
+    },
+    {
+      "name": "章魚飯.",
+      "registeredName": "章魚飯.",
+      "wechatName": "章魚飯.",
+      "university": "",
+      "major": "",
+      "city": "武汉",
+      "locations": [
+        {
+          "label": "武汉",
+          "note": "武汉市",
+          "type": "city"
+        }
+      ],
+      "unmappedLocations": []
+    },
+    {
+      "name": "Lihyu",
+      "registeredName": "Lihyu",
+      "wechatName": "Lihyu",
+      "university": "",
+      "major": "",
+      "city": "",
+      "locations": [],
+      "unmappedLocations": []
+    },
+    {
+      "name": "朱天宇",
+      "registeredName": "朱天宇",
+      "wechatName": "思想先落地",
+      "university": "天津大学",
+      "major": "材料科学与工程",
+      "city": "天津",
+      "locations": [
+        {
+          "label": "天津",
+          "note": "天津市",
+          "type": "city"
+        }
+      ],
+      "unmappedLocations": []
+    },
+    {
+      "name": "仅此而已",
+      "registeredName": "仅此而已",
+      "wechatName": "仅此而已",
+      "university": "",
+      "major": "",
+      "city": "",
+      "locations": [],
+      "unmappedLocations": []
+    },
+    {
+      "name": "月",
+      "registeredName": "月",
+      "wechatName": "月",
+      "university": "",
+      "major": "",
+      "city": "",
+      "locations": [],
+      "unmappedLocations": []
+    },
+    {
+      "name": "舒奕萌",
+      "registeredName": "舒奕萌",
+      "wechatName": "🐟",
+      "university": "",
+      "major": "应届高考生",
+      "city": "山东",
+      "locations": [
+        {
+          "label": "山东",
+          "note": "山东省",
+          "type": "province"
+        }
+      ],
+      "unmappedLocations": []
+    },
+    {
+      "name": "姜永健",
+      "registeredName": "姜永健",
+      "wechatName": "。",
+      "university": "华侨大学",
+      "major": "市场营销专业（2024级）",
+      "city": "泉州 / 厦门",
+      "locations": [
+        {
+          "label": "泉州",
+          "note": "泉州市",
+          "type": "city"
+        },
+        {
+          "label": "厦门",
+          "note": "厦门市",
+          "type": "city"
+        }
+      ],
+      "unmappedLocations": []
+    },
+    {
+      "name": "Yuvi",
+      "registeredName": "Yuvi",
+      "wechatName": "Yuvi",
+      "university": "",
+      "major": "",
+      "city": "",
+      "locations": [],
+      "unmappedLocations": []
+    },
+    {
+      "name": "Cameron",
+      "registeredName": "Cameron",
+      "wechatName": "Cameron",
+      "university": "",
+      "major": "",
+      "city": "",
+      "locations": [],
+      "unmappedLocations": []
+    },
+    {
+      "name": "Gambetto",
+      "registeredName": "Gambetto",
+      "wechatName": "Gambetto",
+      "university": "",
+      "major": "",
+      "city": "",
+      "locations": [],
+      "unmappedLocations": []
+    },
+    {
+      "name": "阿良",
+      "registeredName": "阿良",
+      "wechatName": "Anthony Li",
+      "university": "",
+      "major": "国贸专业大三",
+      "city": "北京",
+      "locations": [
+        {
+          "label": "北京",
+          "note": "北京市",
+          "type": "city"
+        }
+      ],
+      "unmappedLocations": []
+    },
+    {
+      "name": "半夏",
+      "registeredName": "半夏",
+      "wechatName": "半夏",
+      "university": "",
+      "major": "",
+      "city": "",
+      "locations": [],
+      "unmappedLocations": []
+    },
+    {
+      "name": "Musol",
+      "registeredName": "Musol",
+      "wechatName": "桜のMusol",
+      "university": "",
+      "major": "",
+      "city": "",
+      "locations": [],
+      "unmappedLocations": []
+    },
+    {
+      "name": "酌锦",
+      "registeredName": "酌锦",
+      "wechatName": "酌锦",
+      "university": "昆明医科大学",
+      "major": "基础医学专业 / 研0",
+      "city": "昆明",
+      "locations": [
+        {
+          "label": "昆明",
+          "note": "昆明市",
+          "type": "city"
+        }
+      ],
+      "unmappedLocations": []
+    },
+    {
+      "name": "Sophie",
+      "registeredName": "Sophie",
+      "wechatName": "淼",
+      "university": "澳洲不知名某大学；悉尼大学",
+      "major": "教育硕士待入学",
+      "city": "悉尼",
+      "locations": [
+        {
+          "label": "悉尼",
+          "note": "海外都会区边界",
+          "type": "city"
+        }
+      ],
+      "unmappedLocations": []
+    },
+    {
+      "name": "vleffrey",
+      "registeredName": "vleffrey",
+      "wechatName": "vleffrey",
+      "university": "",
+      "major": "",
+      "city": "",
+      "locations": [],
+      "unmappedLocations": []
+    },
+    {
+      "name": "Glory",
+      "registeredName": "Glory",
+      "wechatName": "Glory",
+      "university": "山东理工大学",
+      "major": "地信专业 / 大二",
+      "city": "淄博",
+      "locations": [
+        {
+          "label": "淄博",
+          "note": "淄博市",
+          "type": "city"
+        }
+      ],
+      "unmappedLocations": []
+    },
+    {
+      "name": "Robin",
+      "registeredName": "Robin",
+      "wechatName": "Robin",
+      "university": "中国科学院大学；中科院某研究所",
+      "major": "读研",
+      "city": "北京",
+      "locations": [
+        {
+          "label": "北京",
+          "note": "北京市",
+          "type": "city"
+        }
+      ],
+      "unmappedLocations": []
+    },
+    {
+      "name": "郑杨守都",
+      "registeredName": "郑杨守都",
+      "wechatName": "Luxorion",
+      "university": "青岛科技大学",
+      "major": "人工智能专业在读",
+      "city": "青岛",
+      "locations": [
+        {
+          "label": "青岛",
+          "note": "青岛市",
+          "type": "city"
+        }
+      ],
+      "unmappedLocations": []
+    },
+    {
+      "name": "Wheeler",
+      "registeredName": "Wheeler",
+      "wechatName": "Seacoconut",
+      "university": "上海海洋大学",
+      "major": "物理海洋学",
+      "city": "上海",
+      "locations": [
+        {
+          "label": "上海",
+          "note": "上海市",
+          "type": "city"
+        }
+      ],
+      "unmappedLocations": []
+    },
+    {
+      "name": "梁波",
+      "registeredName": "梁波",
+      "wechatName": "粉色钉子头",
+      "university": "西南交大",
+      "major": "通信工程专业 / 本科一年级",
+      "city": "重庆",
+      "locations": [
+        {
+          "label": "重庆",
+          "note": "重庆市",
+          "type": "city"
+        }
+      ],
+      "unmappedLocations": []
+    },
+    {
+      "name": "康康",
+      "registeredName": "康康",
+      "wechatName": "sloth",
+      "university": "",
+      "major": "师范专业",
+      "city": "广州",
+      "locations": [
+        {
+          "label": "广州",
+          "note": "广州市",
+          "type": "city"
+        }
+      ],
+      "unmappedLocations": []
+    },
+    {
+      "name": "Bryan",
+      "registeredName": "Bryan",
+      "wechatName": "Ryan",
+      "university": "江苏海洋大学",
+      "major": "",
+      "city": "连云港",
+      "locations": [
+        {
+          "label": "连云港",
+          "note": "连云港市",
+          "type": "city"
+        }
+      ],
+      "unmappedLocations": []
+    },
+    {
+      "name": "Levia",
+      "registeredName": "Levia",
+      "wechatName": "Levia.Qi",
+      "university": "福建師範大學",
+      "major": "",
+      "city": "福州",
+      "locations": [
+        {
+          "label": "福州",
+          "note": "福州市",
+          "type": "city"
+        }
+      ],
+      "unmappedLocations": []
+    },
+    {
+      "name": "郁郁葱葱",
+      "registeredName": "郁郁葱葱",
+      "wechatName": "郁郁葱葱",
+      "university": "",
+      "major": "",
+      "city": "",
+      "locations": [],
+      "unmappedLocations": []
+    },
+    {
+      "name": "大符",
+      "registeredName": "大符",
+      "wechatName": "红茶椰",
+      "university": "南京农业大学",
+      "major": "食品安全",
+      "city": "南京",
+      "locations": [
+        {
+          "label": "南京",
+          "note": "南京市",
+          "type": "city"
+        }
+      ],
+      "unmappedLocations": []
+    },
+    {
+      "name": "冷酷小猫",
+      "registeredName": "冷酷小猫",
+      "wechatName": "猫博",
+      "university": "华中科技大学",
+      "major": "机械电子工程",
+      "city": "武汉",
+      "locations": [
+        {
+          "label": "武汉",
+          "note": "武汉市",
+          "type": "city"
+        }
+      ],
+      "unmappedLocations": []
+    },
+    {
+      "name": "张校菘",
+      "registeredName": "张校菘",
+      "wechatName": "向箔",
+      "university": "烟台大学",
+      "major": "AI应用方向",
+      "city": "山东烟台",
+      "locations": [
+        {
+          "label": "烟台",
+          "note": "烟台市",
+          "type": "city"
+        }
+      ],
+      "unmappedLocations": []
+    },
+    {
+      "name": "杜博伦",
+      "registeredName": "杜博伦",
+      "wechatName": "有志青年",
+      "university": "",
+      "major": "应届高考生",
+      "city": "江苏淮安",
+      "locations": [
+        {
+          "label": "淮安",
+          "note": "淮安市",
+          "type": "city"
+        }
+      ],
+      "unmappedLocations": []
+    },
+    {
+      "name": "张淇博",
+      "registeredName": "张淇博",
+      "wechatName": "keve",
+      "university": "深圳技术大学",
+      "major": "集成电路",
+      "city": "深圳",
+      "locations": [
+        {
+          "label": "深圳",
+          "note": "深圳市",
+          "type": "city"
+        }
+      ],
+      "unmappedLocations": []
+    },
+    {
+      "name": "乘璟",
+      "registeredName": "乘璟",
+      "wechatName": "乘璟",
+      "university": "",
+      "major": "",
+      "city": "",
+      "locations": [],
+      "unmappedLocations": []
     }
   ]
 }

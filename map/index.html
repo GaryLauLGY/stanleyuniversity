@@ -277,6 +277,41 @@
       letter-spacing: 0.6px;
     }
 
+    .tree-title-group {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      min-width: 0;
+    }
+
+    .tree-view-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 2px;
+      padding: 2px;
+      border: 1px solid rgba(220, 227, 220, 0.82);
+      border-radius: 7px;
+      background: rgba(255,255,255,0.58);
+      letter-spacing: 0;
+      text-transform: none;
+    }
+
+    .tree-view-btn {
+      min-width: 42px;
+      padding: 4px 8px;
+      border: 0;
+      border-radius: 5px;
+      color: var(--text-faint);
+      font-size: 11px;
+      font-weight: 850;
+    }
+
+    .tree-view-btn.active {
+      color: var(--accent);
+      background: #f1f2ff;
+      box-shadow: inset 0 0 0 1px rgba(100, 104, 217, 0.12);
+    }
+
     .tree-body {
       flex: 1;
       overflow-y: auto;
@@ -428,6 +463,100 @@
       color: var(--text-faint);
       font-size: 11px;
       font-weight: 700;
+    }
+
+    .student-view-list {
+      display: grid;
+      gap: 8px;
+    }
+
+    .student-row-card {
+      display: grid;
+      gap: 8px;
+      padding: 10px;
+      border: 1px solid rgba(220, 227, 220, 0.88);
+      border-radius: 8px;
+      background: rgba(255,255,255,0.68);
+      box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+    }
+
+    .student-row-head {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 8px;
+      align-items: start;
+      min-width: 0;
+    }
+
+    .student-row-head strong {
+      display: block;
+      overflow: hidden;
+      color: var(--text);
+      font-size: 13px;
+      font-weight: 900;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .student-row-head span {
+      color: var(--text-faint);
+      font-size: 11px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .student-row-meta {
+      display: grid;
+      gap: 4px;
+      color: var(--text-dim);
+      font-size: 11px;
+      font-weight: 720;
+      line-height: 1.35;
+    }
+
+    .student-row-meta span {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .student-row-locations {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      min-width: 0;
+    }
+
+    .student-location-chip,
+    .student-location-empty {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      max-width: 100%;
+      padding: 4px 8px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 850;
+      line-height: 1;
+      text-transform: none;
+      letter-spacing: 0;
+    }
+
+    .student-location-chip {
+      border: 1px solid rgba(100, 104, 217, 0.18);
+      color: var(--accent);
+      background: rgba(241,242,255,0.74);
+    }
+
+    .student-location-chip span {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .student-location-empty {
+      color: var(--text-faint);
+      background: rgba(245, 246, 243, 0.82);
     }
 
     .leaf-dot {
@@ -941,8 +1070,15 @@
       }
       .tree-header {
         flex-shrink: 0;
-        min-height: 46px;
+        min-height: 52px;
         background: rgba(238,242,238,0.96);
+      }
+      .tree-title-group {
+        gap: 7px;
+      }
+      .tree-view-btn {
+        min-width: 40px;
+        padding: 5px 8px;
       }
       .tree-body {
         flex: 1;
@@ -1036,7 +1172,16 @@
 
   <main class="app-main">
     <aside class="place-tree" aria-label="已填色地点">
-      <div class="tree-header"><span id="treeTitle">已填色地点</span><span id="visibleCount">16</span></div>
+      <div class="tree-header">
+        <div class="tree-title-group">
+          <span id="treeTitle">已填色地点</span>
+          <div class="tree-view-toggle" aria-label="左栏视图">
+            <button class="tree-view-btn active" type="button" data-tree-view="places">地区</button>
+            <button class="tree-view-btn" type="button" data-tree-view="students">学生</button>
+          </div>
+        </div>
+        <span id="visibleCount">16</span>
+      </div>
       <div class="tree-body" id="cityList"></div>
     </aside>
 
@@ -1129,6 +1274,7 @@
       { label: "悉尼", count: 1, note: "海外都会区边界", lng: 151.2093, lat: -33.8688, overseasId: "sydney", students: ["sam"] }
     ];
     let PROVINCE_ROWS = [];
+    let STUDENT_ROWS = [];
 
     const cityCountByName = new Map();
     const cityLabelByName = new Map();
@@ -1147,6 +1293,7 @@
     const syncStatus = document.getElementById("syncStatus");
     const filterButtons = document.querySelectorAll("[data-filter]");
     const mapModeButtons = document.querySelectorAll("[data-map-mode]");
+    const treeViewButtons = document.querySelectorAll("[data-tree-view]");
     const red = getComputedStyle(document.documentElement).getPropertyValue("--red").trim();
     const amber = getComputedStyle(document.documentElement).getPropertyValue("--amber").trim();
     const green = getComputedStyle(document.documentElement).getPropertyValue("--green").trim();
@@ -1159,6 +1306,7 @@
     let map;
     let filter = "all";
     let geoMode = "city";
+    let treeView = "places";
     let activeLabel = null;
     const expandedLabels = new Set();
     let mapLabelMarkers = [];
@@ -1218,11 +1366,16 @@
 
     function normalizeStudent(student) {
       if (typeof student === "string") {
-        return { registeredName: student, wechatName: student };
+        return { registeredName: student, wechatName: student, university: "", major: "" };
       }
       const registeredName = student?.registeredName || student?.name || student?.wechatName || "未命名成员";
       const wechatName = student?.wechatName || registeredName;
-      return { registeredName, wechatName };
+      return {
+        registeredName,
+        wechatName,
+        university: student?.university || "",
+        major: student?.major || ""
+      };
     }
 
     function studentChip(student) {
@@ -1285,7 +1438,6 @@
       document.getElementById("multiAddressRow").style.display = MULTI_ADDRESS_MEMBERS ? "" : "none";
       document.getElementById("provinceOnlyMetric").textContent = PROVINCE_ONLY_MEMBERS;
       document.getElementById("unrecordedMetric").textContent = UNRECORDED_MEMBERS;
-      treeTitle.textContent = geoMode === "province" ? "省级 / 海外" : "国内省市 / 海外";
       const countRows = displayRows();
       const counts = { all: countRows.length, 1: 0, 2: 0, 3: 0 };
       for (const row of countRows) {
@@ -1311,6 +1463,7 @@
       if (!data || !Array.isArray(data.placeRows)) return;
       PLACE_ROWS = data.placeRows;
       PROVINCE_ROWS = Array.isArray(data.provinceRows) ? data.provinceRows : [];
+      STUDENT_ROWS = Array.isArray(data.studentRows) ? data.studentRows : [];
       TOTAL_MEMBERS = data.totalMembers;
       LOCATED_MEMBERS = data.locatedMembers;
       CITY_LOCATED_MEMBERS = data.cityLocatedMembers || data.locatedMembers;
@@ -1493,6 +1646,43 @@
       `;
     }
 
+    function renderStudentModeList() {
+      if (!STUDENT_ROWS.length) {
+        return `
+          <section class="tree-section">
+            <div class="tree-section-title"><span>学生</span><strong>无</strong></div>
+          </section>
+        `;
+      }
+      const cards = STUDENT_ROWS.map((student, index) => {
+        const item = normalizeStudent(student);
+        const sameName = item.registeredName === item.wechatName;
+        const locations = Array.isArray(student.locations) ? student.locations : [];
+        const locationHtml = locations.length
+          ? locations.map((location) => `
+              <button class="student-location-chip" type="button" data-label="${escapeHtml(location.label)}" title="${escapeHtml(location.note || location.label)}">
+                <span>${escapeHtml(location.label)}</span>
+              </button>
+            `).join("")
+          : `<span class="student-location-empty">未填写地区</span>`;
+        return `
+          <article class="student-row-card">
+            <div class="student-row-head">
+              <strong title="${escapeHtml(item.registeredName)}">${escapeHtml(item.registeredName)}</strong>
+              <span>${index + 1}</span>
+            </div>
+            <div class="student-row-meta">
+              <span title="${escapeHtml(item.wechatName)}">微信：${escapeHtml(sameName ? "同名" : item.wechatName)}</span>
+              <span title="${escapeHtml(item.university || "未填写大学")}">大学：${escapeHtml(item.university || "未填写")}</span>
+              <span title="${escapeHtml(item.major || "未填写专业")}">专业：${escapeHtml(item.major || "未填写")}</span>
+            </div>
+            <div class="student-row-locations">${locationHtml}</div>
+          </article>
+        `;
+      }).join("");
+      return `<section class="student-view-list">${cards}</section>`;
+    }
+
     function findRowByLabel(label) {
       if (!label) return null;
       if (label.endsWith("省级记录")) {
@@ -1504,6 +1694,30 @@
     }
 
     function renderList() {
+      treeViewButtons.forEach((button) => {
+        button.classList.toggle("active", button.dataset.treeView === treeView);
+      });
+      if (treeView === "students") {
+        treeTitle.textContent = "学生";
+        visibleCount.textContent = STUDENT_ROWS.length;
+        list.innerHTML = renderStudentModeList();
+        document.querySelectorAll(".student-location-chip").forEach((button) => {
+          button.addEventListener("click", (event) => {
+            event.stopPropagation();
+            const row = findRowByLabel(button.dataset.label);
+            if (!row) return;
+            const targetMode = row.chinaNames || row.overseasId ? "city" : "province";
+            if (geoMode !== targetMode) {
+              geoMode = targetMode;
+              mapModeButtons.forEach((item) => item.classList.toggle("active", item.dataset.mapMode === geoMode));
+              refreshRenderedData();
+            }
+            focusRow(row, { keepExpansionState: false, revealList: false });
+          });
+        });
+        return;
+      }
+      treeTitle.textContent = geoMode === "province" ? "省级 / 海外" : "国内省市 / 海外";
       const visibleRows = rows();
       visibleCount.textContent = visibleRows.length;
       list.innerHTML = geoMode === "province" ? renderProvinceModeList() : renderCityModeList();
@@ -2016,6 +2230,13 @@
         expandedLabels.clear();
         mapModeButtons.forEach((item) => item.classList.toggle("active", item === button));
         refreshRenderedData();
+      });
+    });
+
+    treeViewButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        treeView = button.dataset.treeView;
+        renderList();
       });
     });
 

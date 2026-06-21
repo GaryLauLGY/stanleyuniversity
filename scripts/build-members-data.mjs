@@ -172,7 +172,9 @@ async function listRecordsByOpenApi(token) {
       const member = memberRecord(fields["名字"], fields["微信名字"]);
       records.push({
         ...member,
-        city: textCell(fields["城市"])
+        city: textCell(fields["城市"]),
+        university: textCell(fields["学校"]),
+        major: textCell(fields["在读专业"])
       });
     }
     pageToken = payload.data?.page_token || "";
@@ -192,6 +194,8 @@ async function listRecordsByLarkCli() {
       "--field-id", "名字",
       "--field-id", "微信名字",
       "--field-id", "城市",
+      "--field-id", "学校",
+      "--field-id", "在读专业",
       "--limit", "200",
       "--offset", String(offset),
       "--format", "json",
@@ -204,7 +208,9 @@ async function listRecordsByLarkCli() {
       const member = memberRecord(row[0], row[1]);
       records.push({
         ...member,
-        city: textCell(row[2])
+        city: textCell(row[2]),
+        university: textCell(row[3]),
+        major: textCell(row[4])
       });
     }
     if (!payload.data?.has_more || rows.length === 0) break;
@@ -237,14 +243,21 @@ function buildMapData(records) {
   const provinceOnlyStudents = [];
   const unmappedStudents = [];
   const multiAddressStudents = [];
+  const studentRows = [];
   let mappedMemberCount = 0;
   let mappedAddressCount = 0;
 
   for (const record of records) {
-    const student = memberRecord(record.registeredName || record.name, record.wechatName);
+    const student = {
+      ...memberRecord(record.registeredName || record.name, record.wechatName),
+      university: textCell(record.university),
+      major: textCell(record.major)
+    };
     const cities = splitCityValues(record.city);
+    const locations = [];
     if (!cities.length) {
       unrecordedStudents.push(student);
+      studentRows.push({ ...student, city: textCell(record.city), locations, unmappedLocations: [] });
       continue;
     }
     if (cities.length > 1) multiAddressStudents.push({ ...student, city: record.city });
@@ -260,6 +273,7 @@ function buildMapData(records) {
         const locationStudent = { ...student, city: bucket.label, sourceCity: record.city };
         bucket.count += 1;
         bucket.students.push(locationStudent);
+        locations.push({ label: bucket.label, note: bucket.note, type: "city" });
         mappedAddressCount += 1;
         if (bucket.provinceLabel && provinceBuckets.has(bucket.provinceLabel)) {
           const provinceBucket = provinceBuckets.get(bucket.provinceLabel);
@@ -280,6 +294,7 @@ function buildMapData(records) {
         provinceBucket.provinceOnlyCount += 1;
         provinceBucket.students.push(provinceStudent);
         provinceOnlyStudents.push(provinceStudent);
+        locations.push({ label: provinceBucket.label, note: provinceBucket.name, type: "province" });
         mappedAddressCount += 1;
       } else {
         unmappedValues.push(city);
@@ -287,6 +302,12 @@ function buildMapData(records) {
     }
     if (mappedKeys.size) mappedMemberCount += 1;
     if (unmappedValues.length) unmappedStudents.push({ ...student, city: unmappedValues.join("/") });
+    studentRows.push({
+      ...student,
+      city: textCell(record.city),
+      locations,
+      unmappedLocations: unmappedValues
+    });
   }
 
   const placeRows = [...buckets.values()]
@@ -332,7 +353,8 @@ function buildMapData(records) {
     provinceOnlyStudents,
     unmappedStudents,
     excludedDualCityStudents: [],
-    multiAddressStudents
+    multiAddressStudents,
+    studentRows
   };
 }
 
