@@ -910,10 +910,14 @@
 
     @media (max-width: 980px) {
       html, body {
-        height: auto;
-        overflow: auto;
+        height: 100%;
+        overflow: hidden;
       }
-      body { display: block; }
+      body {
+        display: grid;
+        grid-template-rows: 40px auto minmax(0, 1fr);
+        background: var(--bg-sidebar);
+      }
       .app-header {
         grid-template-columns: 1fr;
         gap: 10px;
@@ -939,21 +943,41 @@
       }
       .header-actions { justify-self: start; }
       .app-main {
+        height: 100%;
+        min-height: 0;
+        display: grid;
         grid-template-columns: 1fr;
-        overflow: visible;
+        grid-template-rows: minmax(380px, 1fr) minmax(230px, 34vh);
+        overflow: hidden;
       }
       .map-wrap {
-        order: -1;
-        height: 62vh;
-        min-height: 460px;
-      }
-      .place-tree,
-      .data-panel {
-        min-height: 280px;
-        border: 0;
+        order: 0;
+        grid-row: 1;
+        height: auto;
+        min-height: 0;
+        border-bottom: 1px solid var(--border);
       }
       .place-tree {
-        border-top: 1px solid var(--border);
+        order: 1;
+        grid-row: 2;
+        min-height: 0;
+        height: auto;
+        overflow: hidden;
+        border: 0;
+      }
+      .tree-header {
+        flex-shrink: 0;
+        background: rgba(238,242,238,0.96);
+      }
+      .tree-body {
+        flex: 1;
+        min-height: 0;
+        overflow-y: auto;
+        max-height: none;
+        -webkit-overflow-scrolling: touch;
+      }
+      .data-panel {
+        display: none;
       }
     }
 
@@ -1032,19 +1056,7 @@
         min-height: 34px;
       }
       .app-main {
-        height: 100%;
-        min-height: 0;
-        display: grid;
-        grid-template-columns: 1fr;
         grid-template-rows: minmax(300px, 52svh) minmax(0, 1fr);
-        overflow: hidden;
-      }
-      .map-wrap {
-        order: 0;
-        grid-row: 1;
-        height: auto;
-        min-height: 0;
-        border-bottom: 1px solid var(--border);
       }
       .maplibregl-ctrl-top-right {
         top: 10px;
@@ -1061,17 +1073,8 @@
         max-width: none;
         font-size: 11px;
       }
-      .place-tree {
-        order: 1;
-        grid-row: 2;
-        min-height: 0;
-        height: auto;
-        overflow: hidden;
-      }
       .tree-header {
-        flex-shrink: 0;
         min-height: 52px;
-        background: rgba(238,242,238,0.96);
       }
       .tree-title-group {
         gap: 7px;
@@ -1081,12 +1084,7 @@
         padding: 5px 8px;
       }
       .tree-body {
-        flex: 1;
-        min-height: 0;
-        overflow-y: auto;
-        max-height: none;
         padding: 8px 10px 16px;
-        -webkit-overflow-scrolling: touch;
       }
       .tree-row {
         min-height: 54px;
