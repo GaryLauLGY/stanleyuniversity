@@ -1036,6 +1036,7 @@
     const provinceCountByName = new Map();
     const provinceLabelByName = new Map();
     let overseasAdminGeo = null;
+    let chinaProvinceBaseGeo = null;
 
     const tooltip = document.getElementById("tooltip");
     const loading = document.getElementById("loading");
@@ -1063,10 +1064,25 @@
     const expandedLabels = new Set();
     let mapLabelMarkers = [];
 
-    function colorFor(count) {
-      if (count >= 3) return red;
-      if (count === 2) return amber;
+    function heatRowsFor(mode = geoMode) {
+      return mode === "province"
+        ? [...PROVINCE_ROWS, ...overseasRows()]
+        : PLACE_ROWS;
+    }
+
+    function heatTotalFor(mode = geoMode) {
+      return heatRowsFor(mode).reduce((sum, row) => sum + Number(row.count || 0), 0);
+    }
+
+    function colorForShare(count, total) {
+      const share = total ? Number(count || 0) / total : 0;
+      if (share >= 0.08) return red;
+      if (share >= 0.04) return amber;
       return green;
+    }
+
+    function colorFor(count, mode = geoMode) {
+      return colorForShare(count, heatTotalFor(mode));
     }
 
     function overseasRows() {
@@ -1187,6 +1203,7 @@
       updateSummary();
       renderCityPie();
       renderList();
+      refreshMapSources();
       applyLayerFilters();
     }
 
@@ -1207,17 +1224,6 @@
       expandedLabels.clear();
       activeLabel = null;
       refreshRenderedData();
-      if (map?.getSource("china-cities") && chinaCityGeo) {
-        for (const feature of chinaCityGeo.features) decorateFeature(feature);
-        map.getSource("china-cities").setData(chinaCityGeo);
-      }
-      if (map?.getSource("china-provinces") && chinaCityGeo) {
-        chinaProvinceGeo = buildChinaProvinceGeo(chinaCityGeo);
-        map.getSource("china-provinces").setData(chinaProvinceGeo);
-      }
-      if (map?.getSource("overseas-city-blocks")) {
-        map.getSource("overseas-city-blocks").setData(overseasGeoJson());
-      }
       renderMapLabels();
     }
 
@@ -1427,14 +1433,17 @@
     function applyLayerFilters() {
       if (!map || !map.getLayer("china-filled")) return;
       const expression = filteredFeatureExpression();
+      const hiddenExpression = ["==", ["get", "__hidden"], true];
       const cityVisible = geoMode === "city" ? "visible" : "none";
       const provinceVisible = geoMode === "province" ? "visible" : "none";
       for (const layer of ["china-empty", "china-boundaries", "china-filled", "china-active"]) {
         if (map.getLayer(layer)) map.setLayoutProperty(layer, "visibility", cityVisible);
       }
-      for (const layer of ["china-province-empty", "china-province-boundaries", "china-province-filled", "china-province-active"]) {
+      for (const layer of ["china-province-empty", "china-province-outline-halo", "china-province-boundaries", "china-province-filled", "china-province-active"]) {
         if (map.getLayer(layer)) map.setLayoutProperty(layer, "visibility", provinceVisible);
       }
+      if (map.getLayer("china-empty")) map.setFilter("china-empty", geoMode === "city" ? null : hiddenExpression);
+      if (map.getLayer("china-boundaries")) map.setFilter("china-boundaries", geoMode === "city" ? null : hiddenExpression);
       map.setFilter("china-filled", expression);
       map.setFilter("china-active", activeExpression());
       if (map.getLayer("china-province-filled")) map.setFilter("china-province-filled", expression);
@@ -1576,6 +1585,11 @@
       return data;
     }
 
+    async function loadChinaProvinceGeo() {
+      const data = await fetchJson("../data/china-province-boundaries.json");
+      return data;
+    }
+
     async function loadWorldGeo() {
       return fetchJson("../data/world-countries.geojson");
     }
@@ -1589,35 +1603,21 @@
       const count = cityCountByName.get(name) || 0;
       feature.properties.studentCount = count;
       feature.properties.displayLabel = cityLabelByName.get(name) || name;
-      feature.properties.color = count ? colorFor(count) : "rgba(249, 247, 241, 0.42)";
+      feature.properties.color = count ? colorFor(count, "city") : "rgba(249, 247, 241, 0.42)";
     }
 
-    function polygonParts(geometry) {
-      if (!geometry) return [];
-      if (geometry.type === "Polygon") return geometry.coordinates;
-      if (geometry.type === "MultiPolygon") return geometry.coordinates.flat();
-      return [];
-    }
-
-    function buildChinaProvinceGeo(chinaGeo) {
+    function buildChinaProvinceGeo(provinceGeo) {
       const provinceByCode = new Map(PROVINCE_ROWS.map((row) => [String(row.adcode), row]));
-      const ringsByCode = new Map();
-      for (const feature of chinaGeo?.features || []) {
-        const props = feature.properties || {};
-        const code = String(props.level === "province" ? props.adcode : props.parent?.adcode || "");
-        if (!provinceByCode.has(code)) continue;
-        if (!ringsByCode.has(code)) ringsByCode.set(code, []);
-        ringsByCode.get(code).push(...polygonParts(feature.geometry));
-      }
       return {
         type: "FeatureCollection",
-        features: [...provinceByCode.entries()]
-          .map(([code, row]) => {
-            const rings = ringsByCode.get(code) || [];
-            if (!rings.length) return null;
+        features: (provinceGeo?.features || [])
+          .map((feature) => {
+            const props = feature.properties || {};
+            const row = provinceByCode.get(String(props.adcode || ""));
+            if (!row) return null;
             return {
               type: "Feature",
-              geometry: { type: "MultiPolygon", coordinates: rings.map((ring) => [ring]) },
+              geometry: feature.geometry,
               properties: {
                 adcode: row.adcode,
                 name: row.name,
@@ -1627,7 +1627,7 @@
                 centroid: [row.lng, row.lat],
                 level: "province",
                 studentCount: row.count,
-                color: row.count ? colorFor(row.count) : "rgba(249, 247, 241, 0.42)"
+                color: row.count ? colorFor(row.count, "province") : "rgba(249, 247, 241, 0.42)"
               }
             };
           })
@@ -1635,9 +1635,24 @@
       };
     }
 
-    function addChoroplethLayers(chinaGeo, worldGeo, overseasGeo) {
+    function refreshMapSources() {
+      if (map?.getSource("china-cities") && chinaCityGeo) {
+        for (const feature of chinaCityGeo.features) decorateFeature(feature);
+        map.getSource("china-cities").setData(chinaCityGeo);
+      }
+      if (map?.getSource("china-provinces") && chinaProvinceBaseGeo) {
+        chinaProvinceGeo = buildChinaProvinceGeo(chinaProvinceBaseGeo);
+        map.getSource("china-provinces").setData(chinaProvinceGeo);
+      }
+      if (map?.getSource("overseas-city-blocks")) {
+        map.getSource("overseas-city-blocks").setData(overseasGeoJson());
+      }
+    }
+
+    function addChoroplethLayers(chinaGeo, provinceGeo, worldGeo, overseasGeo) {
       chinaCityGeo = chinaGeo;
-      chinaProvinceGeo = buildChinaProvinceGeo(chinaGeo);
+      chinaProvinceBaseGeo = provinceGeo;
+      chinaProvinceGeo = buildChinaProvinceGeo(provinceGeo);
       overseasAdminGeo = overseasGeo;
       map.addSource("world-land", { type: "geojson", data: worldGeo });
       map.addSource("china-cities", { type: "geojson", data: chinaGeo });
@@ -1694,11 +1709,24 @@
         paint: { "fill-color": "rgba(249, 247, 241, 0.46)", "fill-opacity": 0.7 }
       });
       map.addLayer({
+        id: "china-province-outline-halo",
+        type: "line",
+        source: "china-provinces",
+        layout: { visibility: "none" },
+        paint: {
+          "line-color": "rgba(255, 255, 255, 0.9)",
+          "line-width": ["interpolate", ["linear"], ["zoom"], 1, 1.1, 4, 2.1, 6, 3.0]
+        }
+      });
+      map.addLayer({
         id: "china-province-boundaries",
         type: "line",
         source: "china-provinces",
         layout: { visibility: "none" },
-        paint: { "line-color": "rgba(211, 179, 172, 0.9)", "line-width": ["interpolate", ["linear"], ["zoom"], 1, 0.45, 4, 0.85, 6, 1.2] }
+        paint: {
+          "line-color": "rgba(91, 86, 78, 0.42)",
+          "line-width": ["interpolate", ["linear"], ["zoom"], 1, 0.55, 4, 1.05, 6, 1.55]
+        }
       });
       map.addLayer({
         id: "china-province-filled",
@@ -1816,8 +1844,8 @@
         map.resize();
         map.setProjection({ type: "globe" });
         try {
-          const [chinaGeo, worldGeo, overseasGeo] = await Promise.all([loadChinaCityGeo(), loadWorldGeo(), loadOverseasAdminGeo()]);
-          addChoroplethLayers(chinaGeo, worldGeo, overseasGeo);
+          const [chinaGeo, provinceGeo, worldGeo, overseasGeo] = await Promise.all([loadChinaCityGeo(), loadChinaProvinceGeo(), loadWorldGeo(), loadOverseasAdminGeo()]);
+          addChoroplethLayers(chinaGeo, provinceGeo, worldGeo, overseasGeo);
           requestAnimationFrame(() => {
             map.resize();
             map.triggerRepaint();
