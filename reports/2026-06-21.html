@@ -234,6 +234,22 @@
       text-align: center;
     }
 
+    .section-head.stacked {
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+
+    .section-head.stacked .section-kicker {
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    .section-head.stacked h2 {
+      grid-column: 1;
+      grid-row: 2;
+      text-align: center;
+    }
+
     h2 {
       margin: 0;
       font-size: 34px;
@@ -738,7 +754,7 @@
     </section>
 
     <section>
-      <div class="section-head">
+      <div class="section-head stacked">
         <div class="section-kicker">一句话复盘</div>
         <h2>今天的 Stanley商学院，把“想学什么”变成了“可以一起做什么”。</h2>
       </div>
