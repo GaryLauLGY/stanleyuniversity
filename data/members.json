@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-06-22T12:49:32.112Z",
-  "totalMembers": 78,
-  "locatedMembers": 55,
-  "cityLocatedMembers": 55,
-  "provinceLocatedMembers": 50,
-  "filledCityRecords": 53,
-  "mappedAddressCount": 56,
+  "updatedAt": "2026-06-22T17:40:11.066Z",
+  "totalMembers": 80,
+  "locatedMembers": 57,
+  "cityLocatedMembers": 57,
+  "provinceLocatedMembers": 52,
+  "filledCityRecords": 55,
+  "mappedAddressCount": 58,
   "multiAddressMembers": 3,
   "provinceOnlyMembers": 1,
   "unmappedMembers": 1,
@@ -295,6 +295,37 @@
       ]
     },
     {
+      "label": "广州",
+      "provinceLabel": "广东",
+      "note": "广州市",
+      "lng": 113.280637,
+      "lat": 23.125178,
+      "chinaNames": [
+        "广州市"
+      ],
+      "count": 2,
+      "students": [
+        {
+          "name": "康康",
+          "registeredName": "康康",
+          "wechatName": "sloth",
+          "university": "",
+          "major": "师范专业",
+          "city": "广州",
+          "sourceCity": "广州"
+        },
+        {
+          "name": "Felix",
+          "registeredName": "Felix",
+          "wechatName": "Felix",
+          "university": "暨南大学",
+          "major": "金融工程",
+          "city": "广州",
+          "sourceCity": "广州"
+        }
+      ]
+    },
+    {
       "label": "厦门",
       "provinceLabel": "福建",
       "note": "厦门市",
@@ -322,6 +353,37 @@
           "major": "市场营销专业（2024级）",
           "city": "厦门",
           "sourceCity": "泉州 / 厦门"
+        }
+      ]
+    },
+    {
+      "label": "郑州",
+      "provinceLabel": "河南",
+      "note": "郑州市",
+      "lng": 113.665412,
+      "lat": 34.757975,
+      "chinaNames": [
+        "郑州市"
+      ],
+      "count": 2,
+      "students": [
+        {
+          "name": "张锦阳",
+          "registeredName": "张锦阳",
+          "wechatName": "Orion 常青de绵阳",
+          "university": "河南财经政法大学",
+          "major": "软件工程（大一）",
+          "city": "郑州",
+          "sourceCity": "郑州"
+        },
+        {
+          "name": "狐狸",
+          "registeredName": "狐狸",
+          "wechatName": "Ver",
+          "university": "河南大学",
+          "major": "计科",
+          "city": "郑州",
+          "sourceCity": "郑州"
         }
       ]
     },
@@ -492,28 +554,6 @@
           "major": "医学实验技术（大二）",
           "city": "广西柳州",
           "sourceCity": "广西柳州"
-        }
-      ]
-    },
-    {
-      "label": "广州",
-      "provinceLabel": "广东",
-      "note": "广州市",
-      "lng": 113.280637,
-      "lat": 23.125178,
-      "chinaNames": [
-        "广州市"
-      ],
-      "count": 1,
-      "students": [
-        {
-          "name": "康康",
-          "registeredName": "康康",
-          "wechatName": "sloth",
-          "university": "",
-          "major": "师范专业",
-          "city": "广州",
-          "sourceCity": "广州"
         }
       ]
     },
@@ -928,28 +968,6 @@
           "major": "导演 / 艺术生",
           "city": "长春",
           "sourceCity": "长春 / 济南"
-        }
-      ]
-    },
-    {
-      "label": "郑州",
-      "provinceLabel": "河南",
-      "note": "郑州市",
-      "lng": 113.665412,
-      "lat": 34.757975,
-      "chinaNames": [
-        "郑州市"
-      ],
-      "count": 1,
-      "students": [
-        {
-          "name": "张锦阳",
-          "registeredName": "张锦阳",
-          "wechatName": "Orion 常青de绵阳",
-          "university": "河南财经政法大学",
-          "major": "软件工程（大一）",
-          "city": "郑州",
-          "sourceCity": "郑州"
         }
       ]
     },
@@ -1729,6 +1747,172 @@
       ]
     },
     {
+      "label": "广东",
+      "name": "广东省",
+      "adcode": 440000,
+      "lng": 113.2668,
+      "lat": 23.1322,
+      "note": "广东省",
+      "count": 3,
+      "cityCount": 3,
+      "provinceOnlyCount": 0,
+      "students": [
+        {
+          "name": "张淇博",
+          "registeredName": "张淇博",
+          "wechatName": "keve",
+          "university": "深圳技术大学",
+          "major": "集成电路",
+          "city": "深圳",
+          "sourceCity": "深圳"
+        },
+        {
+          "name": "康康",
+          "registeredName": "康康",
+          "wechatName": "sloth",
+          "university": "",
+          "major": "师范专业",
+          "city": "广州",
+          "sourceCity": "广州"
+        },
+        {
+          "name": "Felix",
+          "registeredName": "Felix",
+          "wechatName": "Felix",
+          "university": "暨南大学",
+          "major": "金融工程",
+          "city": "广州",
+          "sourceCity": "广州"
+        }
+      ],
+      "cities": [
+        {
+          "label": "广州",
+          "count": 2,
+          "note": "广州市",
+          "students": [
+            {
+              "name": "康康",
+              "registeredName": "康康",
+              "wechatName": "sloth",
+              "university": "",
+              "major": "师范专业",
+              "city": "广州",
+              "sourceCity": "广州"
+            },
+            {
+              "name": "Felix",
+              "registeredName": "Felix",
+              "wechatName": "Felix",
+              "university": "暨南大学",
+              "major": "金融工程",
+              "city": "广州",
+              "sourceCity": "广州"
+            }
+          ]
+        },
+        {
+          "label": "深圳",
+          "count": 1,
+          "note": "深圳市",
+          "students": [
+            {
+              "name": "张淇博",
+              "registeredName": "张淇博",
+              "wechatName": "keve",
+              "university": "深圳技术大学",
+              "major": "集成电路",
+              "city": "深圳",
+              "sourceCity": "深圳"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "河南",
+      "name": "河南省",
+      "adcode": 410000,
+      "lng": 113.7536,
+      "lat": 34.7657,
+      "note": "河南省",
+      "count": 3,
+      "cityCount": 3,
+      "provinceOnlyCount": 0,
+      "students": [
+        {
+          "name": "张锦阳",
+          "registeredName": "张锦阳",
+          "wechatName": "Orion 常青de绵阳",
+          "university": "河南财经政法大学",
+          "major": "软件工程（大一）",
+          "city": "郑州",
+          "sourceCity": "郑州"
+        },
+        {
+          "name": "徐亚博",
+          "registeredName": "徐亚博",
+          "wechatName": "火火",
+          "university": "信阳师范大学",
+          "major": "护理学",
+          "city": "信阳市",
+          "sourceCity": "信阳市"
+        },
+        {
+          "name": "狐狸",
+          "registeredName": "狐狸",
+          "wechatName": "Ver",
+          "university": "河南大学",
+          "major": "计科",
+          "city": "郑州",
+          "sourceCity": "郑州"
+        }
+      ],
+      "cities": [
+        {
+          "label": "郑州",
+          "count": 2,
+          "note": "郑州市",
+          "students": [
+            {
+              "name": "张锦阳",
+              "registeredName": "张锦阳",
+              "wechatName": "Orion 常青de绵阳",
+              "university": "河南财经政法大学",
+              "major": "软件工程（大一）",
+              "city": "郑州",
+              "sourceCity": "郑州"
+            },
+            {
+              "name": "狐狸",
+              "registeredName": "狐狸",
+              "wechatName": "Ver",
+              "university": "河南大学",
+              "major": "计科",
+              "city": "郑州",
+              "sourceCity": "郑州"
+            }
+          ]
+        },
+        {
+          "label": "信阳市",
+          "count": 1,
+          "note": "信阳市",
+          "students": [
+            {
+              "name": "徐亚博",
+              "registeredName": "徐亚博",
+              "wechatName": "火火",
+              "university": "信阳师范大学",
+              "major": "护理学",
+              "city": "信阳市",
+              "sourceCity": "信阳市"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "label": "浙江",
       "name": "浙江省",
       "adcode": 330000,
@@ -1805,71 +1989,6 @@
       ]
     },
     {
-      "label": "广东",
-      "name": "广东省",
-      "adcode": 440000,
-      "lng": 113.2668,
-      "lat": 23.1322,
-      "note": "广东省",
-      "count": 2,
-      "cityCount": 2,
-      "provinceOnlyCount": 0,
-      "students": [
-        {
-          "name": "张淇博",
-          "registeredName": "张淇博",
-          "wechatName": "keve",
-          "university": "深圳技术大学",
-          "major": "集成电路",
-          "city": "深圳",
-          "sourceCity": "深圳"
-        },
-        {
-          "name": "康康",
-          "registeredName": "康康",
-          "wechatName": "sloth",
-          "university": "",
-          "major": "师范专业",
-          "city": "广州",
-          "sourceCity": "广州"
-        }
-      ],
-      "cities": [
-        {
-          "label": "广州",
-          "count": 1,
-          "note": "广州市",
-          "students": [
-            {
-              "name": "康康",
-              "registeredName": "康康",
-              "wechatName": "sloth",
-              "university": "",
-              "major": "师范专业",
-              "city": "广州",
-              "sourceCity": "广州"
-            }
-          ]
-        },
-        {
-          "label": "深圳",
-          "count": 1,
-          "note": "深圳市",
-          "students": [
-            {
-              "name": "张淇博",
-              "registeredName": "张淇博",
-              "wechatName": "keve",
-              "university": "深圳技术大学",
-              "major": "集成电路",
-              "city": "深圳",
-              "sourceCity": "深圳"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "label": "河北",
       "name": "河北省",
       "adcode": 130000,
@@ -1929,71 +2048,6 @@
               "major": "建环专业",
               "city": "石家庄市",
               "sourceCity": "石家庄市"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "label": "河南",
-      "name": "河南省",
-      "adcode": 410000,
-      "lng": 113.7536,
-      "lat": 34.7657,
-      "note": "河南省",
-      "count": 2,
-      "cityCount": 2,
-      "provinceOnlyCount": 0,
-      "students": [
-        {
-          "name": "张锦阳",
-          "registeredName": "张锦阳",
-          "wechatName": "Orion 常青de绵阳",
-          "university": "河南财经政法大学",
-          "major": "软件工程（大一）",
-          "city": "郑州",
-          "sourceCity": "郑州"
-        },
-        {
-          "name": "徐亚博",
-          "registeredName": "徐亚博",
-          "wechatName": "火火",
-          "university": "信阳师范大学",
-          "major": "护理学",
-          "city": "信阳市",
-          "sourceCity": "信阳市"
-        }
-      ],
-      "cities": [
-        {
-          "label": "信阳市",
-          "count": 1,
-          "note": "信阳市",
-          "students": [
-            {
-              "name": "徐亚博",
-              "registeredName": "徐亚博",
-              "wechatName": "火火",
-              "university": "信阳师范大学",
-              "major": "护理学",
-              "city": "信阳市",
-              "sourceCity": "信阳市"
-            }
-          ]
-        },
-        {
-          "label": "郑州",
-          "count": 1,
-          "note": "郑州市",
-          "students": [
-            {
-              "name": "张锦阳",
-              "registeredName": "张锦阳",
-              "wechatName": "Orion 常青de绵阳",
-              "university": "河南财经政法大学",
-              "major": "软件工程（大一）",
-              "city": "郑州",
-              "sourceCity": "郑州"
             }
           ]
         }
@@ -3733,6 +3787,38 @@
       "unmappedLocations": [
         "宣城"
       ]
+    },
+    {
+      "name": "Felix",
+      "registeredName": "Felix",
+      "wechatName": "Felix",
+      "university": "暨南大学",
+      "major": "金融工程",
+      "city": "广州",
+      "locations": [
+        {
+          "label": "广州",
+          "note": "广州市",
+          "type": "city"
+        }
+      ],
+      "unmappedLocations": []
+    },
+    {
+      "name": "狐狸",
+      "registeredName": "狐狸",
+      "wechatName": "Ver",
+      "university": "河南大学",
+      "major": "计科",
+      "city": "郑州",
+      "locations": [
+        {
+          "label": "郑州",
+          "note": "郑州市",
+          "type": "city"
+        }
+      ],
+      "unmappedLocations": []
     }
   ]
 }
