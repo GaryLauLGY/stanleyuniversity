@@ -9,19 +9,14 @@ on:
 
 permissions:
   contents: write
-  pages: write
-  id-token: write
 
 concurrency:
-  group: pages
+  group: feishu-data-sync
   cancel-in-progress: true
 
 jobs:
-  deploy:
+  sync:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
 
@@ -61,12 +56,3 @@ jobs:
           git commit -m "Update Feishu member data"
           git pull --rebase origin main
           git push origin HEAD:main
-
-      - uses: actions/configure-pages@v5
-
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: "."
-
-      - id: deployment
-        uses: actions/deploy-pages@v4
