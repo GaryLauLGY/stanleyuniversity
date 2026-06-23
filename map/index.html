@@ -921,16 +921,15 @@
       .app-main {
         height: 100%;
         min-height: 0;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: minmax(360px, 52vh) auto auto;
+        display: flex;
+        flex-direction: column;
         overflow-x: hidden;
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
       }
       .map-wrap {
         order: 0;
-        grid-row: 1;
+        flex: 0 0 52vh;
         position: sticky;
         top: 0;
         z-index: 3;
@@ -939,10 +938,11 @@
         border-bottom: 1px solid var(--border);
       }
       .place-tree {
-        order: 2;
-        grid-row: 3;
-        min-height: 320px;
+        order: 1;
+        flex: 0 0 auto;
+        min-height: 0;
         height: auto;
+        display: block;
         overflow: visible;
         border: 0;
         border-top: 1px solid var(--border);
@@ -952,19 +952,20 @@
         background: rgba(238,242,238,0.96);
       }
       .tree-body {
-        flex: 1;
-        min-height: 0;
+        flex: none;
+        min-height: auto;
         overflow-y: visible;
         max-height: none;
         -webkit-overflow-scrolling: touch;
       }
       .data-panel {
-        order: 1;
-        grid-row: 2;
+        order: 2;
+        flex: 0 0 auto;
         display: grid;
         border-left: 0;
         border-top: 1px solid var(--border);
         overflow: visible;
+        scroll-margin-top: 54vh;
       }
       .data-body {
         overflow: visible;
@@ -1043,9 +1044,11 @@
         min-height: 34px;
       }
       .app-main {
-        grid-template-rows: minmax(300px, 48svh) auto auto;
+        display: flex;
+        flex-direction: column;
       }
       .map-wrap {
+        flex-basis: 48svh;
         height: 48svh;
         min-height: 300px;
       }
@@ -1103,11 +1106,12 @@
         padding: 0 10px 12px 34px;
       }
       .data-body {
-        padding: 12px 10px 14px;
+        padding: 18px 10px 18px;
       }
       .pie-card {
         grid-template-columns: 1fr;
-        gap: 12px;
+        gap: 14px;
+        padding-top: 18px;
       }
       .pie {
         margin: 0 auto;
