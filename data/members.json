@@ -1,15 +1,15 @@
 {
-  "updatedAt": "2026-06-24T07:39:20.323Z",
-  "totalMembers": 82,
+  "updatedAt": "2026-06-24T10:48:08.502Z",
+  "totalMembers": 86,
   "locatedMembers": 58,
   "cityLocatedMembers": 58,
-  "provinceLocatedMembers": 53,
-  "filledCityRecords": 56,
-  "mappedAddressCount": 59,
+  "provinceLocatedMembers": 54,
+  "filledCityRecords": 57,
+  "mappedAddressCount": 60,
   "multiAddressMembers": 3,
-  "provinceOnlyMembers": 1,
+  "provinceOnlyMembers": 2,
   "unmappedMembers": 1,
-  "unrecordedMembers": 25,
+  "unrecordedMembers": 28,
   "excludedDualCityMembers": 0,
   "placeRows": [
     {
@@ -2241,6 +2241,29 @@
       ]
     },
     {
+      "label": "江西",
+      "name": "江西省",
+      "adcode": 360000,
+      "lng": 115.8166,
+      "lat": 28.6365,
+      "note": "江西省",
+      "count": 1,
+      "cityCount": 0,
+      "provinceOnlyCount": 1,
+      "students": [
+        {
+          "name": "与神同行",
+          "registeredName": "与神同行",
+          "wechatName": "与神同行",
+          "university": "",
+          "major": "国际贸易",
+          "city": "江西",
+          "sourceCity": "江西"
+        }
+      ],
+      "cities": []
+    },
+    {
       "label": "辽宁",
       "name": "辽宁省",
       "adcode": 210000,
@@ -2651,9 +2674,30 @@
       "major": ""
     },
     {
-      "name": "与神同行",
-      "registeredName": "与神同行",
-      "wechatName": "与神同行",
+      "name": "ʟᴇᴇ",
+      "registeredName": "ʟᴇᴇ",
+      "wechatName": "ʟᴇᴇ",
+      "university": "",
+      "major": ""
+    },
+    {
+      "name": "狼哥",
+      "registeredName": "狼哥",
+      "wechatName": "狼哥",
+      "university": "",
+      "major": ""
+    },
+    {
+      "name": "XiuG",
+      "registeredName": "XiuG",
+      "wechatName": "XiuG",
+      "university": "",
+      "major": ""
+    },
+    {
+      "name": "zzzzz",
+      "registeredName": "zzzzz",
+      "wechatName": "zzzzz",
       "university": "",
       "major": ""
     }
@@ -2667,6 +2711,15 @@
       "major": "应届高考生",
       "city": "山东",
       "sourceCity": "山东"
+    },
+    {
+      "name": "与神同行",
+      "registeredName": "与神同行",
+      "wechatName": "与神同行",
+      "university": "",
+      "major": "国际贸易",
+      "city": "江西",
+      "sourceCity": "江西"
     }
   ],
   "unmappedStudents": [
@@ -3874,6 +3927,52 @@
       "name": "与神同行",
       "registeredName": "与神同行",
       "wechatName": "与神同行",
+      "university": "",
+      "major": "国际贸易",
+      "city": "江西",
+      "locations": [
+        {
+          "label": "江西",
+          "note": "江西省",
+          "type": "province"
+        }
+      ],
+      "unmappedLocations": []
+    },
+    {
+      "name": "ʟᴇᴇ",
+      "registeredName": "ʟᴇᴇ",
+      "wechatName": "ʟᴇᴇ",
+      "university": "",
+      "major": "",
+      "city": "",
+      "locations": [],
+      "unmappedLocations": []
+    },
+    {
+      "name": "狼哥",
+      "registeredName": "狼哥",
+      "wechatName": "狼哥",
+      "university": "",
+      "major": "",
+      "city": "",
+      "locations": [],
+      "unmappedLocations": []
+    },
+    {
+      "name": "XiuG",
+      "registeredName": "XiuG",
+      "wechatName": "XiuG",
+      "university": "",
+      "major": "",
+      "city": "",
+      "locations": [],
+      "unmappedLocations": []
+    },
+    {
+      "name": "zzzzz",
+      "registeredName": "zzzzz",
+      "wechatName": "zzzzz",
       "university": "",
       "major": "",
       "city": "",
