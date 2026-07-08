@@ -1,0 +1,742 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stanley商学院日报 - 2026年7月3日</title>
+  <style>
+    :root {
+      --ink: #1f2933;
+      --muted: #687386;
+      --paper: #fbfaf6;
+      --line: #ded8cd;
+      --panel: #ffffff;
+      --navy: #102a43;
+      --green: #2f6b5f;
+      --gold: #b8872c;
+      --rose: #ad4f5f;
+      --blue: #2f5f9f;
+      --soft-green: #e8f1ee;
+      --soft-gold: #f7ecd4;
+      --soft-rose: #f5e5e8;
+      --soft-blue: #e8eef8;
+      --shadow: 0 18px 45px rgba(16, 42, 67, .08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        linear-gradient(90deg, rgba(16,42,67,.045) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(16,42,67,.035) 1px, transparent 1px),
+        var(--paper);
+      background-size: 36px 36px;
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif;
+      line-height: 1.78;
+    }
+
+    .page {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 40px 24px 64px;
+    }
+
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 18px;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 720;
+    }
+
+    .topbar a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .topbar a:hover {
+      color: var(--green);
+    }
+
+    .topbar-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      justify-content: flex-end;
+    }
+
+    header {
+      display: grid;
+      grid-template-columns: 1.4fr .9fr;
+      gap: 28px;
+      align-items: stretch;
+      min-height: 520px;
+      margin-bottom: 28px;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 44px;
+      border: 1px solid var(--line);
+      background: var(--navy);
+      color: #fff;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 18px;
+      border: 1px solid rgba(255,255,255,.18);
+      pointer-events: none;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      right: -120px;
+      bottom: -120px;
+      width: 320px;
+      height: 320px;
+      background:
+        linear-gradient(135deg, rgba(184,135,44,.9), rgba(173,79,95,.65));
+      transform: rotate(18deg);
+      opacity: .72;
+    }
+
+    .eyebrow {
+      position: relative;
+      z-index: 1;
+      font-size: 13px;
+      letter-spacing: 0;
+      color: rgba(255,255,255,.74);
+      text-transform: uppercase;
+    }
+
+    h1 {
+      position: relative;
+      z-index: 1;
+      margin: 76px 0 18px;
+      max-width: 760px;
+      font-size: clamp(42px, 7vw, 86px);
+      line-height: .98;
+      font-weight: 850;
+      letter-spacing: 0;
+    }
+
+    .subtitle {
+      position: relative;
+      z-index: 1;
+      max-width: 720px;
+      margin: 0;
+      font-size: 22px;
+      color: rgba(255,255,255,.84);
+    }
+
+    .hero-footer {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 44px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 5px 12px;
+      border: 1px solid rgba(255,255,255,.28);
+      color: rgba(255,255,255,.88);
+      background: rgba(255,255,255,.08);
+      font-size: 14px;
+    }
+
+    .meta-panel {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.86);
+      box-shadow: var(--shadow);
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .meta-title {
+      margin: 0 0 16px;
+      font-size: 18px;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .meta-list {
+      display: grid;
+      gap: 12px;
+      margin: 0;
+    }
+
+    .meta-row {
+      display: grid;
+      grid-template-columns: 92px 1fr;
+      gap: 14px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .meta-row span:first-child {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .meta-row span:last-child {
+      font-weight: 720;
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin: 28px 0 34px;
+    }
+
+    .metric {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 20px;
+      min-height: 126px;
+      box-shadow: 0 12px 30px rgba(31,41,51,.05);
+    }
+
+    .metric strong {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--navy);
+      font-size: 34px;
+      line-height: 1;
+    }
+
+    .metric span {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    section {
+      margin-top: 34px;
+      padding: 34px 0;
+      border-top: 2px solid var(--ink);
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: 180px 1fr 180px;
+      gap: 24px;
+      align-items: start;
+      margin-bottom: 22px;
+    }
+
+    .section-kicker {
+      color: var(--green);
+      font-weight: 850;
+      font-size: 14px;
+      text-align: left;
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    .section-head h2 {
+      grid-column: 1 / -1;
+      grid-row: 1;
+      text-align: center;
+    }
+
+    .section-head.stacked {
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+
+    .section-head.stacked .section-kicker {
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    .section-head.stacked h2 {
+      grid-column: 1;
+      grid-row: 2;
+      text-align: center;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 34px;
+      line-height: 1.2;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      margin: 0;
+      font-size: 19px;
+      color: #2d3748;
+    }
+
+    .summary {
+      columns: 2 360px;
+      column-gap: 34px;
+      font-size: 17px;
+    }
+
+    .summary p {
+      break-inside: avoid;
+      margin: 0 0 18px;
+    }
+
+    .events {
+      display: grid;
+      gap: 14px;
+    }
+
+    .event {
+      display: grid;
+      grid-template-columns: 76px 1fr;
+      gap: 18px;
+      padding: 22px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      box-shadow: 0 10px 26px rgba(31,41,51,.04);
+    }
+
+    .event-no {
+      width: 52px;
+      height: 52px;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      background: var(--green);
+      font-size: 22px;
+      font-weight: 850;
+    }
+
+    .event:nth-child(3n+2) .event-no {
+      background: var(--blue);
+    }
+
+    .event:nth-child(3n) .event-no {
+      background: var(--gold);
+    }
+
+    .event h3 {
+      margin: 0 0 8px;
+      font-size: 22px;
+      line-height: 1.35;
+    }
+
+    .event p {
+      margin: 0;
+      color: #344054;
+    }
+
+    .grid-two {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .info-block {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 24px;
+    }
+
+    .info-block h3 {
+      margin: 0 0 12px;
+      font-size: 22px;
+    }
+
+    .info-block ul,
+    .info-block ol {
+      margin: 0;
+      padding-left: 21px;
+    }
+
+    .info-block li {
+      margin: 7px 0;
+    }
+
+    .highlight {
+      background: var(--soft-gold);
+      border-color: #e2c77c;
+    }
+
+    .blue {
+      background: var(--soft-blue);
+      border-color: #b8c9e6;
+    }
+
+    .green {
+      background: var(--soft-green);
+      border-color: #abc9c0;
+    }
+
+    .rose {
+      background: var(--soft-rose);
+      border-color: #d7acb5;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      overflow: hidden;
+    }
+
+    th,
+    td {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+      text-align: left;
+    }
+
+    th {
+      background: var(--navy);
+      color: #fff;
+      font-size: 14px;
+      font-weight: 760;
+    }
+
+    td {
+      font-size: 15px;
+    }
+
+    .topics {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .topic {
+      padding: 24px;
+      border: 1px solid var(--line);
+      background: var(--panel);
+    }
+
+    .topic h3 {
+      margin: 0 0 12px;
+      color: var(--navy);
+      font-size: 22px;
+    }
+
+    .topic p {
+      margin: 0;
+      color: #344054;
+    }
+
+    .actions {
+      counter-reset: action;
+      display: grid;
+      gap: 12px;
+    }
+
+    .action {
+      counter-increment: action;
+      position: relative;
+      padding: 18px 20px 18px 62px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+    }
+
+    .action::before {
+      content: counter(action);
+      position: absolute;
+      left: 18px;
+      top: 18px;
+      width: 28px;
+      height: 28px;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      background: var(--rose);
+      font-weight: 850;
+      font-size: 14px;
+    }
+
+    footer {
+      margin-top: 46px;
+      padding: 22px 0 0;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    @media (max-width: 860px) {
+      .page {
+        padding: 22px 14px 42px;
+      }
+
+      .topbar {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .topbar-links {
+        justify-content: flex-start;
+      }
+
+      header,
+      .section-head,
+      .grid-two,
+      .topics,
+      .metrics {
+        grid-template-columns: 1fr;
+      }
+
+      header {
+        min-height: auto;
+      }
+
+      .hero {
+        min-height: 460px;
+        padding: 30px;
+      }
+
+      h1 {
+        margin-top: 62px;
+      }
+
+      .event {
+        grid-template-columns: 1fr;
+      }
+
+      .event-no {
+        width: 44px;
+        height: 44px;
+      }
+
+      .section-head h2 {
+        grid-column: auto;
+        text-align: left;
+      }
+
+      .section-kicker {
+        grid-column: auto;
+        text-align: left;
+      }
+    }
+
+    @media print {
+      body {
+        background: #fff;
+      }
+
+      .page {
+        max-width: none;
+        padding: 0;
+      }
+
+      .hero,
+      .meta-panel,
+      .metric,
+      .event,
+      .info-block,
+      .topic,
+      .action {
+        box-shadow: none;
+      }
+
+      section {
+        break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <nav class="topbar" aria-label="站点导航">
+      <a href="https://stanleyuniversity.garylau.ai/reports/">Stanley商学院</a>
+      <div class="topbar-links">
+        <a href="https://stanleyuniversity.garylau.ai/reports/">日报汇总</a>
+        <a href="https://stanleyuniversity.garylau.ai/map/">成员地图</a>
+      </div>
+    </nav>
+
+    <header>
+      <div class="hero">
+        <div>
+          <div class="eyebrow">Daily Intelligence Report</div>
+          <h1>Stanley商学院日报</h1>
+          <p class="subtitle">线下会场集结、直播互动、GEO 与小微 AI 讨论、Plus 区域价格交流、资料整理与 X Space 续场。</p>
+        </div>
+        <div class="hero-footer">
+          <span class="tag">2026年7月3日 星期五</span>
+          <span class="tag">Stanley商学院🎓</span>
+          <span class="tag">群聊精华日报</span>
+        </div>
+      </div>
+
+      <aside class="meta-panel">
+        <div>
+          <p class="meta-title">日报元信息</p>
+          <div class="meta-list">
+            <div class="meta-row"><span>日期</span><span>2026年7月3日</span></div>
+            <div class="meta-row"><span>统计区间</span><span>2026-07-03 00:00 至 2026-07-04 00:00</span></div>
+            <div class="meta-row"><span>可见记录</span><span>2026-07-03 11:01:22 至 2026-07-03 20:53:24</span></div>
+            <div class="meta-row"><span>群名称</span><span>Stanley商学院🎓</span></div>
+            <div class="meta-row"><span>定位</span><span>大学生 AI 社群 · 线下交流、直播学习、资料沉淀</span></div>
+          </div>
+        </div>
+        <p class="lead">这一天的聊天主线围绕线下场地和直播展开：成员陆续确认到场、互相提醒去后方交流、为院长和木哥上台互动；傍晚转入餐叙和离场反馈，晚上补上 X 平台资料与新一场 Space 入口。</p>
+      </aside>
+    </header>
+
+    <div class="metrics">
+      <div class="metric"><strong>102</strong><span>条计入统计消息</span></div>
+      <div class="metric"><strong>64</strong><span>条可见文本消息</span></div>
+      <div class="metric"><strong>29</strong><span>位可见发言成员</span></div>
+      <div class="metric"><strong>93</strong><span>成员地图记录</span></div>
+    </div>
+
+    <section>
+      <div class="section-head">
+        <div class="section-kicker">今日总结</div>
+        <h2>线下会场把群聊从提醒带到复盘</h2>
+      </div>
+      <div class="summary">
+        <p>7 月 3 日素材包共包含 104 条记录，其中 102 条进入 digest 统计；可见类型包括文本 64 条、表情 18 条、图片 13 条、链接/文件 7 条、系统 2 条。本日报只使用可见文本、统计字段和已明示链接，不补写图片或不可读文件内容。</p>
+        <p>上午已有成员询问是否有人到场，随后 Stanley 和 JM 回复已到。14:36 起，Xu 面向全员提醒线下同学到场地后方交流，并说明院长也在那里，群聊正式进入线下会场协同状态。</p>
+        <p>下午的互动重点是直播和上台。大家提醒直播间多点赞、为院长加油，并提到“独当一面”也是需要锻炼的能力；15:54 后，木哥上场并被说明讲 GEO，随后群内出现“小微 AI 是个机会”的判断。</p>
+        <p>傍晚有一段 Plus 区域价格交流，围绕土耳其区是否涨价、非土区是否好走、菲律宾区等信息展开，但源素材没有给出完整验证口径，因此日报只保留为价格与区域选择讨论。</p>
+        <p>晚间主线回到线下交流和资料沉淀：Punk 发布“商学院线下交流”“餐叙”等现场节点；有成员反馈因赶车、赶飞机或课设图纸提前提交而错过部分线下环节；狼哥分享前一天 XSpace 整理资料，蜗牛随后给出“2026 普通人用 AI 月入过万，可能吗？”的 Space 入口。</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div class="section-kicker">今日大事件</div>
+        <h2>5 个关键节点</h2>
+      </div>
+      <div class="events">
+        <article class="event"><div class="event-no">1</div><div><h3>成员确认到场，线下交流开始聚拢</h3><p>11:33 起，有成员询问“有没有同学已经到了的”，Stanley 和 JM 先后回应到场，为下午线下会面铺垫。</p></div></article>
+        <article class="event"><div class="event-no">2</div><div><h3>场地后方成为线下交流点</h3><p>14:36，Xu 面向全员提醒已到线下的同学到场地后面交流熟悉，并补充院长也在现场。</p></div></article>
+        <article class="event"><div class="event-no">3</div><div><h3>直播间互动和上台支持集中出现</h3><p>14:44 至 15:17，群内提醒直播点赞、为院长加油，并把“跟院长学习”和“独当一面要锻炼”作为现场学习语境。</p></div></article>
+        <article class="event"><div class="event-no">4</div><div><h3>GEO 和小微 AI 话题短暂接入</h3><p>15:54 后，有成员提到木哥讲 GEO；红茶椰随后指出“小微 AI 是个机会”，但也说明自己使用鸿蒙系统。</p></div></article>
+        <article class="event"><div class="event-no">5</div><div><h3>资料整理与晚间 Space 续上公开表达</h3><p>20:11，狼哥发布 7 月 2 日 XSpace 整理资料；20:53，蜗牛转发 Stanley 和朋友们的新 Space，主题是“2026 普通人用 AI 月入过万，可能吗？”</p></div></article>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div class="section-kicker">数据概览</div>
+        <h2>下午线下互动最密集，晚上进入复盘和续场</h2>
+      </div>
+      <div class="grid-two">
+        <div class="info-block green">
+          <h3>聊天数据</h3>
+          <ul>
+            <li>素材记录：104 条</li>
+            <li>计入 digest 统计：102 条</li>
+            <li>可见文本消息：64 条</li>
+            <li>图片记录：13 条</li>
+            <li>链接/文件记录：7 条</li>
+            <li>表情记录：18 条</li>
+            <li>系统记录：2 条</li>
+            <li>可见发言成员：29 位</li>
+            <li>可见记录：11:01:22 至 20:53:24</li>
+            <li>成员地图记录：93 条</li>
+          </ul>
+        </div>
+        <div class="info-block blue">
+          <h3>发言排行</h3>
+          <ul>
+            <li>Punk：19 条，主要承接线下现场、餐叙和离场反馈。</li>
+            <li>文子ᯓ：11 条，集中在直播间互动、点赞和学习氛围提醒。</li>
+            <li>三十六：10 条，主要参与 Plus 区域价格与账号区选择讨论。</li>
+            <li>XiuG：8 条，贯穿到场询问、线下反馈和资料感谢。</li>
+            <li>Xu：6 条，负责线下场地提醒和现场支持。</li>
+          </ul>
+        </div>
+      </div>
+
+      <div style="margin-top: 18px; overflow-x: auto;">
+        <table>
+          <thead><tr><th>排名</th><th>成员</th><th>消息数</th><th>备注</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td>Punk</td><td>19 条</td><td>线下现场、餐叙、离场反馈</td></tr>
+            <tr><td>2</td><td>文子ᯓ</td><td>11 条</td><td>直播互动和学习氛围</td></tr>
+            <tr><td>3</td><td>三十六</td><td>10 条</td><td>Plus 区域价格讨论</td></tr>
+            <tr><td>4</td><td>XiuG</td><td>8 条</td><td>到场询问、反馈、资料感谢</td></tr>
+            <tr><td>5</td><td>Xu</td><td>6 条</td><td>线下场地提醒和现场支持</td></tr>
+            <tr><td>6</td><td>红茶椰</td><td>4 条</td><td>小微 AI 机会判断</td></tr>
+            <tr><td>7</td><td>Gary</td><td>3 条</td><td>上台支持与互动</td></tr>
+            <tr><td>8</td><td>彭根辉</td><td>3 条</td><td>上台支持和 GEO 提醒</td></tr>
+            <tr><td>9</td><td>kkeve.c</td><td>3 条</td><td>区域价格讨论</td></tr>
+            <tr><td>10</td><td>蜗牛🐌</td><td>3 条</td><td>线下建议与 Space 入口</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div class="section-kicker">主题精华</div>
+        <h2>今天值得沉淀的 4 条线</h2>
+      </div>
+      <div class="topics">
+        <article class="topic"><h3>1. 线下活动需要即时定位</h3><p>“到场了吗”和“去场地后面交流”这类短消息，承担的是线下群体快速汇合的作用，比正式通知更贴近现场。</p></article>
+        <article class="topic"><h3>2. 直播互动也是学习场域</h3><p>群内反复出现点赞、加油、上台和学习提示，说明直播不只是观看入口，也在训练成员公开表达和现场支持。</p></article>
+        <article class="topic"><h3>3. AI 机会讨论要保留设备约束</h3><p>“小微 AI 是个机会”后面紧跟鸿蒙系统限制，提醒工具机会需要和真实设备、系统环境一起评估。</p></article>
+        <article class="topic"><h3>4. 资料整理让错过现场的人能补课</h3><p>狼哥把 7 月 2 日 XSpace 整理成资料，蜗牛又给出晚间新 Space 链接，形成从线下现场到线上复盘的衔接。</p></article>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div class="section-kicker">明天继续</div>
+        <h2>可以自然接上的几件事</h2>
+      </div>
+      <div class="actions">
+        <div class="action">把线下交流、餐叙和上台分享的可公开照片或纪要补到资料目录，图片内容未转写前不要在日报里扩写细节。</div>
+        <div class="action">如果木哥 GEO 分享有文字稿或链接，可以补一份主题摘要，承接当天“GEO”和“小微 AI”两个关键词。</div>
+        <div class="action">整理 Plus 区域价格讨论时，建议补充来源和时间戳，避免把群内经验直接写成稳定价格口径。</div>
+        <div class="action">继续收集晚间 Space 的文字纪要，把“普通人用 AI 月入过万”的讨论沉淀为可复用行动清单。</div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head stacked">
+        <div class="section-kicker">一句话复盘</div>
+        <h2>今天的 Stanley商学院，把线下会场、直播互动和线上资料沉淀接成了一条学习链路。</h2>
+      </div>
+      <div class="grid-two">
+        <div class="info-block highlight"><h3>已经跑通</h3><ul>
+            <li>线下到场和场地位置提醒被及时发到群内。</li>
+            <li>院长、木哥上台相关互动形成了现场支持氛围。</li>
+            <li>7 月 2 日 XSpace 整理资料已经被分享出来。</li>
+            <li>晚间新 Space 入口继续把讨论引向 AI 变现与公开表达。</li>
+          </ul></div>
+        <div class="info-block rose"><h3>继续补齐</h3><ul>
+            <li>图片和部分链接/文件 payload 未做额外解析，公开日报不展开不可见内容。</li>
+            <li>Plus 区域价格讨论缺少外部验证，不写成购买建议。</li>
+            <li>线下分享如果有正式纪要，可以补入后续日报或资料索引。</li>
+          </ul></div>
+      </div>
+    </section>
+
+    <footer>
+      <p>本日报统计口径为 2026-07-03 00:00 至 2026-07-04 00:00 的本地可见聊天记录；图片和链接/文件中的不可读内容未做额外解析，不纳入事实性描述。</p>
+    </footer>
+  </main>
+</body>
+</html>

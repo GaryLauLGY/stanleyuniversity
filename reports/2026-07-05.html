@@ -1,0 +1,735 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stanley商学院日报 - 2026年7月5日</title>
+  <style>
+    :root {
+      --ink: #1f2933;
+      --muted: #687386;
+      --paper: #fbfaf6;
+      --line: #ded8cd;
+      --panel: #ffffff;
+      --navy: #102a43;
+      --green: #2f6b5f;
+      --gold: #b8872c;
+      --rose: #ad4f5f;
+      --blue: #2f5f9f;
+      --soft-green: #e8f1ee;
+      --soft-gold: #f7ecd4;
+      --soft-rose: #f5e5e8;
+      --soft-blue: #e8eef8;
+      --shadow: 0 18px 45px rgba(16, 42, 67, .08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        linear-gradient(90deg, rgba(16,42,67,.045) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(16,42,67,.035) 1px, transparent 1px),
+        var(--paper);
+      background-size: 36px 36px;
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif;
+      line-height: 1.78;
+    }
+
+    .page {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 40px 24px 64px;
+    }
+
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 18px;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 720;
+    }
+
+    .topbar a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .topbar a:hover {
+      color: var(--green);
+    }
+
+    .topbar-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      justify-content: flex-end;
+    }
+
+    header {
+      display: grid;
+      grid-template-columns: 1.4fr .9fr;
+      gap: 28px;
+      align-items: stretch;
+      min-height: 520px;
+      margin-bottom: 28px;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 44px;
+      border: 1px solid var(--line);
+      background: var(--navy);
+      color: #fff;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 18px;
+      border: 1px solid rgba(255,255,255,.18);
+      pointer-events: none;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      right: -120px;
+      bottom: -120px;
+      width: 320px;
+      height: 320px;
+      background:
+        linear-gradient(135deg, rgba(184,135,44,.9), rgba(173,79,95,.65));
+      transform: rotate(18deg);
+      opacity: .72;
+    }
+
+    .eyebrow {
+      position: relative;
+      z-index: 1;
+      font-size: 13px;
+      letter-spacing: 0;
+      color: rgba(255,255,255,.74);
+      text-transform: uppercase;
+    }
+
+    h1 {
+      position: relative;
+      z-index: 1;
+      margin: 76px 0 18px;
+      max-width: 760px;
+      font-size: clamp(42px, 7vw, 86px);
+      line-height: .98;
+      font-weight: 850;
+      letter-spacing: 0;
+    }
+
+    .subtitle {
+      position: relative;
+      z-index: 1;
+      max-width: 720px;
+      margin: 0;
+      font-size: 22px;
+      color: rgba(255,255,255,.84);
+    }
+
+    .hero-footer {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 44px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 5px 12px;
+      border: 1px solid rgba(255,255,255,.28);
+      color: rgba(255,255,255,.88);
+      background: rgba(255,255,255,.08);
+      font-size: 14px;
+    }
+
+    .meta-panel {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.86);
+      box-shadow: var(--shadow);
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .meta-title {
+      margin: 0 0 16px;
+      font-size: 18px;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .meta-list {
+      display: grid;
+      gap: 12px;
+      margin: 0;
+    }
+
+    .meta-row {
+      display: grid;
+      grid-template-columns: 92px 1fr;
+      gap: 14px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .meta-row span:first-child {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .meta-row span:last-child {
+      font-weight: 720;
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin: 28px 0 34px;
+    }
+
+    .metric {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 20px;
+      min-height: 126px;
+      box-shadow: 0 12px 30px rgba(31,41,51,.05);
+    }
+
+    .metric strong {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--navy);
+      font-size: 34px;
+      line-height: 1;
+    }
+
+    .metric span {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    section {
+      margin-top: 34px;
+      padding: 34px 0;
+      border-top: 2px solid var(--ink);
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: 180px 1fr 180px;
+      gap: 24px;
+      align-items: start;
+      margin-bottom: 22px;
+    }
+
+    .section-kicker {
+      color: var(--green);
+      font-weight: 850;
+      font-size: 14px;
+      text-align: left;
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    .section-head h2 {
+      grid-column: 1 / -1;
+      grid-row: 1;
+      text-align: center;
+    }
+
+    .section-head.stacked {
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+
+    .section-head.stacked .section-kicker {
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    .section-head.stacked h2 {
+      grid-column: 1;
+      grid-row: 2;
+      text-align: center;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 34px;
+      line-height: 1.2;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      margin: 0;
+      font-size: 19px;
+      color: #2d3748;
+    }
+
+    .summary {
+      columns: 2 360px;
+      column-gap: 34px;
+      font-size: 17px;
+    }
+
+    .summary p {
+      break-inside: avoid;
+      margin: 0 0 18px;
+    }
+
+    .events {
+      display: grid;
+      gap: 14px;
+    }
+
+    .event {
+      display: grid;
+      grid-template-columns: 76px 1fr;
+      gap: 18px;
+      padding: 22px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      box-shadow: 0 10px 26px rgba(31,41,51,.04);
+    }
+
+    .event-no {
+      width: 52px;
+      height: 52px;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      background: var(--green);
+      font-size: 22px;
+      font-weight: 850;
+    }
+
+    .event:nth-child(3n+2) .event-no {
+      background: var(--blue);
+    }
+
+    .event:nth-child(3n) .event-no {
+      background: var(--gold);
+    }
+
+    .event h3 {
+      margin: 0 0 8px;
+      font-size: 22px;
+      line-height: 1.35;
+    }
+
+    .event p {
+      margin: 0;
+      color: #344054;
+    }
+
+    .grid-two {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .info-block {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 24px;
+    }
+
+    .info-block h3 {
+      margin: 0 0 12px;
+      font-size: 22px;
+    }
+
+    .info-block ul,
+    .info-block ol {
+      margin: 0;
+      padding-left: 21px;
+    }
+
+    .info-block li {
+      margin: 7px 0;
+    }
+
+    .highlight {
+      background: var(--soft-gold);
+      border-color: #e2c77c;
+    }
+
+    .blue {
+      background: var(--soft-blue);
+      border-color: #b8c9e6;
+    }
+
+    .green {
+      background: var(--soft-green);
+      border-color: #abc9c0;
+    }
+
+    .rose {
+      background: var(--soft-rose);
+      border-color: #d7acb5;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      overflow: hidden;
+    }
+
+    th,
+    td {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+      text-align: left;
+    }
+
+    th {
+      background: var(--navy);
+      color: #fff;
+      font-size: 14px;
+      font-weight: 760;
+    }
+
+    td {
+      font-size: 15px;
+    }
+
+    .topics {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .topic {
+      padding: 24px;
+      border: 1px solid var(--line);
+      background: var(--panel);
+    }
+
+    .topic h3 {
+      margin: 0 0 12px;
+      color: var(--navy);
+      font-size: 22px;
+    }
+
+    .topic p {
+      margin: 0;
+      color: #344054;
+    }
+
+    .actions {
+      counter-reset: action;
+      display: grid;
+      gap: 12px;
+    }
+
+    .action {
+      counter-increment: action;
+      position: relative;
+      padding: 18px 20px 18px 62px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+    }
+
+    .action::before {
+      content: counter(action);
+      position: absolute;
+      left: 18px;
+      top: 18px;
+      width: 28px;
+      height: 28px;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      background: var(--rose);
+      font-weight: 850;
+      font-size: 14px;
+    }
+
+    footer {
+      margin-top: 46px;
+      padding: 22px 0 0;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    @media (max-width: 860px) {
+      .page {
+        padding: 22px 14px 42px;
+      }
+
+      .topbar {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .topbar-links {
+        justify-content: flex-start;
+      }
+
+      header,
+      .section-head,
+      .grid-two,
+      .topics,
+      .metrics {
+        grid-template-columns: 1fr;
+      }
+
+      header {
+        min-height: auto;
+      }
+
+      .hero {
+        min-height: 460px;
+        padding: 30px;
+      }
+
+      h1 {
+        margin-top: 62px;
+      }
+
+      .event {
+        grid-template-columns: 1fr;
+      }
+
+      .event-no {
+        width: 44px;
+        height: 44px;
+      }
+
+      .section-head h2 {
+        grid-column: auto;
+        text-align: left;
+      }
+
+      .section-kicker {
+        grid-column: auto;
+        text-align: left;
+      }
+    }
+
+    @media print {
+      body {
+        background: #fff;
+      }
+
+      .page {
+        max-width: none;
+        padding: 0;
+      }
+
+      .hero,
+      .meta-panel,
+      .metric,
+      .event,
+      .info-block,
+      .topic,
+      .action {
+        box-shadow: none;
+      }
+
+      section {
+        break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <nav class="topbar" aria-label="站点导航">
+      <a href="https://stanleyuniversity.garylau.ai/reports/">Stanley商学院</a>
+      <div class="topbar-links">
+        <a href="https://stanleyuniversity.garylau.ai/reports/">日报汇总</a>
+        <a href="https://stanleyuniversity.garylau.ai/map/">成员地图</a>
+      </div>
+    </nav>
+
+    <header>
+      <div class="hero">
+        <div>
+          <div class="eyebrow">Daily Intelligence Report</div>
+          <h1>Stanley商学院日报</h1>
+          <p class="subtitle">Codex 连接异常排查、网络判断、API 配置提醒与 ccswitch 使用边界。</p>
+        </div>
+        <div class="hero-footer">
+          <span class="tag">2026年7月5日 星期日</span>
+          <span class="tag">Stanley商学院🎓</span>
+          <span class="tag">群聊精华日报</span>
+        </div>
+      </div>
+
+      <aside class="meta-panel">
+        <div>
+          <p class="meta-title">日报元信息</p>
+          <div class="meta-list">
+            <div class="meta-row"><span>日期</span><span>2026年7月5日</span></div>
+            <div class="meta-row"><span>统计区间</span><span>2026-07-05 00:00 至 2026-07-06 00:00</span></div>
+            <div class="meta-row"><span>可见记录</span><span>2026-07-05 04:59:32 至 2026-07-05 23:59:06</span></div>
+            <div class="meta-row"><span>群名称</span><span>Stanley商学院🎓</span></div>
+            <div class="meta-row"><span>定位</span><span>大学生 AI 社群 · 工具排障、配置经验、同伴互助</span></div>
+          </div>
+        </div>
+        <p class="lead">7 月 5 日群聊主要集中在晚间，一位成员反馈 Codex 放假回家后突然不可用，群内从网络、重启、代理状态逐步排到 API 配置和 ccswitch 使用边界，形成了一次轻量但很实际的工具排障记录。</p>
+      </aside>
+    </header>
+
+    <div class="metrics">
+      <div class="metric"><strong>23</strong><span>条计入统计消息</span></div>
+      <div class="metric"><strong>17</strong><span>条可见文本消息</span></div>
+      <div class="metric"><strong>8</strong><span>位可见发言成员</span></div>
+      <div class="metric"><strong>93</strong><span>成员地图记录</span></div>
+    </div>
+
+    <section>
+      <div class="section-head">
+        <div class="section-kicker">今日总结</div>
+        <h2>Codex 排障夜，把问题拆到网络、API 与配置</h2>
+      </div>
+      <div class="summary">
+        <p>当天素材包共包含 23 条消息，计入 digest 统计 23 条；其中可见文本 17 条，另有图片、表情和链接/文件记录。链接/文件存在不可读 payload，本日报只使用可见文本与统计字段。</p>
+        <p>晚上 22:15，邱淼淼提出 Codex 突然不可用的问题，并说明是放假回家以后出现。群友先从最常见的网络路径判断：是否没有代理、是否需要重启、代理是否掉线。</p>
+        <p>当提问者补充“网页版 X、GPT 都可以正常使用”后，排障方向从单纯网络问题转向本机工具链。红茶椰建议如果电脑里还有其他 agent，可以直接让它接手修复，说明类似问题在实践中并不少见。</p>
+        <p>临近午夜，讨论进入 API 与配置层面：郁郁葱葱提醒不要用 ccswitch 乱调 API，建议具备手动换 API 的能力后再操作；kkeve.c 则补充 Windows 下 API 配置常见位置主要是 profile 和 config。</p>
+        <p>这一天没有展开大体量话题，但把“AI 工具坏了怎么办”从情绪求助变成了可执行检查清单：网络、代理、重启、其他 agent 协助、API 切换工具、profile/config 文件。</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div class="section-kicker">今日大事件</div>
+        <h2>4 个排障节点</h2>
+      </div>
+      <div class="events">
+        <article class="event"><div class="event-no">1</div><div><h3>Codex 异常被抛到群里</h3><p>22:15，邱淼淼反馈 Codex 放假回家后突然不可用，并附上截图。</p></div></article>
+        <article class="event"><div class="event-no">2</div><div><h3>群友先排查网络与代理</h3><p>陆小果、C姐、月、红茶椰先后给出“是否没翻”“重启”“梯子掉了”“重新开代理”等基础判断。</p></div></article>
+        <article class="event"><div class="event-no">3</div><div><h3>问题转向本机工具链</h3><p>提问者说明网页版 X 和 GPT 可正常使用后，红茶椰建议让电脑里的其他 agent 协助修复。</p></div></article>
+        <article class="event"><div class="event-no">4</div><div><h3>API 配置与 ccswitch 风险被提醒</h3><p>郁郁葱葱提醒不要随意用 ccswitch 调 API，kkeve.c 补充 Windows 下重点检查 profile 与 config。</p></div></article>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div class="section-kicker">数据概览</div>
+        <h2>晚间排障集中发生</h2>
+      </div>
+      <div class="grid-two">
+        <div class="info-block green">
+          <h3>聊天数据</h3>
+          <ul>
+            <li>素材记录：23 条</li>
+            <li>计入 digest 统计：23 条</li>
+            <li>可见文本消息：17 条</li>
+            <li>链接/文件记录：3 条</li>
+            <li>表情/图片记录：3 条</li>
+            <li>可见发言成员：8 位</li>
+            <li>可见记录：04:59:32 至 23:59:06</li>
+            <li>成员地图记录：93 条</li>
+          </ul>
+        </div>
+        <div class="info-block blue">
+          <h3>发言排行</h3>
+          <ul>
+            <li>邱淼淼：6 条，提供问题背景、补充网络可用情况并继续跟进。</li>
+            <li>郁郁葱葱、kkeve.c：各 4 条，分别提醒 API 调整风险和配置文件位置。</li>
+            <li>红茶椰、XiuG：围绕代理、其他 agent 和 ccswitch 使用经验补充信息。</li>
+          </ul>
+        </div>
+      </div>
+
+      <div style="margin-top: 18px; overflow-x: auto;">
+        <table>
+          <thead><tr><th>排名</th><th>成员</th><th>消息数</th><th>备注</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td>邱淼淼</td><td>6 条</td><td>问题发起与补充说明</td></tr>
+            <tr><td>2</td><td>郁郁葱葱</td><td>4 条</td><td>API 调整风险提醒</td></tr>
+            <tr><td>3</td><td>kkeve.c</td><td>4 条</td><td>配置路径建议</td></tr>
+            <tr><td>4</td><td>红茶椰</td><td>3 条</td><td>代理与 agent 协助建议</td></tr>
+            <tr><td>5</td><td>XiuG</td><td>3 条</td><td>ccswitch 使用经验</td></tr>
+            <tr><td>6</td><td>陆小果</td><td>1 条</td><td>基础网络判断</td></tr>
+            <tr><td>7</td><td>C姐</td><td>1 条</td><td>重启建议</td></tr>
+            <tr><td>8</td><td>月</td><td>1 条</td><td>代理状态判断</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div class="section-kicker">主题精华</div>
+        <h2>今天值得沉淀的 4 条线</h2>
+      </div>
+      <div class="topics">
+        <article class="topic"><h3>1. 排障先从环境变量外层开始</h3><p>网络、代理、重启仍然是第一层检查，能快速排除最常见故障。</p></article>
+        <article class="topic"><h3>2. 网页可用不等于 CLI 可用</h3><p>当网页端正常而 Codex 不可用时，要继续检查本机客户端、API 配置和代理链路差异。</p></article>
+        <article class="topic"><h3>3. API 切换工具需要边界感</h3><p>ccswitch 这类工具能提升效率，但误改配置也可能带来更重的恢复成本。</p></article>
+        <article class="topic"><h3>4. 配置定位要形成清单</h3><p>Windows 场景下 profile 和 config 是优先检查位置，可以沉淀成新人排障说明。</p></article>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div class="section-kicker">明天继续</div>
+        <h2>可以整理成一份工具排障卡</h2>
+      </div>
+      <div class="actions">
+        <div class="action">把 Codex/CLI 不可用时的排查顺序沉淀成一页：网络、代理、重启、网页对照、API、profile/config。</div>
+        <div class="action">补充 ccswitch 或类似 API 切换工具的使用前提和恢复方法，避免新手误操作后不知道如何回滚。</div>
+        <div class="action">如果提问者后续修复成功，可以补记录具体原因，形成可复用案例。</div>
+        <div class="action">把“网页可用但 CLI 不可用”的场景单独列入常见问题。</div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head stacked">
+        <div class="section-kicker">一句话复盘</div>
+        <h2>今天的 Stanley商学院，用一场小排障把 AI 工具使用经验变成了可复用的检查路径。</h2>
+      </div>
+      <div class="grid-two">
+        <div class="info-block highlight"><h3>已经跑通</h3><ul>
+            <li>问题被快速定位到 Codex/CLI 使用场景。</li>
+            <li>群友补齐了网络、代理、重启、agent 协助等基础判断。</li>
+            <li>API 配置和 ccswitch 风险被明确提醒。</li>
+            <li>Windows 下 profile/config 的检查方向被提出。</li>
+          </ul></div>
+        <div class="info-block rose"><h3>继续补齐</h3><ul>
+            <li>缺少最终修复结果，建议后续补一条原因回填。</li>
+            <li>图片和链接/文件 payload 未解析，公开日报不展开其中内容。</li>
+            <li>可以把这次排障转成固定 FAQ，减少后续重复问答。</li>
+          </ul></div>
+      </div>
+    </section>
+
+    <footer>
+      <p>本日报统计口径为 2026-07-05 00:00 至 2026-07-06 00:00 的本地可见聊天记录；链接/文件中的二进制内容未做额外解析，不纳入事实性描述。</p>
+    </footer>
+  </main>
+</body>
+</html>

@@ -1,0 +1,736 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stanley商学院日报 - 2026年7月4日</title>
+  <style>
+    :root {
+      --ink: #1f2933;
+      --muted: #687386;
+      --paper: #fbfaf6;
+      --line: #ded8cd;
+      --panel: #ffffff;
+      --navy: #102a43;
+      --green: #2f6b5f;
+      --gold: #b8872c;
+      --rose: #ad4f5f;
+      --blue: #2f5f9f;
+      --soft-green: #e8f1ee;
+      --soft-gold: #f7ecd4;
+      --soft-rose: #f5e5e8;
+      --soft-blue: #e8eef8;
+      --shadow: 0 18px 45px rgba(16, 42, 67, .08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        linear-gradient(90deg, rgba(16,42,67,.045) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(16,42,67,.035) 1px, transparent 1px),
+        var(--paper);
+      background-size: 36px 36px;
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif;
+      line-height: 1.78;
+    }
+
+    .page {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 40px 24px 64px;
+    }
+
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 18px;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 720;
+    }
+
+    .topbar a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .topbar a:hover {
+      color: var(--green);
+    }
+
+    .topbar-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      justify-content: flex-end;
+    }
+
+    header {
+      display: grid;
+      grid-template-columns: 1.4fr .9fr;
+      gap: 28px;
+      align-items: stretch;
+      min-height: 520px;
+      margin-bottom: 28px;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 44px;
+      border: 1px solid var(--line);
+      background: var(--navy);
+      color: #fff;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 18px;
+      border: 1px solid rgba(255,255,255,.18);
+      pointer-events: none;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      right: -120px;
+      bottom: -120px;
+      width: 320px;
+      height: 320px;
+      background:
+        linear-gradient(135deg, rgba(184,135,44,.9), rgba(173,79,95,.65));
+      transform: rotate(18deg);
+      opacity: .72;
+    }
+
+    .eyebrow {
+      position: relative;
+      z-index: 1;
+      font-size: 13px;
+      letter-spacing: 0;
+      color: rgba(255,255,255,.74);
+      text-transform: uppercase;
+    }
+
+    h1 {
+      position: relative;
+      z-index: 1;
+      margin: 76px 0 18px;
+      max-width: 760px;
+      font-size: clamp(42px, 7vw, 86px);
+      line-height: .98;
+      font-weight: 850;
+      letter-spacing: 0;
+    }
+
+    .subtitle {
+      position: relative;
+      z-index: 1;
+      max-width: 720px;
+      margin: 0;
+      font-size: 22px;
+      color: rgba(255,255,255,.84);
+    }
+
+    .hero-footer {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 44px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 5px 12px;
+      border: 1px solid rgba(255,255,255,.28);
+      color: rgba(255,255,255,.88);
+      background: rgba(255,255,255,.08);
+      font-size: 14px;
+    }
+
+    .meta-panel {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.86);
+      box-shadow: var(--shadow);
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .meta-title {
+      margin: 0 0 16px;
+      font-size: 18px;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .meta-list {
+      display: grid;
+      gap: 12px;
+      margin: 0;
+    }
+
+    .meta-row {
+      display: grid;
+      grid-template-columns: 92px 1fr;
+      gap: 14px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .meta-row span:first-child {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .meta-row span:last-child {
+      font-weight: 720;
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin: 28px 0 34px;
+    }
+
+    .metric {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 20px;
+      min-height: 126px;
+      box-shadow: 0 12px 30px rgba(31,41,51,.05);
+    }
+
+    .metric strong {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--navy);
+      font-size: 34px;
+      line-height: 1;
+    }
+
+    .metric span {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    section {
+      margin-top: 34px;
+      padding: 34px 0;
+      border-top: 2px solid var(--ink);
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: 180px 1fr 180px;
+      gap: 24px;
+      align-items: start;
+      margin-bottom: 22px;
+    }
+
+    .section-kicker {
+      color: var(--green);
+      font-weight: 850;
+      font-size: 14px;
+      text-align: left;
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    .section-head h2 {
+      grid-column: 1 / -1;
+      grid-row: 1;
+      text-align: center;
+    }
+
+    .section-head.stacked {
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+
+    .section-head.stacked .section-kicker {
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    .section-head.stacked h2 {
+      grid-column: 1;
+      grid-row: 2;
+      text-align: center;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 34px;
+      line-height: 1.2;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      margin: 0;
+      font-size: 19px;
+      color: #2d3748;
+    }
+
+    .summary {
+      columns: 2 360px;
+      column-gap: 34px;
+      font-size: 17px;
+    }
+
+    .summary p {
+      break-inside: avoid;
+      margin: 0 0 18px;
+    }
+
+    .events {
+      display: grid;
+      gap: 14px;
+    }
+
+    .event {
+      display: grid;
+      grid-template-columns: 76px 1fr;
+      gap: 18px;
+      padding: 22px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      box-shadow: 0 10px 26px rgba(31,41,51,.04);
+    }
+
+    .event-no {
+      width: 52px;
+      height: 52px;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      background: var(--green);
+      font-size: 22px;
+      font-weight: 850;
+    }
+
+    .event:nth-child(3n+2) .event-no {
+      background: var(--blue);
+    }
+
+    .event:nth-child(3n) .event-no {
+      background: var(--gold);
+    }
+
+    .event h3 {
+      margin: 0 0 8px;
+      font-size: 22px;
+      line-height: 1.35;
+    }
+
+    .event p {
+      margin: 0;
+      color: #344054;
+    }
+
+    .grid-two {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .info-block {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 24px;
+    }
+
+    .info-block h3 {
+      margin: 0 0 12px;
+      font-size: 22px;
+    }
+
+    .info-block ul,
+    .info-block ol {
+      margin: 0;
+      padding-left: 21px;
+    }
+
+    .info-block li {
+      margin: 7px 0;
+    }
+
+    .highlight {
+      background: var(--soft-gold);
+      border-color: #e2c77c;
+    }
+
+    .blue {
+      background: var(--soft-blue);
+      border-color: #b8c9e6;
+    }
+
+    .green {
+      background: var(--soft-green);
+      border-color: #abc9c0;
+    }
+
+    .rose {
+      background: var(--soft-rose);
+      border-color: #d7acb5;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      overflow: hidden;
+    }
+
+    th,
+    td {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+      text-align: left;
+    }
+
+    th {
+      background: var(--navy);
+      color: #fff;
+      font-size: 14px;
+      font-weight: 760;
+    }
+
+    td {
+      font-size: 15px;
+    }
+
+    .topics {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .topic {
+      padding: 24px;
+      border: 1px solid var(--line);
+      background: var(--panel);
+    }
+
+    .topic h3 {
+      margin: 0 0 12px;
+      color: var(--navy);
+      font-size: 22px;
+    }
+
+    .topic p {
+      margin: 0;
+      color: #344054;
+    }
+
+    .actions {
+      counter-reset: action;
+      display: grid;
+      gap: 12px;
+    }
+
+    .action {
+      counter-increment: action;
+      position: relative;
+      padding: 18px 20px 18px 62px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+    }
+
+    .action::before {
+      content: counter(action);
+      position: absolute;
+      left: 18px;
+      top: 18px;
+      width: 28px;
+      height: 28px;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      background: var(--rose);
+      font-weight: 850;
+      font-size: 14px;
+    }
+
+    footer {
+      margin-top: 46px;
+      padding: 22px 0 0;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    @media (max-width: 860px) {
+      .page {
+        padding: 22px 14px 42px;
+      }
+
+      .topbar {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .topbar-links {
+        justify-content: flex-start;
+      }
+
+      header,
+      .section-head,
+      .grid-two,
+      .topics,
+      .metrics {
+        grid-template-columns: 1fr;
+      }
+
+      header {
+        min-height: auto;
+      }
+
+      .hero {
+        min-height: 460px;
+        padding: 30px;
+      }
+
+      h1 {
+        margin-top: 62px;
+      }
+
+      .event {
+        grid-template-columns: 1fr;
+      }
+
+      .event-no {
+        width: 44px;
+        height: 44px;
+      }
+
+      .section-head h2 {
+        grid-column: auto;
+        text-align: left;
+      }
+
+      .section-kicker {
+        grid-column: auto;
+        text-align: left;
+      }
+    }
+
+    @media print {
+      body {
+        background: #fff;
+      }
+
+      .page {
+        max-width: none;
+        padding: 0;
+      }
+
+      .hero,
+      .meta-panel,
+      .metric,
+      .event,
+      .info-block,
+      .topic,
+      .action {
+        box-shadow: none;
+      }
+
+      section {
+        break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <nav class="topbar" aria-label="站点导航">
+      <a href="https://stanleyuniversity.garylau.ai/reports/">Stanley商学院</a>
+      <div class="topbar-links">
+        <a href="https://stanleyuniversity.garylau.ai/reports/">日报汇总</a>
+        <a href="https://stanleyuniversity.garylau.ai/map/">成员地图</a>
+      </div>
+    </nav>
+
+    <header>
+      <div class="hero">
+        <div>
+          <div class="eyebrow">Daily Intelligence Report</div>
+          <h1>Stanley商学院日报</h1>
+          <p class="subtitle">线下场景轻互动、XSpace 实战资料沉淀、世界杯主题 Space 邀请和标准化服务思路。</p>
+        </div>
+        <div class="hero-footer">
+          <span class="tag">2026年7月4日 星期六</span>
+          <span class="tag">Stanley商学院🎓</span>
+          <span class="tag">群聊精华日报</span>
+        </div>
+      </div>
+
+      <aside class="meta-panel">
+        <div>
+          <p class="meta-title">日报元信息</p>
+          <div class="meta-list">
+            <div class="meta-row"><span>日期</span><span>2026年7月4日</span></div>
+            <div class="meta-row"><span>统计区间</span><span>2026-07-04 00:00 至 2026-07-05 00:00</span></div>
+            <div class="meta-row"><span>可见记录</span><span>2026-07-04 10:41:49 至 2026-07-04 22:14:00</span></div>
+            <div class="meta-row"><span>群名称</span><span>Stanley商学院🎓</span></div>
+            <div class="meta-row"><span>定位</span><span>大学生 AI 社群 · 线下连接、资料沉淀、公开表达</span></div>
+          </div>
+        </div>
+        <p class="lead">今天群聊体量较轻，主要由四条线构成：上午围绕 Stanley 发出的图片产生线下氛围回应，晚间沉淀 7 月 3 日 XSpace 资料，随后发出世界杯主题 Space 邀请，并出现一段关于把当前事项标准化的服务化表达。</p>
+      </aside>
+    </header>
+
+    <div class="metrics">
+      <div class="metric"><strong>15</strong><span>条计入统计消息</span></div>
+      <div class="metric"><strong>9</strong><span>条可见文本消息</span></div>
+      <div class="metric"><strong>9</strong><span>位可见发言成员</span></div>
+      <div class="metric"><strong>93</strong><span>成员地图记录</span></div>
+    </div>
+
+    <section>
+      <div class="section-head">
+        <div class="section-kicker">今日总结</div>
+        <h2>轻量互动里，留下资料和下一场入口</h2>
+      </div>
+      <div class="summary">
+        <p>7 月 4 日，素材包共包含 15 条消息，全部进入 digest 统计；其中可见文本 9 条、图片占位 3 条、表情占位 3 条。图片内容在素材包中不可见，本日报只使用图片前后的文本反应和结构化统计，不补写画面内容。</p>
+        <p>上午第一段由 Stanley 连续发送两张图片触发，随后群友用“线下搞事情啊”“太强了”“这个环境一看就是大老板”等文本回应。由于图片本身没有描述文件，日报只能确认这是一段围绕线下场景或现场氛围的轻互动。</p>
+        <p>晚间 20:43，狼哥发布 7 月 3 日 XSpace《从0起步，借助AI实现月入过万的实战指南》的整理资料，并说明“昨天的分享已整理，有需要的伙伴自取”。这条信息把前一天的公开分享转成可回看的资料入口。</p>
+        <p>21 点前后，Punk 询问是否有人对世界杯主题感兴趣，并预告 9:00 Space；蜗牛随后补充“Stanley 和他的朋友们：聊聊世界杯，今天你更看好谁？”并附上 X Space 链接，形成当天明确的晚间上麦入口。</p>
+        <p>21:25 后，目送提到“给大家放个福利，把现在做的事做成标准化了”，随后又说明“报价我就不漏了地区不一样”。这段信息显示群内出现了把具体事项标准化、服务化的思路，但价格和图片细节没有公开展开。</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div class="section-kicker">今日大事件</div>
+        <h2>4 个关键节点</h2>
+      </div>
+      <div class="events">
+        <article class="event"><div class="event-no">1</div><div><h3>上午图片触发线下氛围回应</h3><p>10:41，Stanley 连续发送两张图片；10:44 到 10:56，群友围绕“线下搞事情”“太强了”和现场环境作出回应。</p></div></article>
+        <article class="event"><div class="event-no">2</div><div><h3>7 月 3 日 XSpace 整理资料发布</h3><p>20:43，狼哥发出《从0起步，借助AI实现月入过万的实战指南》的整理链接，并说明这是昨天分享的整理内容。</p></div></article>
+        <article class="event"><div class="event-no">3</div><div><h3>世界杯主题 Space 被预告和补链</h3><p>20:53，Punk 提醒对世界杯主题感兴趣的成员关注 9:00 Space；21:20，蜗牛补充主题文案和 X Space 链接。</p></div></article>
+        <article class="event"><div class="event-no">4</div><div><h3>标准化服务思路露出</h3><p>21:25 后，目送提到把现在做的事做成标准化，并补充报价因地区不同不公开；相关图片内容未提供可读描述。</p></div></article>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div class="section-kicker">数据概览</div>
+        <h2>消息少，但主题边界清楚</h2>
+      </div>
+      <div class="grid-two">
+        <div class="info-block green">
+          <h3>聊天数据</h3>
+          <ul>
+            <li>素材记录：15 条</li>
+            <li>计入 digest 统计：15 条</li>
+            <li>可见文本消息：9 条</li>
+            <li>图片占位记录：3 条</li>
+            <li>表情占位记录：3 条</li>
+            <li>可见发言成员：9 位</li>
+            <li>可见记录：10:41:49 至 22:14:00</li>
+            <li>成员地图记录：93 条</li>
+          </ul>
+        </div>
+        <div class="info-block blue">
+          <h3>发言排行</h3>
+          <ul>
+            <li>目送：3 条，是当天唯一达到 3 条以上的发言者，围绕标准化服务和报价边界展开。</li>
+            <li>Stanley、蜗牛、文子ᯓ、狼哥：各 2 条，分别对应图片触发、Space 补链、现场回应和资料整理。</li>
+            <li>JM、Punk、与神同行、Levia.Qi：各 1 条，以表情回应或主题提醒为主。</li>
+          </ul>
+        </div>
+      </div>
+
+      <div style="margin-top: 18px; overflow-x: auto;">
+        <table>
+          <thead><tr><th>排名</th><th>成员</th><th>消息数</th><th>备注</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td>目送</td><td>3 条</td><td>标准化服务与报价边界</td></tr>
+            <tr><td>2</td><td>Stanley</td><td>2 条</td><td>图片触发</td></tr>
+            <tr><td>3</td><td>蜗牛🐌</td><td>2 条</td><td>Space 链接补充</td></tr>
+            <tr><td>4</td><td>文子ᯓ</td><td>2 条</td><td>现场氛围回应</td></tr>
+            <tr><td>5</td><td>狼哥</td><td>2 条</td><td>XSpace 资料整理</td></tr>
+            <tr><td>6</td><td>JM</td><td>1 条</td><td>表情回应</td></tr>
+            <tr><td>7</td><td>Punk</td><td>1 条</td><td>世界杯主题提醒</td></tr>
+            <tr><td>8</td><td>与神同行</td><td>1 条</td><td>表情回应</td></tr>
+            <tr><td>9</td><td>Levia.Qi</td><td>1 条</td><td>表情回应</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div class="section-kicker">主题精华</div>
+        <h2>今天值得沉淀的 4 条线</h2>
+      </div>
+      <div class="topics">
+        <article class="topic"><h3>1. 线下连接仍是群氛围入口</h3><p>上午围绕图片的短对话没有展开成事件，但“线下搞事情”和环境评价说明线下场景仍能快速带动回应。</p></article>
+        <article class="topic"><h3>2. 分享资料要及时沉淀</h3><p>狼哥把前一天 XSpace 内容整理成可自取链接，降低了错过直播后的补课成本，也让主题能跨天继续流通。</p></article>
+        <article class="topic"><h3>3. 公共表达需要明确入口</h3><p>世界杯主题 Space 先由 Punk 发出兴趣召集，再由蜗牛补充正式链接，形成从提醒到入口的完整动作。</p></article>
+        <article class="topic"><h3>4. 标准化是服务化的前置信号</h3><p>目送提到把当前事项标准化，并说明报价因地区差异不公开；这条线适合后续在需求、交付范围和报价口径上继续澄清。</p></article>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div class="section-kicker">明天继续</div>
+        <h2>可以自然接上的几件事</h2>
+      </div>
+      <div class="actions">
+        <div class="action">把 7 月 3 日 XSpace 整理资料纳入固定资料目录或日报索引，避免链接只停留在聊天流里。</div>
+        <div class="action">如果世界杯主题 Space 有后续纪要，可以补充参会要点，延续“Stanley 和他的朋友们”的公开表达线。</div>
+        <div class="action">对“标准化”的服务思路做一次结构化澄清：服务对象、交付清单、适用地区、报价是否需要分层。</div>
+        <div class="action">若图片内容需要进入复盘，后续可补充图片说明文件；在没有描述前，不把图片内容写成事实。</div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head stacked">
+        <div class="section-kicker">一句话复盘</div>
+        <h2>今天的 Stanley商学院，用 15 条消息完成了线下氛围、资料沉淀、Space 入口和服务化表达的轻量衔接。</h2>
+      </div>
+      <div class="grid-two">
+        <div class="info-block highlight"><h3>已经跑通</h3><ul>
+            <li>上午图片触发了围绕线下场景的自然回应。</li>
+            <li>7 月 3 日 XSpace 分享已经整理并发到群内。</li>
+            <li>世界杯主题 Space 完成了预告和链接补充。</li>
+            <li>标准化服务思路被提出，并保留了报价边界。</li>
+          </ul></div>
+        <div class="info-block rose"><h3>继续补齐</h3><ul>
+            <li>图片内容没有可读描述，公开日报不展开图片画面。</li>
+            <li>XSpace 整理链接可进一步归档，方便后续检索。</li>
+            <li>标准化服务如果继续推进，需要补齐服务范围、地区差异和报价口径。</li>
+          </ul></div>
+      </div>
+    </section>
+
+    <footer>
+      <p>本日报统计口径为 2026-07-04 00:00 至 2026-07-05 00:00 的本地可见聊天记录；图片和表情内容未做额外解析，不纳入事实性描述。</p>
+    </footer>
+  </main>
+</body>
+</html>

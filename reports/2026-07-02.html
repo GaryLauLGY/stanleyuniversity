@@ -1,0 +1,740 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stanley商学院日报 - 2026年7月2日</title>
+  <style>
+    :root {
+      --ink: #1f2933;
+      --muted: #687386;
+      --paper: #fbfaf6;
+      --line: #ded8cd;
+      --panel: #ffffff;
+      --navy: #102a43;
+      --green: #2f6b5f;
+      --gold: #b8872c;
+      --rose: #ad4f5f;
+      --blue: #2f5f9f;
+      --soft-green: #e8f1ee;
+      --soft-gold: #f7ecd4;
+      --soft-rose: #f5e5e8;
+      --soft-blue: #e8eef8;
+      --shadow: 0 18px 45px rgba(16, 42, 67, .08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        linear-gradient(90deg, rgba(16,42,67,.045) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(16,42,67,.035) 1px, transparent 1px),
+        var(--paper);
+      background-size: 36px 36px;
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif;
+      line-height: 1.78;
+    }
+
+    .page {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 40px 24px 64px;
+    }
+
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 18px;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 720;
+    }
+
+    .topbar a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .topbar a:hover {
+      color: var(--green);
+    }
+
+    .topbar-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      justify-content: flex-end;
+    }
+
+    header {
+      display: grid;
+      grid-template-columns: 1.4fr .9fr;
+      gap: 28px;
+      align-items: stretch;
+      min-height: 520px;
+      margin-bottom: 28px;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 44px;
+      border: 1px solid var(--line);
+      background: var(--navy);
+      color: #fff;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 18px;
+      border: 1px solid rgba(255,255,255,.18);
+      pointer-events: none;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      right: -120px;
+      bottom: -120px;
+      width: 320px;
+      height: 320px;
+      background:
+        linear-gradient(135deg, rgba(184,135,44,.9), rgba(173,79,95,.65));
+      transform: rotate(18deg);
+      opacity: .72;
+    }
+
+    .eyebrow {
+      position: relative;
+      z-index: 1;
+      font-size: 13px;
+      letter-spacing: 0;
+      color: rgba(255,255,255,.74);
+      text-transform: uppercase;
+    }
+
+    h1 {
+      position: relative;
+      z-index: 1;
+      margin: 76px 0 18px;
+      max-width: 760px;
+      font-size: clamp(42px, 7vw, 86px);
+      line-height: .98;
+      font-weight: 850;
+      letter-spacing: 0;
+    }
+
+    .subtitle {
+      position: relative;
+      z-index: 1;
+      max-width: 720px;
+      margin: 0;
+      font-size: 22px;
+      color: rgba(255,255,255,.84);
+    }
+
+    .hero-footer {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 44px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 5px 12px;
+      border: 1px solid rgba(255,255,255,.28);
+      color: rgba(255,255,255,.88);
+      background: rgba(255,255,255,.08);
+      font-size: 14px;
+    }
+
+    .meta-panel {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.86);
+      box-shadow: var(--shadow);
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .meta-title {
+      margin: 0 0 16px;
+      font-size: 18px;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .meta-list {
+      display: grid;
+      gap: 12px;
+      margin: 0;
+    }
+
+    .meta-row {
+      display: grid;
+      grid-template-columns: 92px 1fr;
+      gap: 14px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .meta-row span:first-child {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .meta-row span:last-child {
+      font-weight: 720;
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin: 28px 0 34px;
+    }
+
+    .metric {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 20px;
+      min-height: 126px;
+      box-shadow: 0 12px 30px rgba(31,41,51,.05);
+    }
+
+    .metric strong {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--navy);
+      font-size: 34px;
+      line-height: 1;
+    }
+
+    .metric span {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    section {
+      margin-top: 34px;
+      padding: 34px 0;
+      border-top: 2px solid var(--ink);
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: 180px 1fr 180px;
+      gap: 24px;
+      align-items: start;
+      margin-bottom: 22px;
+    }
+
+    .section-kicker {
+      color: var(--green);
+      font-weight: 850;
+      font-size: 14px;
+      text-align: left;
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    .section-head h2 {
+      grid-column: 1 / -1;
+      grid-row: 1;
+      text-align: center;
+    }
+
+    .section-head.stacked {
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+
+    .section-head.stacked .section-kicker {
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    .section-head.stacked h2 {
+      grid-column: 1;
+      grid-row: 2;
+      text-align: center;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 34px;
+      line-height: 1.2;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      margin: 0;
+      font-size: 19px;
+      color: #2d3748;
+    }
+
+    .summary {
+      columns: 2 360px;
+      column-gap: 34px;
+      font-size: 17px;
+    }
+
+    .summary p {
+      break-inside: avoid;
+      margin: 0 0 18px;
+    }
+
+    .events {
+      display: grid;
+      gap: 14px;
+    }
+
+    .event {
+      display: grid;
+      grid-template-columns: 76px 1fr;
+      gap: 18px;
+      padding: 22px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      box-shadow: 0 10px 26px rgba(31,41,51,.04);
+    }
+
+    .event-no {
+      width: 52px;
+      height: 52px;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      background: var(--green);
+      font-size: 22px;
+      font-weight: 850;
+    }
+
+    .event:nth-child(3n+2) .event-no {
+      background: var(--blue);
+    }
+
+    .event:nth-child(3n) .event-no {
+      background: var(--gold);
+    }
+
+    .event h3 {
+      margin: 0 0 8px;
+      font-size: 22px;
+      line-height: 1.35;
+    }
+
+    .event p {
+      margin: 0;
+      color: #344054;
+    }
+
+    .grid-two {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .info-block {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 24px;
+    }
+
+    .info-block h3 {
+      margin: 0 0 12px;
+      font-size: 22px;
+    }
+
+    .info-block ul,
+    .info-block ol {
+      margin: 0;
+      padding-left: 21px;
+    }
+
+    .info-block li {
+      margin: 7px 0;
+    }
+
+    .highlight {
+      background: var(--soft-gold);
+      border-color: #e2c77c;
+    }
+
+    .blue {
+      background: var(--soft-blue);
+      border-color: #b8c9e6;
+    }
+
+    .green {
+      background: var(--soft-green);
+      border-color: #abc9c0;
+    }
+
+    .rose {
+      background: var(--soft-rose);
+      border-color: #d7acb5;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      overflow: hidden;
+    }
+
+    th,
+    td {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+      text-align: left;
+    }
+
+    th {
+      background: var(--navy);
+      color: #fff;
+      font-size: 14px;
+      font-weight: 760;
+    }
+
+    td {
+      font-size: 15px;
+    }
+
+    .topics {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .topic {
+      padding: 24px;
+      border: 1px solid var(--line);
+      background: var(--panel);
+    }
+
+    .topic h3 {
+      margin: 0 0 12px;
+      color: var(--navy);
+      font-size: 22px;
+    }
+
+    .topic p {
+      margin: 0;
+      color: #344054;
+    }
+
+    .actions {
+      counter-reset: action;
+      display: grid;
+      gap: 12px;
+    }
+
+    .action {
+      counter-increment: action;
+      position: relative;
+      padding: 18px 20px 18px 62px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+    }
+
+    .action::before {
+      content: counter(action);
+      position: absolute;
+      left: 18px;
+      top: 18px;
+      width: 28px;
+      height: 28px;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      background: var(--rose);
+      font-weight: 850;
+      font-size: 14px;
+    }
+
+    footer {
+      margin-top: 46px;
+      padding: 22px 0 0;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    @media (max-width: 860px) {
+      .page {
+        padding: 22px 14px 42px;
+      }
+
+      .topbar {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .topbar-links {
+        justify-content: flex-start;
+      }
+
+      header,
+      .section-head,
+      .grid-two,
+      .topics,
+      .metrics {
+        grid-template-columns: 1fr;
+      }
+
+      header {
+        min-height: auto;
+      }
+
+      .hero {
+        min-height: 460px;
+        padding: 30px;
+      }
+
+      h1 {
+        margin-top: 62px;
+      }
+
+      .event {
+        grid-template-columns: 1fr;
+      }
+
+      .event-no {
+        width: 44px;
+        height: 44px;
+      }
+
+      .section-head h2 {
+        grid-column: auto;
+        text-align: left;
+      }
+
+      .section-kicker {
+        grid-column: auto;
+        text-align: left;
+      }
+    }
+
+    @media print {
+      body {
+        background: #fff;
+      }
+
+      .page {
+        max-width: none;
+        padding: 0;
+      }
+
+      .hero,
+      .meta-panel,
+      .metric,
+      .event,
+      .info-block,
+      .topic,
+      .action {
+        box-shadow: none;
+      }
+
+      section {
+        break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <nav class="topbar" aria-label="站点导航">
+      <a href="https://stanleyuniversity.garylau.ai/reports/">Stanley商学院</a>
+      <div class="topbar-links">
+        <a href="https://stanleyuniversity.garylau.ai/reports/">日报汇总</a>
+        <a href="https://stanleyuniversity.garylau.ai/map/">成员地图</a>
+      </div>
+    </nav>
+
+    <header>
+      <div class="hero">
+        <div>
+          <div class="eyebrow">Daily Intelligence Report</div>
+          <h1>Stanley商学院日报</h1>
+          <p class="subtitle">从专业选择与转行判断，到土木/暖通路径、AI+行业联想、晚间 Space 和深圳会议提醒。</p>
+        </div>
+        <div class="hero-footer">
+          <span class="tag">2026年7月2日 星期四</span>
+          <span class="tag">Stanley商学院🎓</span>
+          <span class="tag">群聊精华日报</span>
+        </div>
+      </div>
+
+      <aside class="meta-panel">
+        <div>
+          <p class="meta-title">日报元信息</p>
+          <div class="meta-list">
+            <div class="meta-row"><span>日期</span><span>2026年7月2日</span></div>
+            <div class="meta-row"><span>统计区间</span><span>2026-07-02 00:00 至 2026-07-03 00:00</span></div>
+            <div class="meta-row"><span>可见记录</span><span>2026-07-02 11:45:07 至 2026-07-02 22:59:28</span></div>
+            <div class="meta-row"><span>群名称</span><span>Stanley商学院🎓</span></div>
+            <div class="meta-row"><span>定位</span><span>大学生 AI 社群 · 专业选择、职业路径、线下活动</span></div>
+          </div>
+        </div>
+        <p class="lead">今天的讨论从“选择大于努力”展开，集中落到大学专业、转行窗口、土木/暖通就业和 AI+行业可能性；晚间补充了 Space 上麦入口和深圳线下会议到场提醒。</p>
+      </aside>
+    </header>
+
+    <div class="metrics">
+      <div class="metric"><strong>46</strong><span>条计入统计消息</span></div>
+      <div class="metric"><strong>39</strong><span>条可见文本消息</span></div>
+      <div class="metric"><strong>14</strong><span>位可见发言成员</span></div>
+      <div class="metric"><strong>93</strong><span>成员地图记录</span></div>
+    </div>
+
+    <section>
+      <div class="section-head">
+        <div class="section-kicker">今日总结</div>
+        <h2>职业选择讨论，把专业问题拉回现金流和迁移能力</h2>
+      </div>
+      <div class="summary">
+        <p>7 月 2 日，素材包共包含 46 条消息，全部进入 digest 统计；其中可见文本 39 条、表情 5 条、链接/文件 2 条。链接/文件中有二进制或不可读 payload，本日报只使用可见文本和统计字段，不补写不可见内容。</p>
+        <p>午前第一段讨论由 Robin 发起，核心判断是“不管现在是什么专业，一定要往钱多的地方去”，并进一步提醒如果要转行，越早越好。这一判断把群里的专业焦虑拉到职业选择和迁移能力上。</p>
+        <p>随后 Allons--y 具体抛出建环、暖通、土木水利专业代码、投递节能/车企/运营没有回声等现实情况。群友围绕土木类就业、裁员、设计院、数据中心实习和国外蓝领路径给出不同视角。</p>
+        <p>傍晚讨论从“专业对口是否现实”转向“AI+土木/智能建造”的表达。三十六、郁郁葱葱、红茶椰等成员把话题从单一专业出路，推进到能否找到更可变现、更可迁移的组合方向。</p>
+        <p>晚上，蜗牛发布 Stanley 和朋友们的 Space 上麦入口，主题是“你为什么做 X”；当天最后一段则转为深圳线下会议确认，木哥提醒会议正常进行、2 点前到场，并补充门禁和别迟到的信息。</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div class="section-kicker">今日大事件</div>
+        <h2>5 个关键节点</h2>
+      </div>
+      <div class="events">
+        <article class="event"><div class="event-no">1</div><div><h3>专业选择被重新放到收入和机会坐标里</h3><p>11:45 后，Robin 连续提出“选择大于努力”“越早转越好”等判断，引出群友对专业和职业路径的集中回应。</p></div></article>
+        <article class="event"><div class="event-no">2</div><div><h3>建环、暖通和土木水利成为具体案例</h3><p>Allons--y 说明自己方向主要是建环、暖通，专业代码归在土木水利，并补充已投节能、车企、运营但反馈有限。</p></div></article>
+        <article class="event"><div class="event-no">3</div><div><h3>土木类就业被多角度拆解</h3><p>群友讨论了土木裁员、设计院、数据中心实习、国外蓝领路径等选项，形成从行业周期到个人转向的连续判断。</p></div></article>
+        <article class="event"><div class="event-no">4</div><div><h3>AI+土木被提出为组合方向</h3><p>17:55 后，三十六抛出“ai土木吧”，红茶椰随后用“AI+土木=智能建造”把话题转成组合能力的可能性。</p></div></article>
+        <article class="event"><div class="event-no">5</div><div><h3>晚间补充 Space 和深圳会议执行提醒</h3><p>21:00 后，群内出现“你为什么做 X”的 Space 上麦入口；22:46 后，深圳会议确认正常进行，并提醒 2 点前到场、注意门禁。</p></div></article>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div class="section-kicker">数据概览</div>
+        <h2>午间职业讨论最密集，晚间转入活动确认</h2>
+      </div>
+      <div class="grid-two">
+        <div class="info-block green">
+          <h3>聊天数据</h3>
+          <ul>
+            <li>素材记录：46 条</li>
+            <li>计入 digest 统计：46 条</li>
+            <li>可见文本消息：39 条</li>
+            <li>链接/文件记录：2 条</li>
+            <li>表情记录：5 条</li>
+            <li>可见发言成员：14 位</li>
+            <li>可见记录：11:45:07 至 22:59:28</li>
+            <li>成员地图记录：93 条</li>
+          </ul>
+        </div>
+        <div class="info-block blue">
+          <h3>发言排行</h3>
+          <ul>
+            <li>Allons--y：12 条，集中提供建环/暖通背景、投递方向和求职反馈。</li>
+            <li>Robin：9 条，主要提出专业选择、转行和机会判断。</li>
+            <li>蜗牛：4 条，既参与午间回应，也在晚间发布 Space 上麦入口。</li>
+            <li>红茶椰、三十六、郁郁葱葱：各 3 条，围绕 AI+土木、专业对口和就业现实补充观点。</li>
+          </ul>
+        </div>
+      </div>
+
+      <div style="margin-top: 18px; overflow-x: auto;">
+        <table>
+          <thead><tr><th>排名</th><th>成员</th><th>消息数</th><th>备注</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td>Allons--y</td><td>12 条</td><td>建环/暖通案例与求职反馈</td></tr>
+            <tr><td>2</td><td>Robin</td><td>9 条</td><td>职业选择与转行判断</td></tr>
+            <tr><td>3</td><td>蜗牛🐌</td><td>4 条</td><td>回应与 Space 入口发布</td></tr>
+            <tr><td>4</td><td>红茶椰</td><td>3 条</td><td>AI+土木表达</td></tr>
+            <tr><td>5</td><td>三十六</td><td>3 条</td><td>AI 土木话题引出</td></tr>
+            <tr><td>6</td><td>郁郁葱葱</td><td>3 条</td><td>专业对口现实判断</td></tr>
+            <tr><td>7</td><td>XiuG</td><td>2 条</td><td>回应与线下会议确认</td></tr>
+            <tr><td>8</td><td>啊哦</td><td>2 条</td><td>文科生视角回应</td></tr>
+            <tr><td>9</td><td>冷情🌸（商学院）</td><td>2 条</td><td>土木就业反馈</td></tr>
+            <tr><td>10</td><td>木哥</td><td>2 条</td><td>深圳会议到场提醒</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div class="section-kicker">主题精华</div>
+        <h2>今天值得沉淀的 4 条线</h2>
+      </div>
+      <div class="topics">
+        <article class="topic"><h3>1. 专业不是终局，迁移能力更关键</h3><p>群内没有把专业标签当成固定命运，而是讨论什么时候转、往哪里转、如何重新学习和补足能力。</p></article>
+        <article class="topic"><h3>2. 土木/暖通需要拆成具体赛道</h3><p>建环、暖通、节能、车企、运营、数据中心、设计院、国外蓝领被分别提及，说明讨论已经从泛泛“土木难”进入具体路径。</p></article>
+        <article class="topic"><h3>3. AI+行业是表达入口，不是自动解法</h3><p>“AI+土木=智能建造”提供了组合方向，但当天没有进一步展开岗位、技能栈或项目案例，后续需要补实操材料。</p></article>
+        <article class="topic"><h3>4. 线下活动仍需要清晰执行口径</h3><p>深圳会议确认“正常进行”“2 点前到”“有门禁”，这类短信息对到场成员比长讨论更直接。</p></article>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div class="section-kicker">明天继续</div>
+        <h2>可以自然接上的几件事</h2>
+      </div>
+      <div class="actions">
+        <div class="action">把土木/暖通相关岗位拆成一张轻量清单：数据中心、节能、车企、运营、设计院、智能建造等方向分别需要什么作品或技能。</div>
+        <div class="action">如果群内有人正在投递类似方向，可以收集一轮投递反馈，区分“没回声”是简历问题、岗位问题还是赛道供需问题。</div>
+        <div class="action">围绕“AI+土木/智能建造”补一两个真实案例，避免概念停留在口号层。</div>
+        <div class="action">深圳会议后可补一份到场纪要或行动项，帮助没到场的成员跟上后续安排。</div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head stacked">
+        <div class="section-kicker">一句话复盘</div>
+        <h2>今天的 Stanley商学院，把专业焦虑拆成了更具体的赛道判断、转行窗口和线下执行提醒。</h2>
+      </div>
+      <div class="grid-two">
+        <div class="info-block highlight"><h3>已经跑通</h3><ul>
+            <li>职业选择讨论没有停在情绪层，已经落到具体专业和求职反馈。</li>
+            <li>建环、暖通、土木水利、数据中心、设计院等关键词被明确提出。</li>
+            <li>AI+土木/智能建造被提出为后续可拆解方向。</li>
+            <li>深圳线下会议的时间和门禁提醒已经补齐。</li>
+          </ul></div>
+        <div class="info-block rose"><h3>继续补齐</h3><ul>
+            <li>土木/暖通转向哪些岗位，还需要岗位样本、技能要求和作品集案例。</li>
+            <li>“AI+土木”当天只形成方向提示，尚未形成项目清单或学习路径。</li>
+            <li>链接/文件内容部分不可读，公开日报不展开其未转写内容。</li>
+            <li>Space 和深圳会议如果有后续纪要，可以纳入下一次复盘。</li>
+          </ul></div>
+      </div>
+    </section>
+
+    <footer>
+      <p>本日报统计口径为 2026-07-02 00:00 至 2026-07-03 00:00 的本地可见聊天记录；链接/文件中的二进制内容未做额外解析，不纳入事实性描述。</p>
+    </footer>
+  </main>
+</body>
+</html>
