@@ -1,0 +1,738 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stanley商学院日报 - 2026年7月7日</title>
+  <style>
+    :root {
+      --ink: #1f2933;
+      --muted: #687386;
+      --paper: #fbfaf6;
+      --line: #ded8cd;
+      --panel: #ffffff;
+      --navy: #102a43;
+      --green: #2f6b5f;
+      --gold: #b8872c;
+      --rose: #ad4f5f;
+      --blue: #2f5f9f;
+      --soft-green: #e8f1ee;
+      --soft-gold: #f7ecd4;
+      --soft-rose: #f5e5e8;
+      --soft-blue: #e8eef8;
+      --shadow: 0 18px 45px rgba(16, 42, 67, .08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        linear-gradient(90deg, rgba(16,42,67,.045) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(16,42,67,.035) 1px, transparent 1px),
+        var(--paper);
+      background-size: 36px 36px;
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif;
+      line-height: 1.78;
+    }
+
+    .page {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 40px 24px 64px;
+    }
+
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 18px;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 720;
+    }
+
+    .topbar a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .topbar a:hover {
+      color: var(--green);
+    }
+
+    .topbar-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      justify-content: flex-end;
+    }
+
+    header {
+      display: grid;
+      grid-template-columns: 1.4fr .9fr;
+      gap: 28px;
+      align-items: stretch;
+      min-height: 520px;
+      margin-bottom: 28px;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 44px;
+      border: 1px solid var(--line);
+      background: var(--navy);
+      color: #fff;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 18px;
+      border: 1px solid rgba(255,255,255,.18);
+      pointer-events: none;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      right: -120px;
+      bottom: -120px;
+      width: 320px;
+      height: 320px;
+      background:
+        linear-gradient(135deg, rgba(184,135,44,.9), rgba(173,79,95,.65));
+      transform: rotate(18deg);
+      opacity: .72;
+    }
+
+    .eyebrow {
+      position: relative;
+      z-index: 1;
+      font-size: 13px;
+      letter-spacing: 0;
+      color: rgba(255,255,255,.74);
+      text-transform: uppercase;
+    }
+
+    h1 {
+      position: relative;
+      z-index: 1;
+      margin: 76px 0 18px;
+      max-width: 760px;
+      font-size: clamp(42px, 7vw, 86px);
+      line-height: .98;
+      font-weight: 850;
+      letter-spacing: 0;
+    }
+
+    .subtitle {
+      position: relative;
+      z-index: 1;
+      max-width: 720px;
+      margin: 0;
+      font-size: 22px;
+      color: rgba(255,255,255,.84);
+    }
+
+    .hero-footer {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 44px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 5px 12px;
+      border: 1px solid rgba(255,255,255,.28);
+      color: rgba(255,255,255,.88);
+      background: rgba(255,255,255,.08);
+      font-size: 14px;
+    }
+
+    .meta-panel {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.86);
+      box-shadow: var(--shadow);
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .meta-title {
+      margin: 0 0 16px;
+      font-size: 18px;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .meta-list {
+      display: grid;
+      gap: 12px;
+      margin: 0;
+    }
+
+    .meta-row {
+      display: grid;
+      grid-template-columns: 92px 1fr;
+      gap: 14px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .meta-row span:first-child {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .meta-row span:last-child {
+      font-weight: 720;
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin: 28px 0 34px;
+    }
+
+    .metric {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 20px;
+      min-height: 126px;
+      box-shadow: 0 12px 30px rgba(31,41,51,.05);
+    }
+
+    .metric strong {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--navy);
+      font-size: 34px;
+      line-height: 1;
+    }
+
+    .metric span {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    section {
+      margin-top: 34px;
+      padding: 34px 0;
+      border-top: 2px solid var(--ink);
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: 180px 1fr 180px;
+      gap: 24px;
+      align-items: start;
+      margin-bottom: 22px;
+    }
+
+    .section-kicker {
+      color: var(--green);
+      font-weight: 850;
+      font-size: 14px;
+      text-align: left;
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    .section-head h2 {
+      grid-column: 1 / -1;
+      grid-row: 1;
+      text-align: center;
+    }
+
+    .section-head.stacked {
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+
+    .section-head.stacked .section-kicker {
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    .section-head.stacked h2 {
+      grid-column: 1;
+      grid-row: 2;
+      text-align: center;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 34px;
+      line-height: 1.2;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      margin: 0;
+      font-size: 19px;
+      color: #2d3748;
+    }
+
+    .summary {
+      columns: 2 360px;
+      column-gap: 34px;
+      font-size: 17px;
+    }
+
+    .summary p {
+      break-inside: avoid;
+      margin: 0 0 18px;
+    }
+
+    .events {
+      display: grid;
+      gap: 14px;
+    }
+
+    .event {
+      display: grid;
+      grid-template-columns: 76px 1fr;
+      gap: 18px;
+      padding: 22px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      box-shadow: 0 10px 26px rgba(31,41,51,.04);
+    }
+
+    .event-no {
+      width: 52px;
+      height: 52px;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      background: var(--green);
+      font-size: 22px;
+      font-weight: 850;
+    }
+
+    .event:nth-child(3n+2) .event-no {
+      background: var(--blue);
+    }
+
+    .event:nth-child(3n) .event-no {
+      background: var(--gold);
+    }
+
+    .event h3 {
+      margin: 0 0 8px;
+      font-size: 22px;
+      line-height: 1.35;
+    }
+
+    .event p {
+      margin: 0;
+      color: #344054;
+    }
+
+    .grid-two {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .info-block {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 24px;
+    }
+
+    .info-block h3 {
+      margin: 0 0 12px;
+      font-size: 22px;
+    }
+
+    .info-block ul,
+    .info-block ol {
+      margin: 0;
+      padding-left: 21px;
+    }
+
+    .info-block li {
+      margin: 7px 0;
+    }
+
+    .highlight {
+      background: var(--soft-gold);
+      border-color: #e2c77c;
+    }
+
+    .blue {
+      background: var(--soft-blue);
+      border-color: #b8c9e6;
+    }
+
+    .green {
+      background: var(--soft-green);
+      border-color: #abc9c0;
+    }
+
+    .rose {
+      background: var(--soft-rose);
+      border-color: #d7acb5;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      overflow: hidden;
+    }
+
+    th,
+    td {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+      text-align: left;
+    }
+
+    th {
+      background: var(--navy);
+      color: #fff;
+      font-size: 14px;
+      font-weight: 760;
+    }
+
+    td {
+      font-size: 15px;
+    }
+
+    .topics {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .topic {
+      padding: 24px;
+      border: 1px solid var(--line);
+      background: var(--panel);
+    }
+
+    .topic h3 {
+      margin: 0 0 12px;
+      color: var(--navy);
+      font-size: 22px;
+    }
+
+    .topic p {
+      margin: 0;
+      color: #344054;
+    }
+
+    .actions {
+      counter-reset: action;
+      display: grid;
+      gap: 12px;
+    }
+
+    .action {
+      counter-increment: action;
+      position: relative;
+      padding: 18px 20px 18px 62px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+    }
+
+    .action::before {
+      content: counter(action);
+      position: absolute;
+      left: 18px;
+      top: 18px;
+      width: 28px;
+      height: 28px;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      background: var(--rose);
+      font-weight: 850;
+      font-size: 14px;
+    }
+
+    footer {
+      margin-top: 46px;
+      padding: 22px 0 0;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    @media (max-width: 860px) {
+      .page {
+        padding: 22px 14px 42px;
+      }
+
+      .topbar {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .topbar-links {
+        justify-content: flex-start;
+      }
+
+      header,
+      .section-head,
+      .grid-two,
+      .topics,
+      .metrics {
+        grid-template-columns: 1fr;
+      }
+
+      header {
+        min-height: auto;
+      }
+
+      .hero {
+        min-height: 460px;
+        padding: 30px;
+      }
+
+      h1 {
+        margin-top: 62px;
+      }
+
+      .event {
+        grid-template-columns: 1fr;
+      }
+
+      .event-no {
+        width: 44px;
+        height: 44px;
+      }
+
+      .section-head h2 {
+        grid-column: auto;
+        text-align: left;
+      }
+
+      .section-kicker {
+        grid-column: auto;
+        text-align: left;
+      }
+    }
+
+    @media print {
+      body {
+        background: #fff;
+      }
+
+      .page {
+        max-width: none;
+        padding: 0;
+      }
+
+      .hero,
+      .meta-panel,
+      .metric,
+      .event,
+      .info-block,
+      .topic,
+      .action {
+        box-shadow: none;
+      }
+
+      section {
+        break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <nav class="topbar" aria-label="站点导航">
+      <a href="https://stanleyuniversity.garylau.ai/reports/">Stanley商学院</a>
+      <div class="topbar-links">
+        <a href="https://stanleyuniversity.garylau.ai/reports/">日报汇总</a>
+        <a href="https://stanleyuniversity.garylau.ai/map/">成员地图</a>
+      </div>
+    </nav>
+
+    <header>
+      <div class="hero">
+        <div>
+          <div class="eyebrow">Daily Intelligence Report</div>
+          <h1>Stanley商学院日报</h1>
+          <p class="subtitle">XSpace 资料沉淀、录音豆第二轮组织、问卷信息收集、邮费说明与 OPC 创业上麦邀请。</p>
+        </div>
+        <div class="hero-footer">
+          <span class="tag">2026年7月7日 星期二</span>
+          <span class="tag">Stanley商学院🎓</span>
+          <span class="tag">群聊精华日报</span>
+        </div>
+      </div>
+
+      <aside class="meta-panel">
+        <div>
+          <p class="meta-title">日报元信息</p>
+          <div class="meta-list">
+            <div class="meta-row"><span>日期</span><span>2026年7月7日</span></div>
+            <div class="meta-row"><span>统计区间</span><span>2026-07-07 00:00 至 2026-07-08 00:00</span></div>
+            <div class="meta-row"><span>可见记录</span><span>2026-07-07 10:13:32 至 2026-07-07 21:00:25</span></div>
+            <div class="meta-row"><span>群名称</span><span>Stanley商学院🎓</span></div>
+            <div class="meta-row"><span>定位</span><span>大学生 AI 社群 · 活动组织、资料沉淀、创业讨论</span></div>
+          </div>
+        </div>
+        <p class="lead">今天群聊体量不大，核心是把前一天 XSpace 分享整理出来，并围绕“录音豆”第二轮不限量活动推进报名问卷、地址电话信息和顺丰邮费口径，晚间用一条 OPC 创业主题的上麦邀请收尾。</p>
+      </aside>
+    </header>
+
+    <div class="metrics">
+      <div class="metric"><strong>20</strong><span>条计入统计消息</span></div>
+      <div class="metric"><strong>14</strong><span>条可见文本消息</span></div>
+      <div class="metric"><strong>13</strong><span>位可见发言成员</span></div>
+      <div class="metric"><strong>93</strong><span>成员地图记录</span></div>
+    </div>
+
+    <section>
+      <div class="section-head">
+        <div class="section-kicker">今日总结</div>
+        <h2>小体量对话，集中推进一件实事</h2>
+      </div>
+      <div class="summary">
+        <p>7 月 7 日，素材包共包含 20 条消息，全部进入 digest 统计；其中可见文本 14 条、链接/文件 3 条、表情 3 条。链接/文件中有二进制或不可读 payload，本日报只使用可见文本和统计字段，不补写不可见内容。</p>
+        <p>午间第一段信息是资料沉淀：狼哥分享了“AI 时代一人公司生存蓝图：破除变现幻想的实战避坑指南”的整理版，并说明这是昨天分享的整理内容，方便有需要的伙伴自取。</p>
+        <p>傍晚开始，讨论转向“录音豆”第二轮不限量活动。Roland 点名 Xu 和 Gary 组织活动，群友马上确认“不限量”的变化；随后 Xu 提醒已购买录音豆的同学填写问卷，并强调地址信息不要漏掉电话等内容。</p>
+        <p>晚间围绕购买和配送继续补充口径：有人询问价格和是否到付，蜗牛说明付费购买后顺丰邮费自付；也有人用闲鱼差价开玩笑，Roland 随后用“按需购买”把讨论拉回真实需求。</p>
+        <p>当天最后一条有效信息是蜗牛面向全员发出的上麦提醒：Stanley 和朋友们围绕“OPC 创业最重要的不是技术”展开讨论，并附上 X 平台入口。它把当天从工具购买、活动组织延伸回创业和表达场景。</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div class="section-kicker">今日大事件</div>
+        <h2>5 个关键节点</h2>
+      </div>
+      <div class="events">
+        <article class="event"><div class="event-no">1</div><div><h3>XSpace 整理资料被投放到群内</h3><p>13:01，狼哥发布前一天 XSpace 分享的整理版，主题围绕 AI 时代“一人公司”的生存蓝图和变现避坑。</p></div></article>
+        <article class="event"><div class="event-no">2</div><div><h3>录音豆第二轮活动进入组织阶段</h3><p>18:28，Roland 请 Xu 和 Gary 组织录音豆第二轮不限量活动，群里随即确认“不限量”的变化。</p></div></article>
+        <article class="event"><div class="event-no">3</div><div><h3>购买问卷和收货信息成为执行重点</h3><p>19:23，Xu 提醒已经购买录音豆的成员填写问卷，并特别提示地址信息不要漏掉电话等内容。</p></div></article>
+        <article class="event"><div class="event-no">4</div><div><h3>邮费口径被补齐</h3><p>20:03 后，有成员询问是否到付；蜗牛明确说明付费购买后顺丰自付邮费。</p></div></article>
+        <article class="event"><div class="event-no">5</div><div><h3>OPC 创业话题作为晚间入口</h3><p>21:00，蜗牛面向全员发出上麦邀请，主题是“OPC 创业最重要的不是技术”。</p></div></article>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div class="section-kicker">数据概览</div>
+        <h2>晚上围绕录音豆集中互动</h2>
+      </div>
+      <div class="grid-two">
+        <div class="info-block green">
+          <h3>聊天数据</h3>
+          <ul>
+            <li>素材记录：20 条</li>
+            <li>计入 digest 统计：20 条</li>
+            <li>可见文本消息：14 条</li>
+            <li>链接/文件记录：3 条</li>
+            <li>表情记录：3 条</li>
+            <li>可见发言成员：13 位</li>
+            <li>可见记录：10:13:32 至 21:00:25</li>
+            <li>成员地图记录：93 条</li>
+          </ul>
+        </div>
+        <div class="info-block blue">
+          <h3>发言排行</h3>
+          <ul>
+            <li>Roland：5 条，主要推动录音豆第二轮活动组织和购买边界提醒。</li>
+            <li>狼哥、Xu、蜗牛：各 2 条，分别承担资料投放、问卷提醒和邮费/上麦说明。</li>
+            <li>其余成员以确认、询问价格、询问配送和轻量回应为主。</li>
+          </ul>
+        </div>
+      </div>
+
+      <div style="margin-top: 18px; overflow-x: auto;">
+        <table>
+          <thead><tr><th>排名</th><th>成员</th><th>消息数</th><th>备注</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td>Roland 🌊</td><td>5 条</td><td>高频组织与回应</td></tr>
+            <tr><td>2</td><td>狼哥</td><td>2 条</td><td>参与讨论</td></tr>
+            <tr><td>3</td><td>蜗牛🐌</td><td>2 条</td><td>参与讨论</td></tr>
+            <tr><td>4</td><td>Xu</td><td>2 条</td><td>参与讨论</td></tr>
+            <tr><td>5</td><td>冷情🌸（商学院）</td><td>1 条</td><td>参与讨论</td></tr>
+            <tr><td>6</td><td>三十六</td><td>1 条</td><td>参与讨论</td></tr>
+            <tr><td>7</td><td>郁郁葱葱</td><td>1 条</td><td>参与讨论</td></tr>
+            <tr><td>8</td><td>Allons--y</td><td>1 条</td><td>参与讨论</td></tr>
+            <tr><td>9</td><td>Holly🍉</td><td>1 条</td><td>参与讨论</td></tr>
+            <tr><td>10</td><td>Orion 常青de绵阳</td><td>1 条</td><td>参与讨论</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div class="section-kicker">主题精华</div>
+        <h2>今天值得沉淀的 4 条线</h2>
+      </div>
+      <div class="topics">
+        <article class="topic"><h3>1. 分享资料要能被复用</h3><p>狼哥把昨天的 XSpace 内容整理成可自取资料，降低了错过直播后的补课成本。</p></article>
+        <article class="topic"><h3>2. 活动组织要先锁信息</h3><p>录音豆第二轮活动的关键执行点不是讨论热度，而是购买名单、问卷、地址、电话和配送口径。</p></article>
+        <article class="topic"><h3>3. 购买提醒要守住真实需求</h3><p>当群里出现“闲鱼差价”玩笑时，Roland 用“按需购买”收住边界，避免活动被误读成倒卖机会。</p></article>
+        <article class="topic"><h3>4. 工具讨论要接回创业场景</h3><p>晚间 OPC 创业上麦提醒，把录音和表达工具连接到创业讨论、内容沉淀和公开表达。</p></article>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div class="section-kicker">明天继续</div>
+        <h2>可以自然接上的几件事</h2>
+      </div>
+      <div class="actions">
+        <div class="action">确认录音豆第二轮活动的购买名单和问卷回收状态，尤其是地址、电话和数量字段。</div>
+        <div class="action">把顺丰自付邮费、购买后流程、预计发出节奏整理成一句统一回复，减少重复问答。</div>
+        <div class="action">把前一天 XSpace 整理资料放入固定资料目录或日报索引，方便后续检索。</div>
+        <div class="action">如果 OPC 上麦有复盘材料，可以补一份要点摘录，延续“工具使用到创业表达”的主线。</div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head stacked">
+        <div class="section-kicker">一句话复盘</div>
+        <h2>今天的 Stanley商学院，用很少的消息完成了资料分发、活动组织和创业讨论入口的衔接。</h2>
+      </div>
+      <div class="grid-two">
+        <div class="info-block highlight"><h3>已经跑通</h3><ul>
+            <li>昨天的 XSpace 分享已经整理并发到群内。</li>
+            <li>录音豆第二轮不限量活动有人明确承接组织。</li>
+            <li>问卷填写、地址电话和顺丰邮费口径已经被提醒。</li>
+            <li>“按需购买”的边界被重新强调。</li>
+          </ul></div>
+        <div class="info-block rose"><h3>继续补齐</h3><ul>
+            <li>需要确认问卷收集是否完整，避免漏发或收货信息缺失。</li>
+            <li>链接/文件内容部分不可读，公开日报不展开其未转写内容。</li>
+            <li>OPC 上麦讨论如果有后续纪要，可以再纳入下一次复盘。</li>
+          </ul></div>
+      </div>
+    </section>
+
+    <footer>
+      <p>本日报统计口径为 2026-07-07 00:00 至 2026-07-08 00:00 的本地可见聊天记录；链接/文件中的二进制内容未做额外解析，不纳入事实性描述。</p>
+    </footer>
+  </main>
+</body>
+</html>
